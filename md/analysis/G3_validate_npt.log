@@ -1,0 +1,48 @@
+
+=== 5yxn rep1 NPT  G3 PASS ===
+  frames 101 (t 0-1000 ps, spacing 10-10 ps); 3.7 s total, 36.4 ms/frame
+  crystal-positive pairs n = 35: occupancy min 0.03, p10 0.54, q1 0.97, median 1.00, q3 1.00, max 1.00; mean 0.887; >= 0.25: 32, >= 0.5: 31, >= 0.9: 28
+    low crystal-positive: cdr1a:29 x 63 occupancy 0.05
+    low crystal-positive: cdr1a:38 x 1065 occupancy 0.21
+    low crystal-positive: cdr2b:65 x 75 occupancy 0.03
+    low crystal-positive: cdr3b:114 x 1065 occupancy 0.41
+  crystal-negative pairs n = 4803: any contact 19, >= 0.25 7, >= 0.5 3  (mechanics check under restraint; no scores involved)
+  TCR-pMHC heavy-atom contacts: t = 0 347, window min 283 / median 327 / max 382; docked frames (>= 50 % of t = 0) 101/101
+
+=== 7n1f rep1 NPT  G3 PASS ===
+  frames 101 (t 0-1000 ps, spacing 10-10 ps); 3.6 s total, 35.4 ms/frame
+  crystal-positive pairs n = 22: occupancy min 0.11, p10 0.37, q1 0.94, median 1.00, q3 1.00, max 1.00; mean 0.874; >= 0.25: 20, >= 0.5: 19, >= 0.9: 18
+    low crystal-positive: cdr2b:57 x 76 occupancy 0.32
+    low crystal-positive: cdr2b:63 x 75 occupancy 0.11
+    low crystal-positive: cdr3b:109 x 1066 occupancy 0.20
+  crystal-negative pairs n = 4488: any contact 12, >= 0.25 6, >= 0.5 4  (mechanics check under restraint; no scores involved)
+  TCR-pMHC heavy-atom contacts: t = 0 305, window min 246 / median 279 / max 318; docked frames (>= 50 % of t = 0) 101/101
+
+=== 3vxs rep1 NPT  G3 PASS ===
+  frames 101 (t 0-1000 ps, spacing 10-10 ps); 3.9 s total, 38.5 ms/frame
+  crystal-positive pairs n = 30: occupancy min 0.09, p10 0.87, q1 0.99, median 1.00, q3 1.00, max 1.00; mean 0.928; >= 0.25: 29, >= 0.5: 28, >= 0.9: 26
+    low crystal-positive: cdr2b:58 x 79 occupancy 0.30
+    low crystal-positive: cdr3b:110 x 1063 occupancy 0.09
+  crystal-negative pairs n = 4890: any contact 13, >= 0.25 2, >= 0.5 2  (mechanics check under restraint; no scores involved)
+  TCR-pMHC heavy-atom contacts: t = 0 367, window min 277 / median 327 / max 367; docked frames (>= 50 % of t = 0) 101/101
+
+=== 8eo8 rep1 NPT  G3 PASS ===
+  frames 101 (t 0-1000 ps, spacing 10-10 ps); 3.5 s total, 34.8 ms/frame
+  crystal-positive pairs n = 29: occupancy min 0.49, p10 0.77, q1 0.95, median 1.00, q3 1.00, max 1.00; mean 0.935; >= 0.25: 29, >= 0.5: 28, >= 0.9: 24
+    low crystal-positive: cdr3a:110 x 58 occupancy 0.49
+  crystal-negative pairs n = 5301: any contact 20, >= 0.25 5, >= 0.5 2  (mechanics check under restraint; no scores involved)
+  TCR-pMHC heavy-atom contacts: t = 0 283, window min 256 / median 296 / max 349; docked frames (>= 50 % of t = 0) 101/101
+
+G3 overall: PASS
+ pdb  n_frames  n_pos  pos_median  pos_mean  pos_min  n_pos_ge_0_9  n_neg  neg_any  neg_ge_0_25  ref_count  docked  ms_per_frame
+5yxn       101     35         1.0     0.887    0.030            28   4803       19            7        347     101        36.369
+7n1f       101     22         1.0     0.874    0.109            18   4488       12            6        305     101        35.448
+3vxs       101     30         1.0     0.928    0.089            26   4890       13            2        367     101        38.487
+8eo8       101     29         1.0     0.935    0.485            24   5301       20            5        283     101        34.769
+
+Crystal minimum distance of the low-occupancy crystal-positive pairs (same contact function on the clean crystal):
+5yxn cdr1a:29 x 63 4.42, cdr1a:38 x 1065 4.10, cdr2b:65 x 75 3.76, cdr3b:114 x 1065 4.00 A
+7n1f cdr2b:57 x 76 4.37, cdr2b:63 x 75 4.31, cdr3b:109 x 1066 4.17 A
+3vxs cdr2b:58 x 79 4.45, cdr3b:110 x 1063 4.50 A
+8eo8 cdr3a:110 x 58 3.81 A
+(median crystal-positive distance 3.61-3.76 A)

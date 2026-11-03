@@ -1,0 +1,54 @@
+  5yxn rep1: 101 frames, docked 101 (100.0 %), t=0 TCR-pMHC contacts 347
+  5yxn rep2: 101 frames, docked 101 (100.0 %), t=0 TCR-pMHC contacts 304
+  5yxn rep3: 101 frames, docked 101 (100.0 %), t=0 TCR-pMHC contacts 315
+  7n1f rep1: 101 frames, docked 101 (100.0 %), t=0 TCR-pMHC contacts 305
+  7n1f rep2: 101 frames, docked 101 (100.0 %), t=0 TCR-pMHC contacts 262
+  7n1f rep3: 101 frames, docked 101 (100.0 %), t=0 TCR-pMHC contacts 278
+  3vxs rep1: 101 frames, docked 101 (100.0 %), t=0 TCR-pMHC contacts 367
+  3vxs rep2: 101 frames, docked 101 (100.0 %), t=0 TCR-pMHC contacts 333
+  3vxs rep3: 101 frames, docked 101 (100.0 %), t=0 TCR-pMHC contacts 313
+  8eo8 rep1: 101 frames, docked 101 (100.0 %), t=0 TCR-pMHC contacts 283
+  8eo8 rep2: 101 frames, docked 101 (100.0 %), t=0 TCR-pMHC contacts 280
+  8eo8 rep3: 101 frames, docked 101 (100.0 %), t=0 TCR-pMHC contacts 312
+ pdb    rep  n  mean  median   min  n_ge_meaningful
+5yxn      1 35 0.887   1.000 0.030               32
+5yxn      2 35 0.859   1.000 0.040               32
+5yxn      3 35 0.899   1.000 0.010               33
+5yxn system 35 0.882   1.000 0.056               33
+7n1f      1 22 0.874   1.000 0.109               20
+7n1f      2 22 0.860   1.000 0.149               20
+7n1f      3 22 0.880   1.000 0.149               20
+7n1f system 22 0.871   1.000 0.135               20
+3vxs      1 30 0.928   1.000 0.089               29
+3vxs      2 30 0.932   1.000 0.079               28
+3vxs      3 30 0.900   1.000 0.040               28
+3vxs system 30 0.920   1.000 0.069               28
+8eo8      1 29 0.935   1.000 0.485               29
+8eo8      2 29 0.941   0.990 0.584               29
+8eo8      3 29 0.921   1.000 0.257               29
+8eo8 system 29 0.932   0.977 0.482               29
+      score  level      pdb       rep  n_crystal_negative    rho  perm_p_approximate
+synthetic A system     5yxn mean of 3                4803  0.017               0.256
+synthetic A system     7n1f mean of 3                4488 -0.003               0.835
+synthetic A system     3vxs mean of 3                4890 -0.000               0.999
+synthetic A system     8eo8 mean of 3                5301 -0.019               0.170
+synthetic A pooled all four mean of 3               19482 -0.002               0.833
+synthetic B system     5yxn mean of 3                4803 -0.021               0.153
+synthetic B system     7n1f mean of 3                4488 -0.005               0.758
+synthetic B system     3vxs mean of 3                4890 -0.001               0.934
+synthetic B system     8eo8 mean of 3                5301 -0.010               0.476
+synthetic B pooled all four mean of 3               19482 -0.010               0.179
+      score  pdb  k  frac_top_k  n_top_k_ge  base_rate  tie_at_k
+synthetic A 5yxn 35         0.0           0      0.001     False
+synthetic A 7n1f 22         0.0           0      0.001     False
+synthetic A 3vxs 30         0.0           0      0.000     False
+synthetic A 8eo8 29         0.0           0      0.001     False
+synthetic B 5yxn 35         0.0           0      0.001     False
+synthetic B 7n1f 22         0.0           0      0.001     False
+synthetic B 3vxs 30         0.0           0      0.000     False
+synthetic B 8eo8 29         0.0           0      0.001     False
+
+production checkpoints: 5yxn rep1 50,000,000, 5yxn rep2 50,000,000, 5yxn rep3 50,000,000, 7n1f rep1 50,000,000, 7n1f rep2 50,000,000, 7n1f rep3 50,000,000, 3vxs rep1 50,000,000, 3vxs rep2 50,000,000, 3vxs rep3 27,834,300, 8eo8 rep1 50,000,000, 8eo8 rep2 50,000,000, 8eo8 rep3 -1
+complete: 10/12 -> the run script would REFUSE the completion guard
+
+smoke test PASS; outputs in /tmp/claude-1000/-home-muhammad-imran/d664ef50-c781-4acf-bdec-eac545674198/scratchpad/smoke

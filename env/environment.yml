@@ -1,0 +1,41 @@
+# Portable environment for TCR-IMAP. Reproduces the environment in which every reported result
+# was produced. CPU is enough for everything the paper concludes; the GPU build of PyTorch is
+# needed only to retrain.
+#
+#   conda env create -f env/environment.yml
+#   conda activate tcr-imap
+#
+# The pins that matter, and why:
+#   Levenshtein 0.27.3 over RapidFuzz 3.14.3 - Levenshtein.ratio() normalises the INDEL distance
+#     (insertions and deletions only, so a substitution costs 2), not the Levenshtein distance.
+#     A version that normalised the Levenshtein distance would change every similarity, every
+#     cluster and every split, and therefore every reported number.
+#   numpy 1.26.4 - the frozen .npz arrays were written with it; numpy 2.x reads them, but the
+#     pipeline has not been revalidated under it.
+#   matplotlib 3.10.8 - figure rasters are not byte-stable across matplotlib versions, so the
+#     recorded figure checksums only reproduce under this one.
+name: tcr-imap
+channels:
+  - conda-forge
+dependencies:
+  - python=3.10.18
+  - pip=24.*
+  - numpy=1.26.4
+  - pandas=2.3.3
+  - scipy=1.15.2
+  - scikit-learn=1.7.2
+  - matplotlib-base=3.10.8
+  - biopython=1.81
+  - pyarrow=23.0.1
+  - pyyaml=6.0
+  - tqdm=4.68.3
+  - pillow=12.2.0
+  - fonttools=4.62.1
+  - mdanalysis=2.9.0
+  - pip:
+      - Levenshtein==0.27.3
+      - rapidfuzz==3.14.3
+      # Retraining only. Install the build that matches your CUDA, or the CPU build:
+      #   pip install torch==2.10.0 --index-url https://download.pytorch.org/whl/cpu
+      # Every result reported in the paper was produced with torch 2.10.0+cu128 (CUDA 12.8).
+      - torch==2.10.0

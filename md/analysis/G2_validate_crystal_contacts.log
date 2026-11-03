@@ -1,0 +1,22 @@
+
+=== 5yxn  G2 PASS ===
+  resolved pairs 4838; p82v1 contacts 35; recomputed 35; mismatches 0; contacts outside S 0
+  brute-force (18b loop) max |diff| 3.43e-06 A; PBC wrap max |diff| 1.78e-05 A; closest distances to the cutoff: 0.006, 0.016, 0.034 A from 4.5
+  [info] MD starting structure (step3_input, CHARMM-GUI-completed side chains): 35 contacts, 0 differ from the label
+
+=== 7n1f  G2 PASS ===
+  resolved pairs 4510; p82v1 contacts 22; recomputed 22; mismatches 0; contacts outside S 0
+  brute-force (18b loop) max |diff| 4.13e-06 A; PBC wrap max |diff| 2.00e-05 A; closest distances to the cutoff: 0.049, 0.075, 0.100 A from 4.5
+  [info] MD starting structure (step3_input, CHARMM-GUI-completed side chains): 22 contacts, 0 differ from the label
+
+=== 3vxs  G2 PASS ===
+  resolved pairs 4920; p82v1 contacts 30; recomputed 30; mismatches 0; contacts outside S 0
+  brute-force (18b loop) max |diff| 3.93e-06 A; PBC wrap max |diff| 1.89e-05 A; closest distances to the cutoff: 0.004, 0.051, 0.182 A from 4.5
+  [info] MD starting structure (step3_input, CHARMM-GUI-completed side chains): 30 contacts, 0 differ from the label
+
+=== 8eo8  G2 PASS ===
+  resolved pairs 5330; p82v1 contacts 29; recomputed 29; mismatches 0; contacts outside S 0
+  brute-force (18b loop) max |diff| 4.87e-06 A; PBC wrap max |diff| 3.49e-05 A; closest distances to the cutoff: 0.041, 0.060, 0.103 A from 4.5
+  [info] MD starting structure (step3_input, CHARMM-GUI-completed side chains): 29 contacts, 0 differ from the label
+
+G2 overall: PASS

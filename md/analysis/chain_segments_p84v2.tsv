@@ -1,0 +1,21 @@
+pdb	role	chain	segid	n_crystal	n_md	n_aligned	mismatches	crystal_only	md_only
+5yxn	TCRa	A	PROC	192	192	192	0		
+5yxn	TCRb	B	PROB	241	241	241	0		
+5yxn	MHC	C	PROD	275	275	275	0		
+5yxn	b2m	D	PROE	96	96	96	0		
+5yxn	pep	I	PROA	10	10	10	0		
+7n1f	TCRa	D	PROC	197	197	197	0		
+7n1f	TCRb	E	PROB	240	240	240	0		
+7n1f	MHC	A	PROD	272	272	272	0		
+7n1f	b2m	B	PROE	96	96	96	0		
+7n1f	pep	C	PROA	9	9	9	0		
+3vxs	TCRa	D	PROC	204	204	204	0		
+3vxs	TCRb	E	PROB	242	242	242	0		
+3vxs	MHC	A	PROD	274	274	274	0		
+3vxs	b2m	B	PROE	96	96	96	0		
+3vxs	pep	C	PROA	10	10	10	0		
+8eo8	TCRa	D	PROC	204	204	204	0		
+8eo8	TCRb	E	PROB	246	246	246	0		
+8eo8	MHC	A	PROD	275	275	275	0		
+8eo8	b2m	B	PROE	96	96	96	0		
+8eo8	pep	C	PROA	9	9	9	0		

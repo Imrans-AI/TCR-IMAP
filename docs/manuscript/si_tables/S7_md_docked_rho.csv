@@ -1,0 +1,21 @@
+score,reading,level,pdb,n_replicates_contributing,n_crystal_negative,n_distinct_occupancy,n_nonzero_occupancy,n_occupancy_ge_025,rho,perm_p_approximate,interpretable
+TCR-IMAP,count,system,5yxn,1.0,4920,43.0,55.0,11.0,0.1697653548080558,9.999000099990002e-05,True
+TCR-IMAP,count,system,7n1f,3.0,4598,77.0,83.0,8.0,0.21869483004284562,9.999000099990002e-05,True
+TCR-IMAP,count,system,3vxs,3.0,5010,68.0,73.0,6.0,0.1953714852561207,9.999000099990002e-05,True
+TCR-IMAP,count,system,8eo8,3.0,5429,91.0,106.0,14.0,0.2130210613685586,9.999000099990002e-05,True
+TCR-IMAP,count,pooled,4 contributing systems,,19957,274.0,317.0,39.0,0.20049769858786542,9.999000099990002e-05,True
+TCR-IMAP,identity,system,5yxn,0.0,4920,,,,,,False
+TCR-IMAP,identity,system,7n1f,2.0,4598,45.0,50.0,7.0,0.1721638868572652,9.999000099990002e-05,True
+TCR-IMAP,identity,system,3vxs,3.0,5010,54.0,59.0,4.0,0.17637375972571334,9.999000099990002e-05,True
+TCR-IMAP,identity,system,8eo8,0.0,5429,,,,,,False
+TCR-IMAP,identity,pooled,2 contributing systems,,9608,98.0,109.0,11.0,0.17445772218677194,9.999000099990002e-05,True
+pair-frequency prior,count,system,5yxn,1.0,4920,43.0,55.0,11.0,0.3895614766834451,9.999000099990002e-05,True
+pair-frequency prior,count,system,7n1f,3.0,4598,77.0,83.0,8.0,0.4879740990708688,9.999000099990002e-05,True
+pair-frequency prior,count,system,3vxs,3.0,5010,68.0,73.0,6.0,0.43869661564184953,9.999000099990002e-05,True
+pair-frequency prior,count,system,8eo8,3.0,5429,91.0,106.0,14.0,0.3932435738607679,9.999000099990002e-05,True
+pair-frequency prior,count,pooled,4 contributing systems,,19957,274.0,317.0,39.0,0.42425860402073273,9.999000099990002e-05,True
+pair-frequency prior,identity,system,5yxn,0.0,4920,,,,,,False
+pair-frequency prior,identity,system,7n1f,2.0,4598,45.0,50.0,7.0,0.40198073047152955,9.999000099990002e-05,True
+pair-frequency prior,identity,system,3vxs,3.0,5010,54.0,59.0,4.0,0.4071840007645316,9.999000099990002e-05,True
+pair-frequency prior,identity,system,8eo8,0.0,5429,,,,,,False
+pair-frequency prior,identity,pooled,2 contributing systems,,9608,98.0,109.0,11.0,0.4049119806138476,9.999000099990002e-05,True

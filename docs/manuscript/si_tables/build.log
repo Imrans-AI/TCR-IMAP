@@ -1,0 +1,299 @@
+== inputs
+  ok  complex_metadata.tsv sha256 = frozen value in CORRECTION_PLAN_P84V2.md
+  ok  protocols.json sha256 = frozen value in CORRECTION_PLAN_P84V2.md
+  ok  percomplex_random_p84v2.npz = committed SHA256SUMS (validation_fix/clusterdisjoint_run1, the reported run)
+  ok  percomplex_double_p84v2.npz = committed SHA256SUMS (validation_fix/clusterdisjoint_run1, the reported run)
+  ok  percomplex_allele_p84v2.npz = committed SHA256SUMS (validation_fix/clusterdisjoint_run1, the reported run)
+  ok  percomplex_temporal_p84v2.npz = committed SHA256SUMS (validation_fix/clusterdisjoint_run1, the reported run)
+  ok  percomplex_tcr70_p84v2.npz = committed SHA256SUMS (validation_fix/clusterdisjoint_run1, the reported run)
+== S1
+  ok  S1 per-residue random TCR-IMAP macro-AUPRC = benchmark_p84v2.csv
+  ok  S1 per-residue random TCR-IMAP: AUPRC and AUC defined for all 174 complexes
+  ok  S1 per-residue random Struct-TCS macro-AUPRC = benchmark_p84v2.csv
+  ok  S1 per-residue random Struct-TCS: AUPRC and AUC defined for all 174 complexes
+  ok  S1 per-residue random TCR-IMAP vs Struct-TCS at 20k = stats_20k_seed42.tsv
+  ok  S1 per-residue random Seq-TCS macro-AUPRC = benchmark_p84v2.csv
+  ok  S1 per-residue random Seq-TCS: AUPRC and AUC defined for all 174 complexes
+  ok  S1 per-residue random TCR-IMAP vs Seq-TCS at 20k = stats_20k_seed42.tsv
+  ok  S1 per-residue random Position-frequency prior macro-AUPRC = benchmark_p84v2.csv
+  ok  S1 per-residue random Position-frequency prior: AUPRC and AUC defined for all 174 complexes
+  ok  S1 per-residue random TCR-IMAP vs Position-frequency prior at 20k = stats_20k_seed42.tsv
+  ok  S1 per-residue random Nearest-neighbor transfer macro-AUPRC = benchmark_p84v2.csv
+  ok  S1 per-residue random Nearest-neighbor transfer: AUPRC and AUC defined for all 174 complexes
+  ok  S1 per-residue random TCR-IMAP vs Nearest-neighbor transfer at 20k = stats_20k_seed42.tsv
+  ok  S1 per-residue double TCR-IMAP macro-AUPRC = benchmark_p84v2.csv
+  ok  S1 per-residue double TCR-IMAP: AUPRC and AUC defined for all 30 complexes
+  ok  S1 per-residue double Struct-TCS macro-AUPRC = benchmark_p84v2.csv
+  ok  S1 per-residue double Struct-TCS: AUPRC and AUC defined for all 30 complexes
+  ok  S1 per-residue double TCR-IMAP vs Struct-TCS at 20k = stats_20k_seed42.tsv
+  ok  S1 per-residue double Seq-TCS macro-AUPRC = benchmark_p84v2.csv
+  ok  S1 per-residue double Seq-TCS: AUPRC and AUC defined for all 30 complexes
+  ok  S1 per-residue double TCR-IMAP vs Seq-TCS at 20k = stats_20k_seed42.tsv
+  ok  S1 per-residue double Position-frequency prior macro-AUPRC = benchmark_p84v2.csv
+  ok  S1 per-residue double Position-frequency prior: AUPRC and AUC defined for all 30 complexes
+  ok  S1 per-residue double TCR-IMAP vs Position-frequency prior at 20k = stats_20k_seed42.tsv
+  ok  S1 per-residue double Nearest-neighbor transfer macro-AUPRC = benchmark_p84v2.csv
+  ok  S1 per-residue double Nearest-neighbor transfer: AUPRC and AUC defined for all 30 complexes
+  ok  S1 per-residue double TCR-IMAP vs Nearest-neighbor transfer at 20k = stats_20k_seed42.tsv
+  ok  S1 per-residue allele TCR-IMAP macro-AUPRC = benchmark_p84v2.csv
+  ok  S1 per-residue allele TCR-IMAP: AUPRC and AUC defined for all 64 complexes
+  ok  S1 per-residue allele Struct-TCS macro-AUPRC = benchmark_p84v2.csv
+  ok  S1 per-residue allele Struct-TCS: AUPRC and AUC defined for all 64 complexes
+  ok  S1 per-residue allele TCR-IMAP vs Struct-TCS at 20k = stats_20k_seed42.tsv
+  ok  S1 per-residue allele Seq-TCS macro-AUPRC = benchmark_p84v2.csv
+  ok  S1 per-residue allele Seq-TCS: AUPRC and AUC defined for all 64 complexes
+  ok  S1 per-residue allele TCR-IMAP vs Seq-TCS at 20k = stats_20k_seed42.tsv
+  ok  S1 per-residue allele Position-frequency prior macro-AUPRC = benchmark_p84v2.csv
+  ok  S1 per-residue allele Position-frequency prior: AUPRC and AUC defined for all 64 complexes
+  ok  S1 per-residue allele TCR-IMAP vs Position-frequency prior at 20k = stats_20k_seed42.tsv
+  ok  S1 per-residue allele Nearest-neighbor transfer macro-AUPRC = benchmark_p84v2.csv
+  ok  S1 per-residue allele Nearest-neighbor transfer: AUPRC and AUC defined for all 64 complexes
+  ok  S1 per-residue allele TCR-IMAP vs Nearest-neighbor transfer at 20k = stats_20k_seed42.tsv
+  ok  S1 per-residue temporal TCR-IMAP macro-AUPRC = benchmark_p84v2.csv
+  ok  S1 per-residue temporal TCR-IMAP: AUPRC and AUC defined for all 60 complexes
+  ok  S1 per-residue temporal Struct-TCS macro-AUPRC = benchmark_p84v2.csv
+  ok  S1 per-residue temporal Struct-TCS: AUPRC and AUC defined for all 60 complexes
+  ok  S1 per-residue temporal TCR-IMAP vs Struct-TCS at 20k = stats_20k_seed42.tsv
+  ok  S1 per-residue temporal Seq-TCS macro-AUPRC = benchmark_p84v2.csv
+  ok  S1 per-residue temporal Seq-TCS: AUPRC and AUC defined for all 60 complexes
+  ok  S1 per-residue temporal TCR-IMAP vs Seq-TCS at 20k = stats_20k_seed42.tsv
+  ok  S1 per-residue temporal Position-frequency prior macro-AUPRC = benchmark_p84v2.csv
+  ok  S1 per-residue temporal Position-frequency prior: AUPRC and AUC defined for all 60 complexes
+  ok  S1 per-residue temporal TCR-IMAP vs Position-frequency prior at 20k = stats_20k_seed42.tsv
+  ok  S1 per-residue temporal Nearest-neighbor transfer macro-AUPRC = benchmark_p84v2.csv
+  ok  S1 per-residue temporal Nearest-neighbor transfer: AUPRC and AUC defined for all 60 complexes
+  ok  S1 per-residue temporal TCR-IMAP vs Nearest-neighbor transfer at 20k = stats_20k_seed42.tsv
+  ok  S1 per-residue tcr70 TCR-IMAP macro-AUPRC = benchmark_p84v2.csv
+  ok  S1 per-residue tcr70 TCR-IMAP: AUPRC and AUC defined for all 174 complexes
+  ok  S1 per-residue tcr70 Struct-TCS macro-AUPRC = benchmark_p84v2.csv
+  ok  S1 per-residue tcr70 Struct-TCS: AUPRC and AUC defined for all 174 complexes
+  ok  S1 per-residue tcr70 TCR-IMAP vs Struct-TCS at 20k = stats_20k_seed42.tsv
+  ok  S1 per-residue tcr70 Seq-TCS macro-AUPRC = benchmark_p84v2.csv
+  ok  S1 per-residue tcr70 Seq-TCS: AUPRC and AUC defined for all 174 complexes
+  ok  S1 per-residue tcr70 TCR-IMAP vs Seq-TCS at 20k = stats_20k_seed42.tsv
+  ok  S1 per-residue tcr70 Position-frequency prior macro-AUPRC = benchmark_p84v2.csv
+  ok  S1 per-residue tcr70 Position-frequency prior: AUPRC and AUC defined for all 174 complexes
+  ok  S1 per-residue tcr70 TCR-IMAP vs Position-frequency prior at 20k = stats_20k_seed42.tsv
+  ok  S1 per-residue tcr70 Nearest-neighbor transfer macro-AUPRC = benchmark_p84v2.csv
+  ok  S1 per-residue tcr70 Nearest-neighbor transfer: AUPRC and AUC defined for all 174 complexes
+  ok  S1 per-residue tcr70 TCR-IMAP vs Nearest-neighbor transfer at 20k = stats_20k_seed42.tsv
+  ok  S1 pairwise tcr70 arrays share complex order
+  ok  S1 percomplex_tcr70_paired grip = pairwise_ours auprc
+  ok  S1 pairwise random n = protocol_main_p84v2.csv
+  ok  S1 pairwise double n = protocol_main_p84v2.csv
+  ok  S1 pairwise allele n = protocol_main_p84v2.csv
+  ok  S1 pairwise temporal n = protocol_main_p84v2.csv
+  ok  S1 pairwise tcr70 n = protocol_main_p84v2.csv
+  ok  S1 pairwise tcr70 TCR-IMAP vs prior at 20k recomputed from percomplex_tcr70_paired_p84v2.tsv = stats_20k
+  ok  S1 pairwise tcr70 mean = protocol_main
+  ok  S1 pairwise tcr70 TCR-IMAP vs TEIM-Res at 20k = stats_20k
+  ok  S1 TEIM-Res wins = stats_20k
+  ok  S1 subset 4p5A their_random Struct-TCS mean = structcs_setting csv
+  ok  S1 subset 4p5A their_random vs Struct-TCS at 20k = F_structcs_differences_20k.tsv
+  ok  S1 subset 4p5A their_random Seq-TCS mean = structcs_setting csv
+  ok  S1 subset 4p5A their_random vs Seq-TCS at 20k = F_structcs_differences_20k.tsv
+  ok  S1 subset 4p5A our_tcr70 Struct-TCS mean = structcs_setting csv
+  ok  S1 subset 4p5A our_tcr70 vs Struct-TCS at 20k = F_structcs_differences_20k.tsv
+  ok  S1 subset 4p5A our_tcr70 Seq-TCS mean = structcs_setting csv
+  ok  S1 subset 4p5A our_tcr70 vs Seq-TCS at 20k = F_structcs_differences_20k.tsv
+  ok  S1 subset 6A their_random Struct-TCS mean = structcs_setting csv
+  ok  S1 subset 6A their_random vs Struct-TCS at 20k = F_structcs_differences_20k.tsv
+  ok  S1 subset 6A their_random Seq-TCS mean = structcs_setting csv
+  ok  S1 subset 6A their_random vs Seq-TCS at 20k = F_structcs_differences_20k.tsv
+  ok  S1 subset 6A our_tcr70 Struct-TCS mean = structcs_setting csv
+  ok  S1 subset 6A our_tcr70 vs Struct-TCS at 20k = F_structcs_differences_20k.tsv
+  ok  S1 subset 6A our_tcr70 Seq-TCS mean = structcs_setting csv
+  ok  S1 subset 6A our_tcr70 vs Seq-TCS at 20k = F_structcs_differences_20k.tsv
+  ok  S1 AngleNet n = 172 in every run
+wrote S1_benchmark.md + S1_benchmark_per_residue_pairwise.csv, S1_benchmark_comparator_subset.csv, S1_benchmark_anglenet.csv
+== S2
+  ok  S2 29b 'full' cache = pairwise_ours_p84v2 (same model, same complexes)
+  ok  S2 no_mhc cache covers the same complexes
+  ok  S2 no_mhc macro-AUPRC = ablations_p84v2.csv
+  ok  S2 no_tcr cache covers the same complexes
+  ok  S2 no_tcr macro-AUPRC = ablations_p84v2.csv
+  ok  S2 shuffle_tcr cache covers the same complexes
+  ok  S2 shuffle_tcr macro-AUPRC = ablations_p84v2.csv
+  ok  S2 shuffle_mhc cache covers the same complexes
+  ok  S2 shuffle_mhc macro-AUPRC = ablations_p84v2.csv
+  ok  S2 no_cdr3 cache covers the same complexes
+  ok  S2 no_cdr3 macro-AUPRC = ablations_p84v2.csv
+  ok  S2 no_germline cache covers the same complexes
+  ok  S2 no_germline macro-AUPRC = ablations_p84v2.csv
+  ok  S2 no_cross cache covers the same complexes
+  ok  S2 no_cross macro-AUPRC = ablations_p84v2.csv
+  ok  S2 dot_head cache covers the same complexes
+  ok  S2 dot_head macro-AUPRC = ablations_p84v2.csv
+  ok  S2 no_mhc: diff, CI, simultaneous interval, p and Holm p = stats_20k_seed42.tsv
+  ok  S2 no_mhc: simultaneous interval excludes zero iff Holm p < 0.05
+  ok  S2 no_tcr: diff, CI, simultaneous interval, p and Holm p = stats_20k_seed42.tsv
+  ok  S2 no_tcr: simultaneous interval excludes zero iff Holm p < 0.05
+  ok  S2 shuffle_tcr: diff, CI, simultaneous interval, p and Holm p = stats_20k_seed42.tsv
+  ok  S2 shuffle_tcr: simultaneous interval excludes zero iff Holm p < 0.05
+  ok  S2 shuffle_mhc: diff, CI, simultaneous interval, p and Holm p = stats_20k_seed42.tsv
+  ok  S2 shuffle_mhc: simultaneous interval excludes zero iff Holm p < 0.05
+  ok  S2 no_cdr3: diff, CI, simultaneous interval, p and Holm p = stats_20k_seed42.tsv
+  ok  S2 no_cdr3: simultaneous interval excludes zero iff Holm p < 0.05
+  ok  S2 no_germline: diff, CI, simultaneous interval, p and Holm p = stats_20k_seed42.tsv
+  ok  S2 no_germline: simultaneous interval excludes zero iff Holm p < 0.05
+  ok  S2 no_cross: diff, CI, simultaneous interval, p and Holm p = stats_20k_seed42.tsv
+  ok  S2 no_cross: simultaneous interval excludes zero iff Holm p < 0.05
+  ok  S2 dot_head: diff, CI, simultaneous interval, p and Holm p = stats_20k_seed42.tsv
+  ok  S2 dot_head: simultaneous interval excludes zero iff Holm p < 0.05
+wrote S2_ablations.md + S2_ablations.csv
+== S3
+  ok  S3 parameter count TCR-IMAP (pairwise) = 529,310 (CLAUDE.md / HANDOFF_1.md §7 / METHODS_DRAFT.md)
+  ok  S3 parameter count TCR-IMAP (per-residue) = 291,073 (CLAUDE.md / HANDOFF_1.md §7 / METHODS_DRAFT.md)
+  ok  S3 parameter count Struct-TCS = 336,905 (CLAUDE.md / HANDOFF_1.md §7 / METHODS_DRAFT.md)
+  ok  S3 parameter count Seq-TCS = 303,105 (CLAUDE.md / HANDOFF_1.md §7 / METHODS_DRAFT.md)
+  parameter counts: {'TCR-IMAP (pairwise)': 529310, 'TCR-IMAP (per-residue)': 291073, 'Struct-TCS': 336905, 'Seq-TCS': 303105, 'TEIM-Res': 110593, 'AngleNet': 225505}
+wrote S3_hyperparameters.md + S3_hyperparameters.csv
+== S4
+  ok  S4 identity matrix 174 x 174, metadata order (asserted by the S9 build)
+  ok  S4 18 evaluated folds parsed from B2_split_dryrun.log
+  ok  S4 random fold 0: n test and mean max similarity = leakage_audit_dual.tsv
+  ok  S4 random fold 0: maximum = percomplex_maxsim.tsv
+  ok  S4 random fold 0: per-residue train + validation = non-test complexes (B2 log)
+  ok  S4 random fold 1: n test and mean max similarity = leakage_audit_dual.tsv
+  ok  S4 random fold 1: maximum = percomplex_maxsim.tsv
+  ok  S4 random fold 1: per-residue train + validation = non-test complexes (B2 log)
+  ok  S4 random fold 2: n test and mean max similarity = leakage_audit_dual.tsv
+  ok  S4 random fold 2: maximum = percomplex_maxsim.tsv
+  ok  S4 random fold 2: per-residue train + validation = non-test complexes (B2 log)
+  ok  S4 random fold 3: n test and mean max similarity = leakage_audit_dual.tsv
+  ok  S4 random fold 3: maximum = percomplex_maxsim.tsv
+  ok  S4 random fold 3: per-residue train + validation = non-test complexes (B2 log)
+  ok  S4 random fold 4: n test and mean max similarity = leakage_audit_dual.tsv
+  ok  S4 random fold 4: maximum = percomplex_maxsim.tsv
+  ok  S4 random fold 4: per-residue train + validation = non-test complexes (B2 log)
+  ok  S4 double fold 0: n test and mean max similarity = leakage_audit_dual.tsv
+  ok  S4 double fold 0: maximum = percomplex_maxsim.tsv
+  ok  S4 double fold 0: per-residue train + validation = non-test complexes (B2 log)
+  ok  S4 double fold 1: n test and mean max similarity = leakage_audit_dual.tsv
+  ok  S4 double fold 1: maximum = percomplex_maxsim.tsv
+  ok  S4 double fold 1: per-residue train + validation = non-test complexes (B2 log)
+  ok  S4 double fold 2: n test and mean max similarity = leakage_audit_dual.tsv
+  ok  S4 double fold 2: maximum = percomplex_maxsim.tsv
+  ok  S4 double fold 2: per-residue train + validation = non-test complexes (B2 log)
+  ok  S4 allele fold 0: n test and mean max similarity = leakage_audit_dual.tsv
+  ok  S4 allele fold 0: maximum = percomplex_maxsim.tsv
+  ok  S4 allele fold 0: per-residue train + validation = non-test complexes (B2 log)
+  ok  S4 allele fold 1: n test and mean max similarity = leakage_audit_dual.tsv
+  ok  S4 allele fold 1: maximum = percomplex_maxsim.tsv
+  ok  S4 allele fold 1: per-residue train + validation = non-test complexes (B2 log)
+  ok  S4 allele fold 2: n test and mean max similarity = leakage_audit_dual.tsv
+  ok  S4 allele fold 2: maximum = percomplex_maxsim.tsv
+  ok  S4 allele fold 2: per-residue train + validation = non-test complexes (B2 log)
+  ok  S4 allele fold 3: n test and mean max similarity = leakage_audit_dual.tsv
+  ok  S4 allele fold 3: maximum = percomplex_maxsim.tsv
+  ok  S4 allele fold 4: n test and mean max similarity = leakage_audit_dual.tsv
+  ok  S4 allele fold 4: maximum = percomplex_maxsim.tsv
+  ok  S4 allele fold 4: per-residue train + validation = non-test complexes (B2 log)
+  ok  S4 temporal fold 0: n test and mean max similarity = leakage_audit_dual.tsv
+  ok  S4 temporal fold 0: maximum = percomplex_maxsim.tsv
+  ok  S4 temporal fold 0: per-residue train + validation = non-test complexes (B2 log)
+  ok  S4 tcr70 fold 0: n test and mean max similarity = leakage_audit_dual.tsv
+  ok  S4 tcr70 fold 0: maximum = percomplex_maxsim.tsv
+  ok  S4 tcr70 fold 0: per-residue train + validation = non-test complexes (B2 log)
+  ok  S4 tcr70 fold 1: n test and mean max similarity = leakage_audit_dual.tsv
+  ok  S4 tcr70 fold 1: maximum = percomplex_maxsim.tsv
+  ok  S4 tcr70 fold 1: per-residue train + validation = non-test complexes (B2 log)
+  ok  S4 tcr70 fold 2: n test and mean max similarity = leakage_audit_dual.tsv
+  ok  S4 tcr70 fold 2: maximum = percomplex_maxsim.tsv
+  ok  S4 tcr70 fold 2: per-residue train + validation = non-test complexes (B2 log)
+  ok  S4 tcr70 fold 3: n test and mean max similarity = leakage_audit_dual.tsv
+  ok  S4 tcr70 fold 3: maximum = percomplex_maxsim.tsv
+  ok  S4 tcr70 fold 3: per-residue train + validation = non-test complexes (B2 log)
+  ok  S4 tcr70 fold 4: n test and mean max similarity = leakage_audit_dual.tsv
+  ok  S4 tcr70 fold 4: maximum = percomplex_maxsim.tsv
+  ok  S4 tcr70 fold 4: per-residue train + validation = non-test complexes (B2 log)
+  ok  S4 tcr70 maximum train/test similarity = 0.696 (clustering strings)
+  ok  S4 tcr70: no cluster on both sides of any fold
+  ok  S4 coverage {'random': 174, 'double': 30, 'allele': 64, 'temporal': 60, 'tcr70': 174}
+wrote S4_protocol_folds.md + S4_protocol_folds.csv
+== S5
+  ok  S5 thresholds align
+  ok  S5 threshold 1.01: fold table = summary table, n test = sweep n
+  ok  S5 threshold 0.95: fold table = summary table, n test = sweep n
+  ok  S5 threshold 0.9: fold table = summary table, n test = sweep n
+  ok  S5 threshold 0.85: fold table = summary table, n test = sweep n
+  ok  S5 threshold 0.8: fold table = summary table, n test = sweep n
+  ok  S5 threshold 0.75: fold table = summary table, n test = sweep n
+  ok  S5 threshold 0.7: fold table = summary table, n test = sweep n
+wrote S5_identity_sweep.md + S5_identity_sweep.csv
+== S6
+  ok  S6 percomplex_tcr70_paired delta = grip − prior
+  ok  S6 5yxn p84v2 rank 12 and Δ +0.244648 = criteria document revision of 24 Oct (±0.001)
+  ok  S6 5yxn clu70 and resolution = complex_metadata
+  ok  S6 3vxs p84v2 rank 4 and Δ +0.266226 = criteria document revision of 24 Oct (±0.001)
+  ok  S6 3vxs clu70 and resolution = complex_metadata
+  ok  S6 7n1f p84v2 rank 167 and Δ -0.110461 = criteria document revision of 24 Oct (±0.001)
+  ok  S6 7n1f clu70 and resolution = complex_metadata
+  ok  S6 8eo8 p84v2 rank 154 and Δ -0.065068 = criteria document revision of 24 Oct (±0.001)
+  ok  S6 8eo8 clu70 and resolution = complex_metadata
+  ok  S6 12 replicates parsed from S2_qc_all12.log
+  ok  S6 5yxn rep1 TCR–pMHC retention 21.0 % = criteria document table (21 %) within 1.5 points
+  ok  S6 5yxn rep1: 9,001 window frames; mean backbone RMSD = summary table
+  ok  S6 5yxn rep1: complete, 10,001 frames, 0 irregular, 0 LINCS
+  ok  S6 5yxn rep2 TCR–pMHC retention 29.6 % = criteria document table (29 %) within 1.5 points
+  ok  S6 5yxn rep2: 9,001 window frames; mean backbone RMSD = summary table
+  ok  S6 5yxn rep2: complete, 10,001 frames, 0 irregular, 0 LINCS
+  ok  S6 5yxn rep3 TCR–pMHC retention 34.4 % = criteria document table (34 %) within 1.5 points
+  ok  S6 5yxn rep3: 9,001 window frames; mean backbone RMSD = summary table
+  ok  S6 5yxn rep3: complete, 10,001 frames, 0 irregular, 0 LINCS
+  ok  S6 7n1f rep1 TCR–pMHC retention 57.6 % = criteria document table (58 %) within 1.5 points
+  ok  S6 7n1f rep1: 9,001 window frames; mean backbone RMSD = summary table
+  ok  S6 7n1f rep1: complete, 10,001 frames, 0 irregular, 0 LINCS
+  ok  S6 7n1f rep2 TCR–pMHC retention 57.8 % = criteria document table (57 %) within 1.5 points
+  ok  S6 7n1f rep2: 9,001 window frames; mean backbone RMSD = summary table
+  ok  S6 7n1f rep2: complete, 10,001 frames, 0 irregular, 0 LINCS
+  ok  S6 7n1f rep3 TCR–pMHC retention 74.3 % = criteria document table (74 %) within 1.5 points
+  ok  S6 7n1f rep3: 9,001 window frames; mean backbone RMSD = summary table
+  ok  S6 7n1f rep3: complete, 10,001 frames, 0 irregular, 0 LINCS
+  ok  S6 3vxs rep1 TCR–pMHC retention 70.6 % = criteria document table (71 %) within 1.5 points
+  ok  S6 3vxs rep1: 9,001 window frames; mean backbone RMSD = summary table
+  ok  S6 3vxs rep1: complete, 10,001 frames, 0 irregular, 0 LINCS
+  ok  S6 3vxs rep2 TCR–pMHC retention 85.2 % = criteria document table (85 %) within 1.5 points
+  ok  S6 3vxs rep2: 9,001 window frames; mean backbone RMSD = summary table
+  ok  S6 3vxs rep2: complete, 10,001 frames, 0 irregular, 0 LINCS
+  ok  S6 3vxs rep3 TCR–pMHC retention 81.8 % = criteria document table (82 %) within 1.5 points
+  ok  S6 3vxs rep3: 9,001 window frames; mean backbone RMSD = summary table
+  ok  S6 3vxs rep3: complete, 10,001 frames, 0 irregular, 0 LINCS
+  ok  S6 8eo8 rep1 TCR–pMHC retention 73.3 % = criteria document table (73 %) within 1.5 points
+  ok  S6 8eo8 rep1: 9,001 window frames; mean backbone RMSD = summary table
+  ok  S6 8eo8 rep1: complete, 10,001 frames, 0 irregular, 0 LINCS
+  ok  S6 8eo8 rep2 TCR–pMHC retention 59.1 % = criteria document table (58 %) within 1.5 points
+  ok  S6 8eo8 rep2: 9,001 window frames; mean backbone RMSD = summary table
+  ok  S6 8eo8 rep2: complete, 10,001 frames, 0 irregular, 0 LINCS
+  ok  S6 8eo8 rep3 TCR–pMHC retention 74.9 % = criteria document table (75 %) within 1.5 points
+  ok  S6 8eo8 rep3: 9,001 window frames; mean backbone RMSD = summary table
+  ok  S6 8eo8 rep3: complete, 10,001 frames, 0 irregular, 0 LINCS
+  ok  S6 system mean backbone RMSD = Figure 7E caption
+wrote S6_md_selection_qc.md + S6_md_systems.csv, S6_md_replicates.csv
+== S7
+  ok  S7 all four: both scores on the same pairs
+  ok  S7 5yxn: both scores on the same pairs
+  ok  S7 7n1f: both scores on the same pairs
+  ok  S7 3vxs: both scores on the same pairs
+  ok  S7 8eo8: both scores on the same pairs
+  ok  S7 every primary and stratum row is interpretable
+  ok  S7 top-k enrichment 28–88× on 1–7 pairs (CLAUDE.md)
+wrote S7_md_occupancy.md + S7_md_rho.csv, S7_md_strata.csv, S7_md_topk.csv, S7_md_check1.csv, S7_md_docked_rho.csv, S7_md_score_score.csv
+== S8
+  ok  S8 exact twins 100/174 = handoff6_statements.tsv
+  ok  S8 twin pairs differing in peptide 123/163 = handoff6_statements.tsv
+  ok  S8 deduplication 42 removed -> 132, median NN 0.967 = handoff6_statements.tsv
+  ok  S8 helix contacts 4674 of 5294 = REBUILD_P84V2_REPORT.md step 4 (4,674 / 5,294)
+  ok  S8 β-sheet floor: 0 contacts in 595,952 resolved pairs
+wrote S8_dataset_descriptors.md + S8_dataset_descriptors.csv
+wrote INDEX.md
+PENDING:
+- S1: pairwise ROC AUC of TCR-IMAP under allele (no per-complex AUC stored; computing it means scoring stored predictions)
+- S1: pairwise ROC AUC of TCR-IMAP under double (no per-complex AUC stored; computing it means scoring stored predictions)
+- S1: pairwise ROC AUC of TCR-IMAP under random (no per-complex AUC stored; computing it means scoring stored predictions)
+- S1: pairwise ROC AUC of TCR-IMAP under temporal (no per-complex AUC stored; computing it means scoring stored predictions)
+- S1: pairwise ROC AUC of the pair-frequency prior under allele (not stored)
+- S1: pairwise ROC AUC of the pair-frequency prior under double (not stored)
+- S1: pairwise ROC AUC of the pair-frequency prior under random (not stored)
+- S1: pairwise ROC AUC of the pair-frequency prior under tcr70 (not stored)
+- S1: pairwise ROC AUC of the pair-frequency prior under temporal (not stored)

@@ -1,0 +1,17 @@
+Figure 1. Structural benchmark and sequence-based contact prediction with TCR-IMAP.
+(A) STCRDab complexes provide the structural benchmark, aligned sequence inputs and crystal-contact
+labels. The 1AO7 illustration shows the TCR variable domains, peptide and MHC-I platform; domains
+outside this interface view are omitted. TCRα is blue, TCRβ purple, MHC green and peptide magenta.
+Contacts are defined by a minimum inter-residue heavy-atom distance of 4.5 Å. Methods and within-fold
+priors are compared under frozen random and grouped partitioning protocols using paired per-complex
+metrics and cluster-bootstrap inference; the primary protocol is tcr70. Protocol definitions,
+candidate masks and per-residue comparisons are specified in Methods.
+(B) The pairwise TCR-IMAP variant embeds 75 aligned TCR rows and 84 MHC columns. Separate
+Transformer encoders produce residue representations; TCR queries attend to MHC keys and values.
+A residual connection and layer normalization update the TCR representations. The bilinear head
+combines these with the MHC representations, together with a learned positional term, scale and
+bias, and a sigmoid yields contact probabilities. The displayed prediction is the stored tcr70
+out-of-fold prediction for 1AO7, not a fabricated illustration. Grey map cells indicate unresolved
+pairs; both maps retain the original row and column order. Structural coordinates define labels
+and masks and are not input features for this sequence-based model. The separate per-residue
+variant is described in Methods.

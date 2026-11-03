@@ -1,0 +1,11 @@
+Review draft, not installed in the M3 manuscript.
+The supplied comparator figures informed the separation of study overview and model architecture,
+restrained colours, short labels and molecular context. No comparator artwork was copied.
+The original molecular illustration was ray-traced from the M3 STCRDab 1AO7 structure with PyMOL.
+All other diagram elements are editable vectors in SVG/PDF; the original molecular rendering is
+embedded raster artwork. The PyMOL session and rendering script are supplied for structural edits.
+This alternative omits all dataset counts and input/output dimensions and simplifies the architecture to a direct horizontal flow.
+The 900-dpi PNG contains 6480 × 4230 pixels. Panel letters A and B are bold; descriptive panel headings are omitted. Train and evaluate, TCR residues and MHC residues use regular weight. PDF/SVG preserve vector text and connectors.
+Scientific source: scripts/19_train_pairmap.py PairNet; frozen pairmaps_tcr70_p84v2.npz;
+complex_metadata.tsv; data/structures/stcrdab/imgt/1ao7.pdb.
+No manuscript files or M3 repository files were modified. No training or MD analysis was performed.

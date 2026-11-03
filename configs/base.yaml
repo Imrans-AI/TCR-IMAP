@@ -1,0 +1,31 @@
+project: tcr-imap
+seed: 42
+
+data:
+  processed: data/processed/pairs.parquet
+  splits_dir: data/splits
+  split: unseen_allele        # random | unseen_allele | unseen_vgene | unseen_epitope
+  negatives: shuffled         # shuffled | repertoire
+
+prior:
+  path: priors/contact_prior.npz
+  mode: learned_scale         # learned_scale | zero | permuted | uniform
+  init_gamma: 1.0
+  per_head_gamma: true
+
+model:
+  plm: esm2_t12_35M_UR50D     # frozen; upgrade to t33_650M if VRAM allows
+  freeze_plm: true
+  d_model: 256
+  n_heads: 8
+  n_layers: 3
+  dropout: 0.1
+  segment_embeddings: true    # marks CDR1/CDR2 (germline) vs CDR3
+
+train:
+  epochs: 60
+  batch_size: 64
+  lr: 3.0e-4
+  weight_decay: 0.01
+  early_stop_patience: 10
+  monitor: val_auprc

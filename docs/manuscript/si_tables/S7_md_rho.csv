@@ -1,0 +1,35 @@
+score,level,pdb,rep,n_crystal_negative,n_distinct_occupancy,n_nonzero_occupancy,n_occupancy_ge_025,rho,perm_p_approximate,interpretable
+TCR-IMAP,system,5yxn,mean of 3,4920,88,119,6,0.23635640585868786,9.999000099990002e-05,True
+TCR-IMAP,replicate,5yxn,1,4920,57,84,2,0.19844360036355504,,True
+TCR-IMAP,replicate,5yxn,2,4920,52,66,10,0.18503087710739405,,True
+TCR-IMAP,replicate,5yxn,3,4920,37,49,5,0.15533728130746055,,True
+TCR-IMAP,system,7n1f,mean of 3,4598,68,83,8,0.21869604080256888,9.999000099990002e-05,True
+TCR-IMAP,replicate,7n1f,1,4598,42,49,5,0.16738123637323465,,True
+TCR-IMAP,replicate,7n1f,2,4598,52,64,8,0.19388145227954465,,True
+TCR-IMAP,replicate,7n1f,3,4598,41,47,6,0.16856936140135276,,True
+TCR-IMAP,system,3vxs,mean of 3,5010,59,73,6,0.19537169891275363,9.999000099990002e-05,True
+TCR-IMAP,replicate,3vxs,1,5010,41,50,6,0.16362005677262825,,True
+TCR-IMAP,replicate,3vxs,2,5010,40,48,2,0.16230628862990143,,True
+TCR-IMAP,replicate,3vxs,3,5010,41,51,9,0.16469562919452352,,True
+TCR-IMAP,system,8eo8,mean of 3,5429,80,106,14,0.2130157266763185,9.999000099990002e-05,True
+TCR-IMAP,replicate,8eo8,1,5429,56,65,14,0.16578447675574087,,True
+TCR-IMAP,replicate,8eo8,2,5429,67,85,12,0.19023263640394267,,True
+TCR-IMAP,replicate,8eo8,3,5429,61,79,15,0.18028553459506538,,True
+TCR-IMAP,pooled,all four,mean of 3,19957,237,381,34,0.21602055125458866,9.999000099990002e-05,True
+pair-frequency prior,system,5yxn,mean of 3,4920,88,119,6,0.47061768573760154,9.999000099990002e-05,True
+pair-frequency prior,replicate,5yxn,1,4920,57,84,2,0.3859903639535204,,True
+pair-frequency prior,replicate,5yxn,2,4920,52,66,10,0.40120649733397645,,True
+pair-frequency prior,replicate,5yxn,3,4920,37,49,5,0.3213101448400667,,True
+pair-frequency prior,system,7n1f,mean of 3,4598,68,83,8,0.4879679922235466,9.999000099990002e-05,True
+pair-frequency prior,replicate,7n1f,1,4598,42,49,5,0.40753593558635093,,True
+pair-frequency prior,replicate,7n1f,2,4598,52,64,8,0.43457437610755795,,True
+pair-frequency prior,replicate,7n1f,3,4598,41,47,6,0.3768707775145756,,True
+pair-frequency prior,system,3vxs,mean of 3,5010,59,73,6,0.43869535154862904,9.999000099990002e-05,True
+pair-frequency prior,replicate,3vxs,1,5010,41,50,6,0.37955406715655965,,True
+pair-frequency prior,replicate,3vxs,2,5010,40,48,2,0.35984270165688126,,True
+pair-frequency prior,replicate,3vxs,3,5010,41,51,9,0.38342034252248336,,True
+pair-frequency prior,system,8eo8,mean of 3,5429,80,106,14,0.3932402090956163,9.999000099990002e-05,True
+pair-frequency prior,replicate,8eo8,1,5429,56,65,14,0.3235275231027626,,True
+pair-frequency prior,replicate,8eo8,2,5429,67,85,12,0.3602114432416296,,True
+pair-frequency prior,replicate,8eo8,3,5429,61,79,15,0.33187889690857214,,True
+pair-frequency prior,pooled,all four,mean of 3,19957,237,381,34,0.4410192233658774,9.999000099990002e-05,True

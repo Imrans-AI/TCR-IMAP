@@ -1,0 +1,15 @@
+# Every run here must exist before the paper is written.
+# The permuted-prior control is the single most important row.
+ablations:
+  - name: full
+    prior.mode: learned_scale
+  - name: no_prior
+    prior.mode: zero
+  - name: permuted_prior      # same statistics, wrong geometry — the key control
+    prior.mode: permuted
+  - name: uniform_prior
+    prior.mode: uniform
+  - name: cdr3_only
+    model.use_germline_loops: false
+  - name: no_mhc
+    model.use_mhc: false

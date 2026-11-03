@@ -1,0 +1,1115 @@
+{
+ "table": {
+  "TRAV1-1*01": {
+   "chain": "A",
+   "cdr1": "TSGFYG",
+   "cdr2": "NALDGL"
+  },
+  "TRAV1-2*01": {
+   "chain": "A",
+   "cdr1": "TSGFNG",
+   "cdr2": "NVLDGL"
+  },
+  "TRAV1-2*03": {
+   "chain": "A",
+   "cdr1": "TSGFNG",
+   "cdr2": "NVLDGL"
+  },
+  "TRAV10*01": {
+   "chain": "A",
+   "cdr1": "VSPFSN",
+   "cdr2": "MTFSENT"
+  },
+  "TRAV10*02": {
+   "chain": "A",
+   "cdr1": "VSPFSN",
+   "cdr2": "MTFSENT"
+  },
+  "TRAV12-1*01": {
+   "chain": "A",
+   "cdr1": "NSASQS",
+   "cdr2": "VYSSGN"
+  },
+  "TRAV12-2*01": {
+   "chain": "A",
+   "cdr1": "DRGSQS",
+   "cdr2": "IYSNGD"
+  },
+  "TRAV12-3*01": {
+   "chain": "A",
+   "cdr1": "NSAFQY",
+   "cdr2": "TYSSGN"
+  },
+  "TRAV13-1*01": {
+   "chain": "A",
+   "cdr1": "DSASNY",
+   "cdr2": "IRSNVGE"
+  },
+  "TRAV13-2*01": {
+   "chain": "A",
+   "cdr1": "NSASDY",
+   "cdr2": "IRSNMDK"
+  },
+  "TRAV14/DV4*01": {
+   "chain": "A",
+   "cdr1": "TSDPSYG",
+   "cdr2": "QGSYDQQN"
+  },
+  "TRAV14/DV4*02": {
+   "chain": "A",
+   "cdr1": "TSDQSYG",
+   "cdr2": "QGSYDEQN"
+  },
+  "TRAV16*01": {
+   "chain": "A",
+   "cdr1": "YSGSPE",
+   "cdr2": "HISR"
+  },
+  "TRAV17*01": {
+   "chain": "A",
+   "cdr1": "TSINN",
+   "cdr2": "IRSNERE"
+  },
+  "TRAV18*01": {
+   "chain": "A",
+   "cdr1": "SSYSTF",
+   "cdr2": "SSENQE"
+  },
+  "TRAV19*01": {
+   "chain": "A",
+   "cdr1": "TRDTTYY",
+   "cdr2": "RNSFDEQN"
+  },
+  "TRAV2*01": {
+   "chain": "A",
+   "cdr1": "VSNAYN",
+   "cdr2": "GSKP"
+  },
+  "TRAV20*01": {
+   "chain": "A",
+   "cdr1": "VSGLRG",
+   "cdr2": "LYSAGEE"
+  },
+  "TRAV20*02": {
+   "chain": "A",
+   "cdr1": "VSGLRG",
+   "cdr2": "LYSAGEE"
+  },
+  "TRAV21*01": {
+   "chain": "A",
+   "cdr1": "DSAIYN",
+   "cdr2": "IQSSQRE"
+  },
+  "TRAV22*01": {
+   "chain": "A",
+   "cdr1": "DSVNN",
+   "cdr2": "IPSGT"
+  },
+  "TRAV23/DV6*01": {
+   "chain": "A",
+   "cdr1": "NTAFDY",
+   "cdr2": "IRPDVSE"
+  },
+  "TRAV23/DV6*05": {
+   "chain": "A",
+   "cdr1": "NTAFDY",
+   "cdr2": "IRPDVSE"
+  },
+  "TRAV24*01": {
+   "chain": "A",
+   "cdr1": "SSNFYA",
+   "cdr2": "MTLNGDE"
+  },
+  "TRAV25*01": {
+   "chain": "A",
+   "cdr1": "TTLSN",
+   "cdr2": "LVKSGEV"
+  },
+  "TRAV26-1*01": {
+   "chain": "A",
+   "cdr1": "TISGNEY",
+   "cdr2": "GLKNN"
+  },
+  "TRAV26-1*02": {
+   "chain": "A",
+   "cdr1": "TISGNEY",
+   "cdr2": "GLKNN"
+  },
+  "TRAV26-2*01": {
+   "chain": "A",
+   "cdr1": "TISGTDY",
+   "cdr2": "GLTSN"
+  },
+  "TRAV27*01": {
+   "chain": "A",
+   "cdr1": "SVFSS",
+   "cdr2": "VVTGGEV"
+  },
+  "TRAV27*03": {
+   "chain": "A",
+   "cdr1": "SVFSS",
+   "cdr2": "VVTGGEV"
+  },
+  "TRAV29/DV5*01": {
+   "chain": "A",
+   "cdr1": "NSMFDY",
+   "cdr2": "ISSIKDK"
+  },
+  "TRAV29/DV5*02": {
+   "chain": "A",
+   "cdr1": "NSMFDY",
+   "cdr2": "ISSIKDK"
+  },
+  "TRAV29/DV5*04": {
+   "chain": "A",
+   "cdr1": "NSMFDY",
+   "cdr2": "ISSIKDK"
+  },
+  "TRAV3*01": {
+   "chain": "A",
+   "cdr1": "VSGNPY",
+   "cdr2": "YITGDNLV"
+  },
+  "TRAV30*01": {
+   "chain": "A",
+   "cdr1": "KALYS",
+   "cdr2": "LLKGGEQ"
+  },
+  "TRAV30*05": {
+   "chain": "A",
+   "cdr1": "KALYS",
+   "cdr2": "LLKGGEQ"
+  },
+  "TRAV34*01": {
+   "chain": "A",
+   "cdr1": "KTLYG",
+   "cdr2": "LQKGGEE"
+  },
+  "TRAV35*01": {
+   "chain": "A",
+   "cdr1": "SIFNT",
+   "cdr2": "LYKAGEL"
+  },
+  "TRAV36/DV7*01": {
+   "chain": "A",
+   "cdr1": "VTNFRS",
+   "cdr2": "LTSSGIE"
+  },
+  "TRAV36/DV7*05": {
+   "chain": "A",
+   "cdr1": "VTNFRS",
+   "cdr2": "LTSSGIE"
+  },
+  "TRAV38-1*01": {
+   "chain": "A",
+   "cdr1": "TSENNYY",
+   "cdr2": "QEAYKQQN"
+  },
+  "TRAV38-2/DV8*01": {
+   "chain": "A",
+   "cdr1": "TSESDYY",
+   "cdr2": "QEAYKQQN"
+  },
+  "TRAV39*01": {
+   "chain": "A",
+   "cdr1": "TTSDR",
+   "cdr2": "LLSNGAV"
+  },
+  "TRAV4*01": {
+   "chain": "A",
+   "cdr1": "NIATNDY",
+   "cdr2": "GYKTK"
+  },
+  "TRAV40*01": {
+   "chain": "A",
+   "cdr1": "STGYPT",
+   "cdr2": "ETME"
+  },
+  "TRAV41*01": {
+   "chain": "A",
+   "cdr1": "VGISA",
+   "cdr2": "LSSGK"
+  },
+  "TRAV5*01": {
+   "chain": "A",
+   "cdr1": "DSSSTY",
+   "cdr2": "IFSNMDM"
+  },
+  "TRAV6*01": {
+   "chain": "A",
+   "cdr1": "NYSPAY",
+   "cdr2": "IRENEKE"
+  },
+  "TRAV6*07": {
+   "chain": "A",
+   "cdr1": "NYSPAY",
+   "cdr2": "IRENEKE"
+  },
+  "TRAV7*01": {
+   "chain": "A",
+   "cdr1": "VSRFNN",
+   "cdr2": "MYSAGYE"
+  },
+  "TRAV8-1*01": {
+   "chain": "A",
+   "cdr1": "YGGTVN",
+   "cdr2": "YFSGDPLV"
+  },
+  "TRAV8-2*01": {
+   "chain": "A",
+   "cdr1": "SSYSPS",
+   "cdr2": "YTSAATLV"
+  },
+  "TRAV8-2*03": {
+   "chain": "A",
+   "cdr1": "SSYSPS",
+   "cdr2": "YTSAATLV"
+  },
+  "TRAV8-3*01": {
+   "chain": "A",
+   "cdr1": "YGATPY",
+   "cdr2": "YFSGDTLV"
+  },
+  "TRAV8-4*01": {
+   "chain": "A",
+   "cdr1": "SSVPPY",
+   "cdr2": "YTSAATLV"
+  },
+  "TRAV8-6*01": {
+   "chain": "A",
+   "cdr1": "SSVSVY",
+   "cdr2": "YLSGSTLV"
+  },
+  "TRAV8-6*02": {
+   "chain": "A",
+   "cdr1": "SSVSVY",
+   "cdr2": "YLSGSTLV"
+  },
+  "TRAV9-1*01": {
+   "chain": "A",
+   "cdr1": "TTQYPS",
+   "cdr2": "AMKANDK"
+  },
+  "TRAV9-2*01": {
+   "chain": "A",
+   "cdr1": "ATGYPS",
+   "cdr2": "ATKADDK"
+  },
+  "TRAV9-2*02": {
+   "chain": "A",
+   "cdr1": "ATGYPS",
+   "cdr2": "ATKADDK"
+  },
+  "TRBV10-1*01": {
+   "chain": "B",
+   "cdr1": "WNHNN",
+   "cdr2": "SYGVQD"
+  },
+  "TRBV10-1*02": {
+   "chain": "B",
+   "cdr1": "WNHNN",
+   "cdr2": "SYGVHD"
+  },
+  "TRBV10-2*01": {
+   "chain": "B",
+   "cdr1": "WSHSY",
+   "cdr2": "SAAADI"
+  },
+  "TRBV10-2*02": {
+   "chain": "B",
+   "cdr1": "WSHSY",
+   "cdr2": "SAAADI"
+  },
+  "TRBV10-3*01": {
+   "chain": "B",
+   "cdr1": "ENHRY",
+   "cdr2": "SYGVKD"
+  },
+  "TRBV10-3*02": {
+   "chain": "B",
+   "cdr1": "ENHRY",
+   "cdr2": "SYGVKD"
+  },
+  "TRBV11-1*01": {
+   "chain": "B",
+   "cdr1": "SGHAT",
+   "cdr2": "FQDESV"
+  },
+  "TRBV11-2*01": {
+   "chain": "B",
+   "cdr1": "SGHAT",
+   "cdr2": "FQNNGV"
+  },
+  "TRBV11-2*03": {
+   "chain": "B",
+   "cdr1": "SGHAT",
+   "cdr2": "FQNNGV"
+  },
+  "TRBV11-3*01": {
+   "chain": "B",
+   "cdr1": "SGHNT",
+   "cdr2": "YENEEA"
+  },
+  "TRBV12-3*01": {
+   "chain": "B",
+   "cdr1": "SGHNS",
+   "cdr2": "FNNNVP"
+  },
+  "TRBV12-4*01": {
+   "chain": "B",
+   "cdr1": "SGHDY",
+   "cdr2": "FNNNVP"
+  },
+  "TRBV12-5*01": {
+   "chain": "B",
+   "cdr1": "LGHNT",
+   "cdr2": "FRNRAP"
+  },
+  "TRBV13*01": {
+   "chain": "B",
+   "cdr1": "PRHDT",
+   "cdr2": "FYEKMQ"
+  },
+  "TRBV14*01": {
+   "chain": "B",
+   "cdr1": "SGHDN",
+   "cdr2": "FVKESK"
+  },
+  "TRBV15*01": {
+   "chain": "B",
+   "cdr1": "LNHNV",
+   "cdr2": "YYDKDF"
+  },
+  "TRBV15*02": {
+   "chain": "B",
+   "cdr1": "LNHNV",
+   "cdr2": "YYDKDF"
+  },
+  "TRBV16*01": {
+   "chain": "B",
+   "cdr1": "KGHSY",
+   "cdr2": "FQNENV"
+  },
+  "TRBV18*01": {
+   "chain": "B",
+   "cdr1": "KGHSH",
+   "cdr2": "LQKENI"
+  },
+  "TRBV19*01": {
+   "chain": "B",
+   "cdr1": "LNHDA",
+   "cdr2": "SQIVND"
+  },
+  "TRBV19*02": {
+   "chain": "B",
+   "cdr1": "LNHDA",
+   "cdr2": "SHIVND"
+  },
+  "TRBV2*01": {
+   "chain": "B",
+   "cdr1": "SNHLY",
+   "cdr2": "FYNNEI"
+  },
+  "TRBV20-1*01": {
+   "chain": "B",
+   "cdr1": "DFQATT",
+   "cdr2": "SNEGSKA"
+  },
+  "TRBV24-1*01": {
+   "chain": "B",
+   "cdr1": "KGHDR",
+   "cdr2": "SFDVKD"
+  },
+  "TRBV24-1*02": {
+   "chain": "B",
+   "cdr1": "KGHDR",
+   "cdr2": "SFDVKD"
+  },
+  "TRBV25-1*01": {
+   "chain": "B",
+   "cdr1": "MGHDK",
+   "cdr2": "SYGVNS"
+  },
+  "TRBV27*01": {
+   "chain": "B",
+   "cdr1": "MNHEY",
+   "cdr2": "SMNVEV"
+  },
+  "TRBV28*01": {
+   "chain": "B",
+   "cdr1": "MDHEN",
+   "cdr2": "SYDVKM"
+  },
+  "TRBV29-1*01": {
+   "chain": "B",
+   "cdr1": "SQVTM",
+   "cdr2": "ANQGSEA"
+  },
+  "TRBV3-1*01": {
+   "chain": "B",
+   "cdr1": "LGHDT",
+   "cdr2": "YNNKEL"
+  },
+  "TRBV30*02": {
+   "chain": "B",
+   "cdr1": "GTSNPN",
+   "cdr2": "SVGIG"
+  },
+  "TRBV4-1*01": {
+   "chain": "B",
+   "cdr1": "MGHRA",
+   "cdr2": "YSYEKL"
+  },
+  "TRBV4-2*01": {
+   "chain": "B",
+   "cdr1": "LGHNA",
+   "cdr2": "YNFKEQ"
+  },
+  "TRBV4-3*01": {
+   "chain": "B",
+   "cdr1": "LGHNA",
+   "cdr2": "YSLEER"
+  },
+  "TRBV5-1*01": {
+   "chain": "B",
+   "cdr1": "SGHRS",
+   "cdr2": "YFSETQ"
+  },
+  "TRBV5-4*01": {
+   "chain": "B",
+   "cdr1": "SGHNT",
+   "cdr2": "YYREEE"
+  },
+  "TRBV5-5*01": {
+   "chain": "B",
+   "cdr1": "SGHKS",
+   "cdr2": "YYEKEE"
+  },
+  "TRBV5-6*01": {
+   "chain": "B",
+   "cdr1": "SGHDT",
+   "cdr2": "YYEEEE"
+  },
+  "TRBV5-8*01": {
+   "chain": "B",
+   "cdr1": "SGHTS",
+   "cdr2": "YDEGEE"
+  },
+  "TRBV6-1*01": {
+   "chain": "B",
+   "cdr1": "MNHNS",
+   "cdr2": "SASEGT"
+  },
+  "TRBV6-2*01": {
+   "chain": "B",
+   "cdr1": "MNHEY",
+   "cdr2": "SVGEGT"
+  },
+  "TRBV6-3*01": {
+   "chain": "B",
+   "cdr1": "MNHEY",
+   "cdr2": "SVGEGT"
+  },
+  "TRBV6-4*01": {
+   "chain": "B",
+   "cdr1": "MRHNA",
+   "cdr2": "SNTAGT"
+  },
+  "TRBV6-4*02": {
+   "chain": "B",
+   "cdr1": "MRHNA",
+   "cdr2": "SNTAGT"
+  },
+  "TRBV6-5*01": {
+   "chain": "B",
+   "cdr1": "MNHEY",
+   "cdr2": "SVGAGI"
+  },
+  "TRBV6-6*01": {
+   "chain": "B",
+   "cdr1": "MNHNY",
+   "cdr2": "SVGAGI"
+  },
+  "TRBV6-6*02": {
+   "chain": "B",
+   "cdr1": "MNHNY",
+   "cdr2": "SVGAGI"
+  },
+  "TRBV6-8*01": {
+   "chain": "B",
+   "cdr1": "MNHGY",
+   "cdr2": "SAAAGT"
+  },
+  "TRBV6-9*01": {
+   "chain": "B",
+   "cdr1": "MNHGY",
+   "cdr2": "SVAAGI"
+  },
+  "TRBV7-2*01": {
+   "chain": "B",
+   "cdr1": "SGHTA",
+   "cdr2": "FQGNSA"
+  },
+  "TRBV7-2*02": {
+   "chain": "B",
+   "cdr1": "SGHTA",
+   "cdr2": "FQGNSA"
+  },
+  "TRBV7-2*03": {
+   "chain": "B",
+   "cdr1": "SGHTA",
+   "cdr2": "FQGNSA"
+  },
+  "TRBV7-3*01": {
+   "chain": "B",
+   "cdr1": "SGHTA",
+   "cdr2": "FQGTGA"
+  },
+  "TRBV7-4*01": {
+   "chain": "B",
+   "cdr1": "SGHVT",
+   "cdr2": "SQSDAQ"
+  },
+  "TRBV7-6*01": {
+   "chain": "B",
+   "cdr1": "SGHVS",
+   "cdr2": "FNYEAQ"
+  },
+  "TRBV7-7*01": {
+   "chain": "B",
+   "cdr1": "SSHAT",
+   "cdr2": "FNYEAQ"
+  },
+  "TRBV7-8*01": {
+   "chain": "B",
+   "cdr1": "SGHVS",
+   "cdr2": "FQNEAQ"
+  },
+  "TRBV7-8*02": {
+   "chain": "B",
+   "cdr1": "SGHVS",
+   "cdr2": "FQNEAQ"
+  },
+  "TRBV7-9*01": {
+   "chain": "B",
+   "cdr1": "SEHNR",
+   "cdr2": "FQNEAQ"
+  },
+  "TRBV7-9*03": {
+   "chain": "B",
+   "cdr1": "SEHNR",
+   "cdr2": "FQNEAQ"
+  },
+  "TRBV9*01": {
+   "chain": "B",
+   "cdr1": "SGDLS",
+   "cdr2": "YYNGEE"
+  },
+  "TRBV9*02": {
+   "chain": "B",
+   "cdr1": "SGDLS",
+   "cdr2": "YYNGEE"
+  }
+ },
+ "gene_level": {
+  "TRAV1-1": {
+   "chain": "A",
+   "cdr1": "TSGFYG",
+   "cdr2": "NALDGL"
+  },
+  "TRAV1-2": {
+   "chain": "A",
+   "cdr1": "TSGFNG",
+   "cdr2": "NVLDGL"
+  },
+  "TRAV10": {
+   "chain": "A",
+   "cdr1": "VSPFSN",
+   "cdr2": "MTFSENT"
+  },
+  "TRAV12-1": {
+   "chain": "A",
+   "cdr1": "NSASQS",
+   "cdr2": "VYSSGN"
+  },
+  "TRAV12-2": {
+   "chain": "A",
+   "cdr1": "DRGSQS",
+   "cdr2": "IYSNGD"
+  },
+  "TRAV12-3": {
+   "chain": "A",
+   "cdr1": "NSAFQY",
+   "cdr2": "TYSSGN"
+  },
+  "TRAV13-1": {
+   "chain": "A",
+   "cdr1": "DSASNY",
+   "cdr2": "IRSNVGE"
+  },
+  "TRAV13-2": {
+   "chain": "A",
+   "cdr1": "NSASDY",
+   "cdr2": "IRSNMDK"
+  },
+  "TRAV14/DV4": {
+   "chain": "A",
+   "cdr1": "TSDPSYG",
+   "cdr2": "QGSYDQQN"
+  },
+  "TRAV16": {
+   "chain": "A",
+   "cdr1": "YSGSPE",
+   "cdr2": "HISR"
+  },
+  "TRAV17": {
+   "chain": "A",
+   "cdr1": "TSINN",
+   "cdr2": "IRSNERE"
+  },
+  "TRAV18": {
+   "chain": "A",
+   "cdr1": "SSYSTF",
+   "cdr2": "SSENQE"
+  },
+  "TRAV19": {
+   "chain": "A",
+   "cdr1": "TRDTTYY",
+   "cdr2": "RNSFDEQN"
+  },
+  "TRAV2": {
+   "chain": "A",
+   "cdr1": "VSNAYN",
+   "cdr2": "GSKP"
+  },
+  "TRAV20": {
+   "chain": "A",
+   "cdr1": "VSGLRG",
+   "cdr2": "LYSAGEE"
+  },
+  "TRAV21": {
+   "chain": "A",
+   "cdr1": "DSAIYN",
+   "cdr2": "IQSSQRE"
+  },
+  "TRAV22": {
+   "chain": "A",
+   "cdr1": "DSVNN",
+   "cdr2": "IPSGT"
+  },
+  "TRAV23/DV6": {
+   "chain": "A",
+   "cdr1": "NTAFDY",
+   "cdr2": "IRPDVSE"
+  },
+  "TRAV24": {
+   "chain": "A",
+   "cdr1": "SSNFYA",
+   "cdr2": "MTLNGDE"
+  },
+  "TRAV25": {
+   "chain": "A",
+   "cdr1": "TTLSN",
+   "cdr2": "LVKSGEV"
+  },
+  "TRAV26-1": {
+   "chain": "A",
+   "cdr1": "TISGNEY",
+   "cdr2": "GLKNN"
+  },
+  "TRAV26-2": {
+   "chain": "A",
+   "cdr1": "TISGTDY",
+   "cdr2": "GLTSN"
+  },
+  "TRAV27": {
+   "chain": "A",
+   "cdr1": "SVFSS",
+   "cdr2": "VVTGGEV"
+  },
+  "TRAV29/DV5": {
+   "chain": "A",
+   "cdr1": "NSMFDY",
+   "cdr2": "ISSIKDK"
+  },
+  "TRAV3": {
+   "chain": "A",
+   "cdr1": "VSGNPY",
+   "cdr2": "YITGDNLV"
+  },
+  "TRAV30": {
+   "chain": "A",
+   "cdr1": "KALYS",
+   "cdr2": "LLKGGEQ"
+  },
+  "TRAV34": {
+   "chain": "A",
+   "cdr1": "KTLYG",
+   "cdr2": "LQKGGEE"
+  },
+  "TRAV35": {
+   "chain": "A",
+   "cdr1": "SIFNT",
+   "cdr2": "LYKAGEL"
+  },
+  "TRAV36/DV7": {
+   "chain": "A",
+   "cdr1": "VTNFRS",
+   "cdr2": "LTSSGIE"
+  },
+  "TRAV38-1": {
+   "chain": "A",
+   "cdr1": "TSENNYY",
+   "cdr2": "QEAYKQQN"
+  },
+  "TRAV38-2/DV8": {
+   "chain": "A",
+   "cdr1": "TSESDYY",
+   "cdr2": "QEAYKQQN"
+  },
+  "TRAV39": {
+   "chain": "A",
+   "cdr1": "TTSDR",
+   "cdr2": "LLSNGAV"
+  },
+  "TRAV4": {
+   "chain": "A",
+   "cdr1": "NIATNDY",
+   "cdr2": "GYKTK"
+  },
+  "TRAV40": {
+   "chain": "A",
+   "cdr1": "STGYPT",
+   "cdr2": "ETME"
+  },
+  "TRAV41": {
+   "chain": "A",
+   "cdr1": "VGISA",
+   "cdr2": "LSSGK"
+  },
+  "TRAV5": {
+   "chain": "A",
+   "cdr1": "DSSSTY",
+   "cdr2": "IFSNMDM"
+  },
+  "TRAV6": {
+   "chain": "A",
+   "cdr1": "NYSPAY",
+   "cdr2": "IRENEKE"
+  },
+  "TRAV7": {
+   "chain": "A",
+   "cdr1": "VSRFNN",
+   "cdr2": "MYSAGYE"
+  },
+  "TRAV8-1": {
+   "chain": "A",
+   "cdr1": "YGGTVN",
+   "cdr2": "YFSGDPLV"
+  },
+  "TRAV8-2": {
+   "chain": "A",
+   "cdr1": "SSYSPS",
+   "cdr2": "YTSAATLV"
+  },
+  "TRAV8-3": {
+   "chain": "A",
+   "cdr1": "YGATPY",
+   "cdr2": "YFSGDTLV"
+  },
+  "TRAV8-4": {
+   "chain": "A",
+   "cdr1": "SSVPPY",
+   "cdr2": "YTSAATLV"
+  },
+  "TRAV8-6": {
+   "chain": "A",
+   "cdr1": "SSVSVY",
+   "cdr2": "YLSGSTLV"
+  },
+  "TRAV9-1": {
+   "chain": "A",
+   "cdr1": "TTQYPS",
+   "cdr2": "AMKANDK"
+  },
+  "TRAV9-2": {
+   "chain": "A",
+   "cdr1": "ATGYPS",
+   "cdr2": "ATKADDK"
+  },
+  "TRBV10-1": {
+   "chain": "B",
+   "cdr1": "WNHNN",
+   "cdr2": "SYGVQD"
+  },
+  "TRBV10-2": {
+   "chain": "B",
+   "cdr1": "WSHSY",
+   "cdr2": "SAAADI"
+  },
+  "TRBV10-3": {
+   "chain": "B",
+   "cdr1": "ENHRY",
+   "cdr2": "SYGVKD"
+  },
+  "TRBV11-1": {
+   "chain": "B",
+   "cdr1": "SGHAT",
+   "cdr2": "FQDESV"
+  },
+  "TRBV11-2": {
+   "chain": "B",
+   "cdr1": "SGHAT",
+   "cdr2": "FQNNGV"
+  },
+  "TRBV11-3": {
+   "chain": "B",
+   "cdr1": "SGHNT",
+   "cdr2": "YENEEA"
+  },
+  "TRBV12-3": {
+   "chain": "B",
+   "cdr1": "SGHNS",
+   "cdr2": "FNNNVP"
+  },
+  "TRBV12-4": {
+   "chain": "B",
+   "cdr1": "SGHDY",
+   "cdr2": "FNNNVP"
+  },
+  "TRBV12-5": {
+   "chain": "B",
+   "cdr1": "LGHNT",
+   "cdr2": "FRNRAP"
+  },
+  "TRBV13": {
+   "chain": "B",
+   "cdr1": "PRHDT",
+   "cdr2": "FYEKMQ"
+  },
+  "TRBV14": {
+   "chain": "B",
+   "cdr1": "SGHDN",
+   "cdr2": "FVKESK"
+  },
+  "TRBV15": {
+   "chain": "B",
+   "cdr1": "LNHNV",
+   "cdr2": "YYDKDF"
+  },
+  "TRBV16": {
+   "chain": "B",
+   "cdr1": "KGHSY",
+   "cdr2": "FQNENV"
+  },
+  "TRBV18": {
+   "chain": "B",
+   "cdr1": "KGHSH",
+   "cdr2": "LQKENI"
+  },
+  "TRBV19": {
+   "chain": "B",
+   "cdr1": "LNHDA",
+   "cdr2": "SQIVND"
+  },
+  "TRBV2": {
+   "chain": "B",
+   "cdr1": "SNHLY",
+   "cdr2": "FYNNEI"
+  },
+  "TRBV20-1": {
+   "chain": "B",
+   "cdr1": "DFQATT",
+   "cdr2": "SNEGSKA"
+  },
+  "TRBV24-1": {
+   "chain": "B",
+   "cdr1": "KGHDR",
+   "cdr2": "SFDVKD"
+  },
+  "TRBV25-1": {
+   "chain": "B",
+   "cdr1": "MGHDK",
+   "cdr2": "SYGVNS"
+  },
+  "TRBV27": {
+   "chain": "B",
+   "cdr1": "MNHEY",
+   "cdr2": "SMNVEV"
+  },
+  "TRBV28": {
+   "chain": "B",
+   "cdr1": "MDHEN",
+   "cdr2": "SYDVKM"
+  },
+  "TRBV29-1": {
+   "chain": "B",
+   "cdr1": "SQVTM",
+   "cdr2": "ANQGSEA"
+  },
+  "TRBV3-1": {
+   "chain": "B",
+   "cdr1": "LGHDT",
+   "cdr2": "YNNKEL"
+  },
+  "TRBV30": {
+   "chain": "B",
+   "cdr1": "GTSNPN",
+   "cdr2": "SVGIG"
+  },
+  "TRBV4-1": {
+   "chain": "B",
+   "cdr1": "MGHRA",
+   "cdr2": "YSYEKL"
+  },
+  "TRBV4-2": {
+   "chain": "B",
+   "cdr1": "LGHNA",
+   "cdr2": "YNFKEQ"
+  },
+  "TRBV4-3": {
+   "chain": "B",
+   "cdr1": "LGHNA",
+   "cdr2": "YSLEER"
+  },
+  "TRBV5-1": {
+   "chain": "B",
+   "cdr1": "SGHRS",
+   "cdr2": "YFSETQ"
+  },
+  "TRBV5-4": {
+   "chain": "B",
+   "cdr1": "SGHNT",
+   "cdr2": "YYREEE"
+  },
+  "TRBV5-5": {
+   "chain": "B",
+   "cdr1": "SGHKS",
+   "cdr2": "YYEKEE"
+  },
+  "TRBV5-6": {
+   "chain": "B",
+   "cdr1": "SGHDT",
+   "cdr2": "YYEEEE"
+  },
+  "TRBV5-8": {
+   "chain": "B",
+   "cdr1": "SGHTS",
+   "cdr2": "YDEGEE"
+  },
+  "TRBV6-1": {
+   "chain": "B",
+   "cdr1": "MNHNS",
+   "cdr2": "SASEGT"
+  },
+  "TRBV6-2": {
+   "chain": "B",
+   "cdr1": "MNHEY",
+   "cdr2": "SVGEGT"
+  },
+  "TRBV6-3": {
+   "chain": "B",
+   "cdr1": "MNHEY",
+   "cdr2": "SVGEGT"
+  },
+  "TRBV6-4": {
+   "chain": "B",
+   "cdr1": "MRHNA",
+   "cdr2": "SNTAGT"
+  },
+  "TRBV6-5": {
+   "chain": "B",
+   "cdr1": "MNHEY",
+   "cdr2": "SVGAGI"
+  },
+  "TRBV6-6": {
+   "chain": "B",
+   "cdr1": "MNHNY",
+   "cdr2": "SVGAGI"
+  },
+  "TRBV6-8": {
+   "chain": "B",
+   "cdr1": "MNHGY",
+   "cdr2": "SAAAGT"
+  },
+  "TRBV6-9": {
+   "chain": "B",
+   "cdr1": "MNHGY",
+   "cdr2": "SVAAGI"
+  },
+  "TRBV7-2": {
+   "chain": "B",
+   "cdr1": "SGHTA",
+   "cdr2": "FQGNSA"
+  },
+  "TRBV7-3": {
+   "chain": "B",
+   "cdr1": "SGHTA",
+   "cdr2": "FQGTGA"
+  },
+  "TRBV7-4": {
+   "chain": "B",
+   "cdr1": "SGHVT",
+   "cdr2": "SQSDAQ"
+  },
+  "TRBV7-6": {
+   "chain": "B",
+   "cdr1": "SGHVS",
+   "cdr2": "FNYEAQ"
+  },
+  "TRBV7-7": {
+   "chain": "B",
+   "cdr1": "SSHAT",
+   "cdr2": "FNYEAQ"
+  },
+  "TRBV7-8": {
+   "chain": "B",
+   "cdr1": "SGHVS",
+   "cdr2": "FQNEAQ"
+  },
+  "TRBV7-9": {
+   "chain": "B",
+   "cdr1": "SEHNR",
+   "cdr2": "FQNEAQ"
+  },
+  "TRBV9": {
+   "chain": "B",
+   "cdr1": "SGDLS",
+   "cdr2": "YYNGEE"
+  }
+ },
+ "alias": {
+  "TRAV1": "TRAV1-1",
+  "TRAV12": "TRAV12-1",
+  "TRAV13": "TRAV13-1",
+  "TRAV14": "TRAV14/DV4",
+  "TRAV14DV4": "TRAV14/DV4",
+  "TRAV14-1": "TRAV14/DV4",
+  "TRAV23": "TRAV23/DV6",
+  "TRAV23DV6": "TRAV23/DV6",
+  "TRAV23-1": "TRAV23/DV6",
+  "TRAV26": "TRAV26-1",
+  "TRAV29": "TRAV29/DV5",
+  "TRAV29DV5": "TRAV29/DV5",
+  "TRAV29-1": "TRAV29/DV5",
+  "TRAV36": "TRAV36/DV7",
+  "TRAV36DV7": "TRAV36/DV7",
+  "TRAV36-1": "TRAV36/DV7",
+  "TRAV38": "TRAV38-1",
+  "TRAV38-2": "TRAV38-2/DV8",
+  "TRAV38-2DV8": "TRAV38-2/DV8",
+  "TRAV38-2-1": "TRAV38-2/DV8",
+  "TRAV8": "TRAV8-1",
+  "TRAV9": "TRAV9-1",
+  "TRBV10": "TRBV10-1",
+  "TRBV11": "TRBV11-1",
+  "TRBV20": "TRBV20-1",
+  "TRBV24": "TRBV24-1",
+  "TRBV25": "TRBV25-1",
+  "TRBV29": "TRBV29-1",
+  "TRBV3": "TRBV3-1",
+  "TRBV4": "TRBV4-1",
+  "TRBV5": "TRBV5-1",
+  "TRBV6": "TRBV6-1"
+ }
+}

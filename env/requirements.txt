@@ -1,0 +1,19 @@
+# pip equivalent of env/environment.yml, for a plain virtualenv on Python 3.10.
+# Analysis and figures need only the first block; torch is required to retrain.
+numpy==1.26.4
+pandas==2.3.3
+scipy==1.15.2
+scikit-learn==1.7.2
+matplotlib==3.10.8
+biopython==1.81
+pyarrow==23.0.1
+PyYAML==6.0
+tqdm==4.68.3
+Pillow==12.2.0
+fonttools==4.62.1
+MDAnalysis==2.9.0
+Levenshtein==0.27.3
+rapidfuzz==3.14.3
+
+# retraining only (pick the build matching your CUDA, or the CPU wheel)
+torch==2.10.0

@@ -1,0 +1,63 @@
+
+=== 5yxn  G1 PASS ===
+  chains: TCRa A->PROC, TCRb B->PROB, MHC C->PROD, b2m D->PROE, pep I->PROA
+  TCRa A->PROC: crystal 192, MD 192, aligned 192, type mismatches 0, crystal-only [-], MD-only (modelled) [-]
+  TCRb B->PROB: crystal 241, MD 241, aligned 241, type mismatches 0, crystal-only [-], MD-only (modelled) [-]
+  MHC  C->PROD: crystal 275, MD 275, aligned 275, type mismatches 0, crystal-only [-], MD-only (modelled) [-]
+  b2m  D->PROE: crystal 96, MD 96, aligned 96, type mismatches 0, crystal-only [-], MD-only (modelled) [-]
+  pep  I->PROA: crystal 10, MD 10, aligned 10, type mismatches 0, crystal-only [-], MD-only (modelled) [-]
+  superposition of all aligned CA: rmsd 0.0005 A; mapped slot residues: CA deviation max 0.0008 A, heavy-atom deviation max 0.0008 A
+  TCR slots with a crystal residue 59/84, mapped 59; MHC positions 82/82, mapped 82
+  resolved pairs: rebuilt S 4838 == p82v1 S 4838: True; every resolved pair mapped: True
+  insertion-code residue on a slot: mhc 1061 -> C ALA1061A (18b last-wins) -> MD PROD ALA resid 1061, residue #149 of the segment, CA dev 0.0005 A
+  insertion-code residue on a slot: mhc 1072 -> C GLY1072A (18b last-wins) -> MD PROD GLY resid 1072, residue #161 of the segment, CA dev 0.0006 A
+  heavy-atom counts crystal = MD on 140/141 mapped residues; differ: 1087 GLU 4->9
+  MD residues sharing a resid (insertion codes dropped by CHARMM-GUI; split by atom-name repeat): ALA1061, ALA1061, GLU1072, GLY1072
+
+=== 7n1f  G1 PASS ===
+  chains: TCRa D->PROC, TCRb E->PROB, MHC A->PROD, b2m B->PROE, pep C->PROA
+  TCRa D->PROC: crystal 197, MD 197, aligned 197, type mismatches 0, crystal-only [-], MD-only (modelled) [-]
+  TCRb E->PROB: crystal 240, MD 240, aligned 240, type mismatches 0, crystal-only [-], MD-only (modelled) [-]
+  MHC  A->PROD: crystal 272, MD 272, aligned 272, type mismatches 0, crystal-only [-], MD-only (modelled) [-]
+  b2m  B->PROE: crystal 96, MD 96, aligned 96, type mismatches 0, crystal-only [-], MD-only (modelled) [-]
+  pep  C->PROA: crystal 9, MD 9, aligned 9, type mismatches 0, crystal-only [-], MD-only (modelled) [-]
+  superposition of all aligned CA: rmsd 0.0005 A; mapped slot residues: CA deviation max 0.0008 A, heavy-atom deviation max 0.0008 A
+  TCR slots with a crystal residue 55/84, mapped 55; MHC positions 82/82, mapped 82
+  resolved pairs: rebuilt S 4510 == p82v1 S 4510: True; every resolved pair mapped: True
+  insertion-code residue on a slot: mhc 1061 -> A ALA1061A (18b last-wins) -> MD PROD ALA resid 1061, residue #149 of the segment, CA dev 0.0005 A
+  insertion-code residue on a slot: mhc 1072 -> A GLY1072A (18b last-wins) -> MD PROD GLY resid 1072, residue #161 of the segment, CA dev 0.0006 A
+  heavy-atom counts crystal = MD on 137/137 mapped residues
+  MD residues sharing a resid (insertion codes dropped by CHARMM-GUI; split by atom-name repeat): ALA1061, ALA1061, GLU1072, GLY1072
+
+=== 3vxs  G1 PASS ===
+  chains: TCRa D->PROC, TCRb E->PROB, MHC A->PROD, b2m B->PROE, pep C->PROA
+  TCRa D->PROC: crystal 204, MD 204, aligned 204, type mismatches 0, crystal-only [-], MD-only (modelled) [-]
+  TCRb E->PROB: crystal 242, MD 242, aligned 242, type mismatches 0, crystal-only [-], MD-only (modelled) [-]
+  MHC  A->PROD: crystal 274, MD 274, aligned 274, type mismatches 0, crystal-only [-], MD-only (modelled) [-]
+  b2m  B->PROE: crystal 96, MD 96, aligned 96, type mismatches 0, crystal-only [-], MD-only (modelled) [-]
+  pep  C->PROA: crystal 10, MD 10, aligned 10, type mismatches 0, crystal-only [-], MD-only (modelled) [-]
+  superposition of all aligned CA: rmsd 0.0005 A; mapped slot residues: CA deviation max 0.0008 A, heavy-atom deviation max 0.0008 A
+  TCR slots with a crystal residue 60/84, mapped 60; MHC positions 82/82, mapped 82
+  resolved pairs: rebuilt S 4920 == p82v1 S 4920: True; every resolved pair mapped: True
+  insertion-code residue on a slot: mhc 1061 -> A ALA1061A (18b last-wins) -> MD PROD ALA resid 1061, residue #149 of the segment, CA dev 0.0004 A
+  insertion-code residue on a slot: mhc 1072 -> A GLY1072A (18b last-wins) -> MD PROD GLY resid 1072, residue #161 of the segment, CA dev 0.0006 A
+  heavy-atom counts crystal = MD on 142/142 mapped residues
+  MD residues sharing a resid (insertion codes dropped by CHARMM-GUI; split by atom-name repeat): ALA1061, ALA1061, GLU1072, GLY1072
+
+=== 8eo8  G1 PASS ===
+  chains: TCRa D->PROC, TCRb E->PROB, MHC A->PROD, b2m B->PROE, pep C->PROA
+  TCRa D->PROC: crystal 204, MD 204, aligned 204, type mismatches 0, crystal-only [-], MD-only (modelled) [-]
+  TCRb E->PROB: crystal 246, MD 246, aligned 246, type mismatches 0, crystal-only [-], MD-only (modelled) [-]
+  MHC  A->PROD: crystal 275, MD 275, aligned 275, type mismatches 0, crystal-only [-], MD-only (modelled) [-]
+  b2m  B->PROE: crystal 96, MD 96, aligned 96, type mismatches 0, crystal-only [-], MD-only (modelled) [-]
+  pep  C->PROA: crystal 9, MD 9, aligned 9, type mismatches 0, crystal-only [-], MD-only (modelled) [-]
+  superposition of all aligned CA: rmsd 0.0005 A; mapped slot residues: CA deviation max 0.0008 A, heavy-atom deviation max 0.0008 A
+  TCR slots with a crystal residue 65/84, mapped 65; MHC positions 82/82, mapped 82
+  resolved pairs: rebuilt S 5330 == p82v1 S 5330: True; every resolved pair mapped: True
+  insertion-code residue on a slot: mhc 1061 -> A ALA1061A (18b last-wins) -> MD PROD ALA resid 1061, residue #148 of the segment, CA dev 0.0003 A
+  insertion-code residue on a slot: mhc 1072 -> A GLY1072A (18b last-wins) -> MD PROD GLY resid 1072, residue #160 of the segment, CA dev 0.0001 A
+  heavy-atom counts crystal = MD on 147/147 mapped residues
+  MD residues sharing a resid (insertion codes dropped by CHARMM-GUI; split by atom-name repeat): ALA1061, ALA1061, GLU1072, GLY1072
+
+wrote md/analysis/residue_map_<pdb>.tsv x 4, md/analysis/chain_segments.tsv
+G1 overall: PASS

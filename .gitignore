@@ -1,0 +1,23 @@
+# Large frozen arrays and results ship in the Zenodo archive, not in the git repository.
+# See DATA.md for where to place them.
+data/processed/*.npz
+data/processed/*.parquet
+data/interim/*.pkl
+data/interim/*.npz
+results/tables/
+results/review/
+figures/previous_versions/
+
+# never
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.DS_Store
+.venv/
+*.egg-info/
+*.pt
+*.pth
+
+# molecular dynamics: trajectories and CHARMM-GUI bundles are not redistributed
+md/runs/
+md/systems/*/charmm-gui*

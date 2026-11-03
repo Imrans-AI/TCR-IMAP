@@ -1,0 +1,17 @@
+PASS  test_contact_function_synthetic_trajectory_with_pbc
+PASS  test_docked_rules
+PASS  test_only_crystal_negative_pairs_enter
+PASS  test_perm_p_calibrated_under_null
+PASS  test_perm_p_floor_for_perfect_association
+PASS  test_perm_p_matches_exact_enumeration
+PASS  test_pooled_permutation_is_within_system
+PASS  test_pooled_rho_is_rho_over_union
+PASS  test_positive_summary
+PASS  test_prior_control_uses_identical_code
+PASS  test_rho_hand_computed_with_ties
+PASS  test_rho_monotone_and_reversed
+PASS  test_system_occupancy_is_replicate_mean
+PASS  test_top_k_known_answer
+PASS  test_window_selects_9001_frames
+
+15/15 passed
