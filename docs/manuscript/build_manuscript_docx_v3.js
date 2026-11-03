@@ -91,10 +91,11 @@ const P = (text, opts = {}) => new Paragraph({
   ...opts,
 });
 
-const H1 = (t) => new Paragraph({
+const H1 = (t, opts = {}) => new Paragraph({
   children: [new TextRun({ text: t, font: FONT, size: 26, bold: true })],
   spacing: { before: 320, after: 160 },
   heading: HeadingLevel.HEADING_1,
+  ...opts,
 });
 
 const H2 = (t) => new Paragraph({
@@ -833,20 +834,7 @@ body.push(P(
 
 body.push(H2("2.12. Data and code availability"));
 body.push(P(
-"The STCRDab structures are publicly available. The frozen partitioning file, complex metadata, contact labels with "
-+ "row and column manifests, trained-model predictions, per-complex metric arrays and all analysis and figure scripts "
-+ "will be deposited in a public repository with a persistent identifier on acceptance; no deposit has been made at "
-+ "the time of writing, so no repository URL or archive identifier can be quoted here. A local release package has "
-+ "been assembled and tested in two parts \u2014 a code repository tree and a versioned data archive, both staged "
-+ "from the same source revision \u2014 containing the frozen partitioning file, the complex table, the contact "
-+ "labels with their row and column manifests, the stored per-complex and per-pair prediction arrays, every "
-+ "analysis script, the comparator reimplementations with a table recording every deviation from each published "
-+ "specification, an environment specification, SHA-256 checksums over every file and a worked example "
-+ "that reproduces the reported pairwise results from the released arrays on a CPU in under a minute. Molecular "
-+ "dynamics input files, parameters, seeds, analysis scripts and the twelve output tables are included; the "
-+ "trajectories themselves are hundreds of gigabytes and are available from the corresponding author on request. "
-+ "Software: Python 3.10, PyTorch 2.10.0, NumPy 1.26.4, pandas 2.3.3, SciPy 1.15.2, Biopython 1.81, scikit-learn "
-+ "1.7.2, Levenshtein 0.27.3 (over RapidFuzz 3.14.3), MDAnalysis 2.9.0, matplotlib 3.10.8, DSSP 4.2.2, GROMACS 2023.2 and CHARMM-GUI."));
+"The STCRDab structures are publicly available. The frozen partitioning file, complex metadata, contact labels with row and column manifests, trained-model predictions, per-complex metric arrays and all analysis and figure scripts are prepared for public release. The code repository is https://github.com/Imrans-AI/TCR-IMAP (private during author review). No Zenodo deposit or archive DOI exists at the time of writing. A local release package has been assembled and tested in two parts — a code repository tree and a versioned data archive, both staged from the same source revision — containing the frozen partitioning file, the complex table, the contact labels with their row and column manifests, the stored per-complex and per-pair prediction arrays, every analysis script, the comparator reimplementations with a table recording every deviation from each published specification, an environment specification, SHA-256 checksums over every file and a worked example that reproduces the reported pairwise results from the stored arrays on a CPU in under a minute. Molecular dynamics input files, parameters, seeds, analysis scripts and the twelve output tables are included; the trajectories themselves are hundreds of gigabytes and are available from the corresponding author on reasonable request. Software: Python 3.10, PyTorch 2.10.0, NumPy 1.26.4, pandas 2.3.3, SciPy 1.15.2, Biopython 1.81, scikit-learn 1.7.2, Levenshtein 0.27.3 (over RapidFuzz 3.14.3), MDAnalysis 2.9.0, matplotlib 3.10.8, DSSP 4.2.2, GROMACS 2023.2 and CHARMM-GUI."));
 
 /* ---- results ---- */
 body.push(H1("3. Results"));
@@ -1319,23 +1307,10 @@ body.push(P(
 
 body.push(H1("Data and Code Availability"));
 body.push(P(
-"A release package containing all code, the frozen partitioning file, the complex table, the contact labels with "
-+ "their row and column manifests, the stored per-complex and per-pair prediction arrays, the comparator "
-+ "reimplementations, an environment specification, SHA-256 checksums over every file and a worked "
-+ "example has been assembled and tested from a clean copy outside the working repository. It is organized as a "
-+ "code repository tree and a versioned data archive, staged from one source revision, because the prediction "
-+ "arrays the reported numbers are computed from are too large for a source repository. It will be deposited in a public repository and "
-+ "archived with a persistent identifier on acceptance. **No deposit has been made at the time of writing**, and no "
-+ "repository URL or archive identifier is quoted anywhere in this manuscript for that reason. The worked example "
-+ "reproduces the reported pairwise results from the released arrays on a CPU in under a minute; regenerating those "
-+ "predictions by retraining requires a GPU and is documented separately. The structures analyzed are publicly "
-+ "available from STCRDab [[9]] and the Protein Data Bank and are referenced rather than redistributed. The "
-+ "comparators are our own reimplementations written from the published descriptions; no original author\u2019s "
-+ "repository is redistributed, and a provenance table records every deviation from each published "
-+ "specification, the execution defects that prevented the released Struct-TCS implementation from running, and "
-+ "the components that were not available at all. Molecular dynamics input files, parameters, seeds, analysis "
-+ "scripts and the twelve output tables are included, so the occupancy analysis can be repeated independently; the "
-+ "trajectories are hundreds of gigabytes and are available from the corresponding author on request."));
+"A release package containing all code, the frozen partitioning file, the complex table, the contact labels with their row and column manifests, the stored per-complex and per-pair prediction arrays, the comparator reimplementations, an environment specification, SHA-256 checksums over every file and a worked example has been assembled and tested from a clean copy outside the working repository. The code and data packages are staged from the same source revision. The code repository is https://github.com/Imrans-AI/TCR-IMAP (private during author review); a public release and a versioned Zenodo archive are planned. No archive DOI has been assigned. The worked example reproduces the reported pairwise results from the stored arrays on a CPU in under a minute; regenerating those predictions by retraining requires a GPU and is documented separately. The structures analyzed are publicly available from STCRDab [[9]] and the Protein Data Bank. Four cleaned coordinate files (3VXS, 5YXN, 7N1F and 8EO8) are included as MD inputs; the remaining source coordinates are referenced through retrieval instructions. The comparator reimplementations and a provenance table documenting adaptations, execution defects and unavailable components are included; the original authors’ repositories are not redistributed. Molecular dynamics input files, parameters, seeds, analysis scripts and the twelve output tables are included, so the occupancy analysis can be repeated independently; the trajectories are hundreds of gigabytes and are available from the corresponding author on reasonable request. Original code is licensed under MIT; original derived data and documentation are licensed under CC BY 4.0. Third-party material retains its own terms."));
+
+body.push(H1("Funding and Acknowledgments"));
+body.push(P("D.-Q.W. is supported by the National Key R&D Program of China (2024YFA1306400 and 2023YFE0199200), the National Natural Science Foundation of China (32570803 and 32030063), and the Intergovernmental International Scientific and Technological Innovation Cooperation Program. The computations were performed in part at Pengcheng Laboratory and the Center for High-Performance Computing, Shanghai Jiao Tong University."));
 
 body.push(H1("Supporting Information"));
 body.push(P(
@@ -1348,8 +1323,7 @@ body.push(P(
 + "canonical-CDR-only scoring sensitivity."));
 
 /* ---- references ---- */
-body.push(new Paragraph({ children: [new PageBreak()] }));
-body.push(H1("References"));
+body.push(H1("References", { pageBreakBefore: true }));
 body.push(...refParagraphs);
 
 /* helper used above (declared late is fine for function decls) */

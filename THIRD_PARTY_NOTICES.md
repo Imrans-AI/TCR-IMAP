@@ -1,9 +1,9 @@
 # Third-party material
 
-This package distributes **original code and original derived data only**. Everything of
-third-party origin is referenced by identifier with retrieval instructions, not bundled.
+This package contains original code and derived data, plus the four cleaned coordinate files
+identified below. Third-party material retains its own terms.
 
-## Structures — referenced, not redistributed
+## Structures — source collection and included MD inputs
 
 | material | source | how to retrieve |
 |---|---|---|
@@ -13,6 +13,17 @@ third-party origin is referenced by identifier with retrieval instructions, not 
 `data/SOURCES.md` records the retrieval date and the selection criteria. The **derived** data in
 this package — contact labels, masks, residue graphs, the aligned representation, the cohort table
 and the clusters — is our own work computed from those public structures.
+
+Four cleaned coordinate files are included for the MD inputs and Figure 7:
+
+- `md/systems/3vxs/prep/3vxs_clean.pdb` — PDB 3VXS
+- `md/systems/5yxn/prep/5yxn_clean.pdb` — PDB 5YXN
+- `md/systems/7n1f/prep/7n1f_clean.pdb` — PDB 7N1F
+- `md/systems/8eo8/prep/8eo8_clean.pdb` — PDB 8EO8
+
+These are processed copies of source coordinates, not newly determined structures. Preparation
+is recorded in `md/systems/BUILD_MANIFEST.tsv`. The package's MIT and CC BY 4.0 grants do not
+relicense third-party coordinates. The rest of the structure collection is not bundled.
 
 One structure, `1ao7`, is rendered in Figure 1 panel A. The rendering is ours
 (`figures/source/fig1_arial_20261102/render_structure.py`); the coordinates are the public PDB entry
@@ -59,5 +70,6 @@ font subsetting, as published figures normally do. No font file is redistributed
 
 ## Licence of this package
 
-Not yet decided — see `LICENSING_DECISION_REQUIRED.md`. The notices above describe the origin of the
-material; they do not grant any permission.
+MIT applies to original code and CC BY 4.0 to original derived data and documentation.
+See `LICENSING_DECISION_REQUIRED.md` for the scope and exclusions. These grants do not extend
+to third-party material or to the final figure assets.

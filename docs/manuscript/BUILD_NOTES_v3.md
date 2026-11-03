@@ -76,5 +76,18 @@ approved figure, so a regenerated or substituted Figure 1 cannot reach the DOCX 
 the audit trail but refuses to run without `--allow-superseded` and writes only to
 `figures/previous_versions/`.
 
-Still open and unchanged from v2: the **GitHub handle** in the Data and Code Availability
-placeholder and the **full author list for EPACT (reference 26)**.
+## Release decisions, 3 November 2026
+
+The private repository is https://github.com/Imrans-AI/TCR-IMAP. The EPACT reference already carries all nine
+authors; the former checklist entry was stale. The author approved MIT for original code and
+CC BY 4.0 for original derived data/documentation, authors as copyright holders, the funding
+statement in `release/packaging/docs/FUNDING.md`, and trajectories on reasonable request.
+These changes are in the v3 builder and DOCX. The existing DOCX was edited directly at the OOXML
+paragraph level to preserve all equation and media parts, then rendered for verification.
+Figure assets have not been relicensed. No public release, tag or Zenodo deposit exists.
+
+Validation of the 3 November edit: 37 pages; funding on page 34; only pages 15, 16 and 34
+differ pixel-for-pixel from the prior DOCX rendered with the same runtime. All 13 equations,
+all 63 citation targets and all embedded media remain unchanged. The explicit blank paragraph
+carrying the References page break was replaced with pageBreakBefore on its heading to avoid
+an empty overflow page after adding funding. SI and all historical v2 files were untouched.

@@ -1,15 +1,16 @@
 {
   "package": "tcr-imap-github",
   "version": "1.0.0-rc1",
-  "staged": "2026-11-02",
-  "source_revision": "e1458ef870bcb0d91efbec39434d4d52b41c9540",
+  "staged": "2026-11-03",
+  "source_revision": "07f37205dcd0b8d344d47ec5291757901aa6e33b",
   "source_branch": "m3-revision-v3",
   "source_tree_clean_at_staging": true,
-  "files": 294,
-  "bytes": 39487594,
+  "files": 297,
+  "bytes": 39502822,
   "figure_1_sha256": "0684c8647a0b158c86af9229f2344f1eec4f8ae71b08e83c12cda0a26364d9a1",
   "published": false,
-  "repository_url": null,
+  "repository_url": "https://github.com/Imrans-AI/TCR-IMAP",
+  "repository_visibility": "private",
   "archive_doi": null,
-  "note": "Nothing in this package has been published, pushed or deposited. repository_url and archive_doi are null because no repository and no archive record exist; they are not placeholders to be guessed."
+  "note": "The GitHub repository is private for author review. No public release or Zenodo deposit exists; archive_doi remains null. The source revision records the research tree used to stage this package, not the separate GitHub publication commit."
 }

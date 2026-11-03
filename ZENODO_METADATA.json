@@ -1,55 +1,22 @@
 {
-  "_README": [
-    "DRAFT deposition metadata for the Zenodo package. Field names and allowed values follow the",
-    "Zenodo developer documentation (developers.zenodo.org, Deposit > Representation): required are",
-    "upload_type, publication_date, title, creators, description, access_right and - when",
-    "access_right is 'open' - license.",
-    "",
-    "NOTHING HAS BEEN DEPOSITED. No record, no reserved DOI, no community submission. Values that",
-    "cannot be known without inventing them are left as explicit REQUIRED-AUTHOR-DECISION or",
-    "SET-ON-DEPOSIT markers rather than guessed; a deposit must fail validation rather than publish a",
-    "fabricated field.",
-    "",
-    "Upload via the API as: create deposition -> upload files to the bucket (not the legacy /files",
-    "endpoint, which caps at 100 MB per file) -> PUT this metadata -> publish."
-  ],
-
   "metadata": {
     "upload_type": "dataset",
-    "_upload_type_note": [
-      "'dataset' because the archive's reason to exist is the frozen benchmark, the stored",
-      "predictions and the per-complex metrics. Depositing the code tree separately as",
-      "upload_type 'software' and linking the two with related_identifiers is the alternative; it is",
-      "an author decision, and this draft assumes one combined record."
-    ],
-
-    "publication_date": "SET-ON-DEPOSIT (YYYY-MM-DD, the actual deposit date; Zenodo defaults to today if omitted)",
-
     "title": "TCR-IMAP: homology-controlled evaluation of TCR-MHC contact prediction - benchmark, frozen protocols, stored predictions and analysis code",
-
     "creators": [
       {
         "name": "Imran, Muhammad",
-        "affiliation": "State Key Laboratory of Microbial Metabolism, School of Life Sciences and Biotechnology, Shanghai Jiao Tong University, Shanghai 200240, China",
-        "orcid": "REQUIRED-AUTHOR-DECISION (no ORCID is recorded anywhere in this project; supply it or delete this key)"
+        "affiliation": "State Key Laboratory of Microbial Metabolism, School of Life Sciences and Biotechnology, Shanghai Jiao Tong University, Shanghai 200240, China"
       },
       {
         "name": "Wei, Dong-Qing",
-        "affiliation": "State Key Laboratory of Microbial Metabolism, School of Life Sciences and Biotechnology, Shanghai Jiao Tong University, Shanghai 200240, China",
-        "orcid": "REQUIRED-AUTHOR-DECISION (as above)"
+        "affiliation": "State Key Laboratory of Microbial Metabolism, School of Life Sciences and Biotechnology, Shanghai Jiao Tong University, Shanghai 200240, China"
       }
     ],
-
-    "description": "<p>Frozen benchmark, partitioning protocols, baselines, stored predictions and analysis code accompanying the manuscript <em>TCR-IMAP: Homology-Controlled Evaluation of TCR&ndash;MHC Contact Prediction</em>.</p><p><strong>The contribution is the evaluation framework.</strong> The archive contains the apparatus for measuring how much of a sequence-based TCR&ndash;MHC class I contact predictor's apparent accuracy belongs to the evaluation rather than to the model: 174 curated TCR&ndash;peptide&ndash;MHC class I complexes, all with a human MHC class I heavy chain, collapsing to 69 TCR clusters at a similarity ratio of 0.70; contact labels and candidate masks over a 174 &times; 75 &times; 84 tensor holding 893,928 resolved residue pairs of which 5,281 (0.59&nbsp;%) are contacts at a 4.5&nbsp;&Aring; heavy-atom threshold, keyed by IMGT number together with insertion code; five partitioning protocols fixed before the reported results were produced, with a declared primary metric, protocol and comparison; within-fold pair-frequency priors; complete stored pairwise predictions for all five protocols; per-complex per-residue metrics; comparator reimplementations with a full provenance and deviation table; a training-size-matched control whose plan was committed before any downsampled model was trained; the authoritative identity-threshold sweep at 20,000 cluster-bootstrap resamples; and the molecular-dynamics analysis code with its twelve output tables.</p><p>A worked example reproduces the reported pairwise results from the stored arrays on a CPU in under a minute. Retraining is optional and needs a GPU.</p><p><strong>Scope and limitations.</strong> Paired &alpha;&beta; TCRs on human MHC class I, &alpha;1/&alpha;2 platform; receptors are human in 165 complexes, mouse in 8 and mixed chimpanzee/human &alpha; in 1. MHC class II, &gamma;&delta; receptors and non-human MHC are out of scope. The archive contains no sequence-to-input builder: applying the model outside the cohort requires an IMGT numbering step that is documented but not implemented. The predeclared primary comparison is unresolved at this sample size (+0.0312 [&minus;0.0049, +0.0650], p = 0.088) and is reported as it stands. The canonical-CDR-only sensitivity covers 14 comparisons but not that primary comparison, because the per-residue benchmark stores metrics rather than predictions and writes no checkpoint; no historical per-residue checkpoint or prediction array exists. Molecular-dynamics trajectories are not included. Source structures are from STCRDab and the Protein Data Bank and are referenced, not redistributed.</p>",
-
+    "description": "<p>Frozen benchmark, partitioning protocols, baselines, stored predictions and analysis code accompanying the manuscript <em>TCR-IMAP: Homology-Controlled Evaluation of TCR&ndash;MHC Contact Prediction</em>.</p><p><strong>The contribution is the evaluation framework.</strong> The archive contains the apparatus for measuring how much of a sequence-based TCR&ndash;MHC class I contact predictor's apparent accuracy belongs to the evaluation rather than to the model: 174 curated TCR&ndash;peptide&ndash;MHC class I complexes, all with a human MHC class I heavy chain, collapsing to 69 TCR clusters at a similarity ratio of 0.70; contact labels and candidate masks over a 174 &times; 75 &times; 84 tensor holding 893,928 resolved residue pairs of which 5,281 (0.59&nbsp;%) are contacts at a 4.5&nbsp;&Aring; heavy-atom threshold, keyed by IMGT number together with insertion code; five partitioning protocols fixed before the reported results were produced, with a declared primary metric, protocol and comparison; within-fold pair-frequency priors; complete stored pairwise predictions for all five protocols; per-complex per-residue metrics; comparator reimplementations with a full provenance and deviation table; a training-size-matched control whose plan was committed before any downsampled model was trained; the authoritative identity-threshold sweep at 20,000 cluster-bootstrap resamples; and the molecular-dynamics analysis code with its twelve output tables.</p><p>A worked example reproduces the reported pairwise results from the stored arrays on a CPU in under a minute. Retraining is optional and needs a GPU.</p><p><strong>Scope and limitations.</strong> Paired &alpha;&beta; TCRs on human MHC class I, &alpha;1/&alpha;2 platform; receptors are human in 165 complexes, mouse in 8 and mixed chimpanzee/human &alpha; in 1. MHC class II, &gamma;&delta; receptors and non-human MHC are out of scope. The archive contains no sequence-to-input builder: applying the model outside the cohort requires an IMGT numbering step that is documented but not implemented. The predeclared primary comparison is unresolved at this sample size (+0.0312 [&minus;0.0049, +0.0650], p = 0.088) and is reported as it stands. The canonical-CDR-only sensitivity covers 14 comparisons but not that primary comparison, because the per-residue benchmark stores metrics rather than predictions and writes no checkpoint; no historical per-residue checkpoint or prediction array exists. Molecular-dynamics trajectories are not included. Source structures are from STCRDab and the Protein Data Bank. Four cleaned MD-input coordinate files (3VXS, 5YXN, 7N1F and 8EO8) are included; other source coordinates are referenced through retrieval instructions.</p><p><strong>Funding and acknowledgments.</strong> D.-Q.W. is supported by the National Key R&amp;D Program of China (2024YFA1306400 and 2023YFE0199200), the National Natural Science Foundation of China (32570803 and 32030063), and the Intergovernmental International Scientific and Technological Innovation Cooperation Program. The computations were performed in part at Pengcheng Laboratory and the Center for High-Performance Computing, Shanghai Jiao Tong University.</p>",
     "access_right": "open",
-
-    "license": "REQUIRED-AUTHOR-DECISION (Zenodo requires this when access_right is 'open'; use an id from /api/licenses. See LICENSING_DECISION_REQUIRED.md: the recommendation is 'cc-by-4.0' for the data with 'mit' for the code)",
-
+    "license": "cc-by-4.0",
     "version": "1.0.0-rc1",
-
     "language": "eng",
-
     "keywords": [
       "T-cell receptor",
       "major histocompatibility complex",
@@ -62,38 +29,25 @@
       "structural bioinformatics",
       "molecular dynamics"
     ],
-
     "related_identifiers": [
       {
-        "relation": "isSupplementTo",
-        "identifier": "SET-ON-ACCEPTANCE (the manuscript DOI; omit this entry entirely until one exists)",
-        "resource_type": "publication-article"
-      },
-      {
         "relation": "isSupplementedBy",
-        "identifier": "SET-ON-DEPOSIT (the GitHub repository URL, once it exists; do not invent one)",
+        "identifier": "https://github.com/Imrans-AI/TCR-IMAP",
         "resource_type": "software"
       },
       {
         "relation": "references",
         "identifier": "10.1093/nar/gkx971",
-        "resource_type": "publication-article",
-        "_note": "STCRDab (Leem et al., Nucleic Acids Res. 2018) - the source of the structures"
+        "resource_type": "publication-article"
       },
       {
         "relation": "references",
         "identifier": "10.1021/acs.jcim.5c00055",
-        "resource_type": "publication-article",
-        "_note": "Gao et al., J. Chem. Inf. Model. 2025 - the Struct-TCS/Seq-TCS comparators, reimplemented here"
+        "resource_type": "publication-article"
       }
     ],
-
-    "notes": "Nothing in this record has been published at the time of drafting. The archive corresponds to a specific source revision, recorded in PACKAGE_INFO.json; an archive is only valid against the code tree whose revision it names.",
-
+    "notes": "Prepared locally; no Zenodo record exists. The linked GitHub repository is private. The MD trajectories are available from the corresponding author on reasonable request. Original code: MIT. Original derived data and documentation: CC BY 4.0. Third-party material retains its own terms; final figure assets are excluded from these grants pending an author decision. See LICENSING_DECISION_REQUIRED.md and THIRD_PARTY_NOTICES.md. ORCIDs and manuscript DOI are omitted because none has been supplied. Funding is stated in the description; no funder-registry identifier has been invented.",
     "communities": [],
-    "_communities_note": "Author decision: none is assumed. Adding a community sends the record for curation.",
-
-    "grants": [],
-    "_grants_note": "REQUIRED-AUTHOR-DECISION. No funding statement exists anywhere in this project and none is invented. If the work is funded, add the grant identifiers here and a matching Funding section to the manuscript."
+    "grants": []
   }
 }

@@ -2,7 +2,7 @@
 #
 # INCOMPLETE BY DESIGN. The fields a release needs but that do not yet exist are listed under
 # "author decisions required" at the end of this file and are NOT filled with placeholders:
-# there is no repository, no DOI and no release date, so none is quoted.
+# The private repository exists; no public release date or archive DOI has been assigned.
 cff-version: 1.2.0
 message: >-
   This software and data package accompanies a manuscript that is in preparation. It has not been
@@ -19,6 +19,10 @@ abstract: >-
   deviation table, and a worked example that reproduces the reported pairwise results on a CPU.
 type: software
 version: 1.0.0-rc1
+repository-code: "https://github.com/Imrans-AI/TCR-IMAP"
+license:
+  - MIT
+  - CC-BY-4.0
 authors:
   - family-names: Imran
     given-names: Muhammad
@@ -59,14 +63,13 @@ references:
     start: D406
     end: D412
     notes: >-
-      Source of the 174 IMGT-numbered structures, retrieved 15 August 2026. The structures are not
-      redistributed in this package; see THIRD_PARTY_NOTICES.md.
+      Source of the 174 IMGT-numbered structures, retrieved 15 August 2026. Four cleaned MD-input
+      coordinate files are included; see THIRD_PARTY_NOTICES.md for their provenance.
 #
 # ---------------------------------------------------------------------------------------------
 # AUTHOR DECISIONS REQUIRED before this file is valid for a release
 # ---------------------------------------------------------------------------------------------
-#   license:        no licence has been assigned - see LICENSING_DECISION_REQUIRED.md
-#   repository-code: no repository exists - do not invent a URL
+#   licence scope: see LICENSING_DECISION_REQUIRED.md; figures and third-party material excluded
 #   doi / identifiers: no archive record exists - do not invent or pre-reserve a DOI here
 #   date-released:  set to the actual deposit date on the day of deposit, not before
 #   preferred-citation: add the manuscript once it has a journal, year and status

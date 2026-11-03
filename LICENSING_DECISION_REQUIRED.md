@@ -1,48 +1,25 @@
-# Licensing — an open author decision
+# Licence scope — author decision recorded 3 November 2026
 
-**No licence is assigned, and no licence file is shipped.** Nothing in this repository records a
-licensing decision: there is no `LICENSE`, no `COPYING`, no licence header in any source file and no
-statement in `CLAUDE.md`, `GUIDELINES.md` or the manuscript. Assigning one is the author's call, and
-guessing would be worse than leaving it open, so this file states the recommendation and stops.
+The author approved MIT for original code and CC BY 4.0 for original derived data and
+documentation, with copyright held by Muhammad Imran and Dong-Qing Wei. This filename is kept
+for existing links; the code/data decision is resolved.
 
-**Until a licence is chosen, default copyright applies**: all rights reserved, no permission to
-reuse, and the package is for author review only. Zenodo additionally **requires** a `license` value
-whenever `access_right` is `open`, so a deposit cannot be published without this decision.
+| Material | Terms |
+|---|---|
+| Original code, scripts, tests, manuscript builders and figure-generation source | MIT; see `LICENSE` |
+| Original derived labels, masks, metrics, predictions, protocols and documentation | CC BY 4.0; see `LICENSE-DATA` |
+| Final figure images, PDFs, SVGs and structure renderings | Not covered by this decision; confirm intended terms before public release |
+| Third-party coordinates, fonts, software and other third-party material | Their own terms; see `THIRD_PARTY_NOTICES.md` |
 
-## Recommendation
+Copyright 2026 Muhammad Imran and Dong-Qing Wei, for their original contributions.
+The grants apply only to rights the authors hold; they do not assert ownership of third-party
+material or replace institutional requirements. The mixed licence identifiers in the citation
+and archive metadata must be read with this scope, not as a choice of licence for every file.
 
-A split licence, which is the normal arrangement for a paper with code and data, and the one the
-journals and the archive expect:
+MIT requires preservation of its copyright and permission notices. CC BY 4.0 requires
+appropriate attribution, a licence link and indication of changes when sharing adapted material.
+No publisher agreement is assumed. Figure rights can be reviewed before submission; there is no
+general requirement to wait until after signing an agreement.
 
-| part | recommended | why |
-|---|---|---|
-| **code** — `src/`, `scripts/`, `tests/`, `md/analysis/`, `figures/source/`, the manuscript builders | **MIT** | permissive, one page, imposes nothing on reusers, and matches the comparator reimplementations' purpose of being inspected and adapted. BSD-3-Clause is equivalent in effect if an institution prefers it |
-| **derived data** — contact labels, masks, the cohort table, the frozen protocols, stored predictions, per-complex metrics, MD output tables | **CC BY 4.0** | the frozen protocols and the characterized benchmark are the contribution others are most likely to reuse, and attribution is the only condition worth imposing. CC0 is the alternative if the aim is maximum reuse with no conditions; Zenodo defaults datasets to CC0 |
-| **figures** — `figures/main/`, `figures/supplementary/` | follow whatever the journal's copyright-transfer agreement allows, typically **CC BY 4.0** | this is the one part a publisher agreement can constrain, so it must be settled after the agreement is signed, not before |
-
-Avoid a non-commercial (`-NC`) or no-derivatives (`-ND`) clause on the data. Both make the benchmark
-unusable for the reuse the paper argues for, and `-NC` is widely read as blocking industry research.
-
-## What the decision affects
-
-1. `LICENSE` and, if the split is adopted, `LICENSE-DATA` at the package root.
-2. The `license` field in `ZENODO_METADATA.json`, which is currently
-   `REQUIRED-AUTHOR-DECISION`. Zenodo expects an identifier from its `/api/licenses` list, for
-   example `mit` or `cc-by-4.0`.
-3. The `license` field in `CITATION.cff`, currently absent for the same reason.
-4. A one-line "Licence" section in `README.md`, which currently says the decision is open.
-5. Whether a licence header is added to source files. Not required by MIT; a `SPDX-License-Identifier`
-   line is a cheap convention if wanted.
-
-## What the decision does not affect
-
-The third-party material in `THIRD_PARTY_NOTICES.md`. The structures stay under their own terms and
-are referenced rather than redistributed, so no licence chosen here can or does apply to them.
-
-## Required of the author
-
-- [ ] Confirm the code licence (recommended **MIT**).
-- [ ] Confirm the data licence (recommended **CC BY 4.0**).
-- [ ] Confirm that the institution and the funder impose no conflicting requirement.
-- [ ] Confirm the figure licence **after** the publisher agreement is in place.
-- [ ] State the copyright holder line: the authors, or Shanghai Jiao Tong University, or both.
+Sources: https://opensource.org/license/mit ; https://creativecommons.org/licenses/by/4.0/ ;
+https://help.zenodo.org/docs/deposit/describe-records/licenses/ .

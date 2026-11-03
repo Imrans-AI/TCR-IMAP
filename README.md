@@ -1,7 +1,8 @@
 # TCR-IMAP — homology-controlled evaluation of TCR–MHC contact prediction
 
-**Nothing here has been published, pushed or deposited.** This package was assembled and tested
-locally for author review. No repository URL and no DOI exist, so none is quoted; see
+**Private review repository:** [Imrans-AI/TCR-IMAP](https://github.com/Imrans-AI/TCR-IMAP).
+The code package was pushed privately on 3 November 2026. No public release or Zenodo deposit
+exists, and no archive DOI has been assigned. See
 `PUBLICATION_CHECKLIST.md` for what remains to be done, and `PACKAGE_INFO.json` for the exact source
 revision this tree was staged from.
 
@@ -141,26 +142,31 @@ nothing here says the analysis must never be repeated.**
 7.7 GB as stored here and far larger with full-resolution coordinates, and the four CHARMM-GUI
 bundles are 3.3 GB. Everything needed to regenerate them is included: the structures are public, the
 build manifest records the CHARMM-GUI parameters, and the `.mdp` files carry the protocol and seeds.
-**Whether, where and on what terms the trajectories are made available is an open author decision**
-(`PUBLICATION_CHECKLIST.md`); this package makes no promise about it.
+The MD trajectories are available from the corresponding author on reasonable request.
 
 ---
 
 ## Third-party material
 
-See `THIRD_PARTY_NOTICES.md`. In short: the structures are public (STCRDab and the Protein Data
-Bank) and are **not** redistributed here — retrieval instructions are given instead. The comparator
+See `THIRD_PARTY_NOTICES.md`. The full source-structure collection is retrieved from STCRDab
+and the Protein Data Bank. Four cleaned coordinate files (3vxs, 5yxn, 7n1f and 8eo8) are included
+as MD inputs; the remaining coordinate files are referenced through retrieval instructions. The comparator
 reimplementations are our own code written from the published descriptions; no third-party source
 repository is bundled, and `results/review/COMPARATOR_PROVENANCE.md` records every deviation from
 each published specification.
 
 ## Licence
 
-**Not yet decided.** No licence file is shipped, because assigning one is the author's decision and
-`LICENSING_DECISION_REQUIRED.md` sets out the recommendation and what it affects. Until a licence is
-chosen, default copyright applies and this package is for author review only.
+Original code is licensed under **MIT** (`LICENSE`). Original derived data and documentation
+are licensed under **CC BY 4.0** (`LICENSE-DATA`). Copyright 2026 Muhammad Imran and Dong-Qing Wei.
+See `LICENSING_DECISION_REQUIRED.md` for scope and exclusions: third-party material retains its
+own terms, and the final figure assets have not been assigned a licence in this decision.
 
 ## Citing
 
-`CITATION.cff` carries the author and title metadata. It deliberately has no DOI, no repository URL
-and no release date, because none exists yet.
+`CITATION.cff` carries the authors, title, repository URL and applicable licences. No DOI or
+public release date is supplied because neither exists yet.
+
+## Funding and acknowledgments
+
+D.-Q.W. is supported by the National Key R&D Program of China (2024YFA1306400 and 2023YFE0199200), the National Natural Science Foundation of China (32570803 and 32030063), and the Intergovernmental International Scientific and Technological Innovation Cooperation Program. The computations were performed in part at Pengcheng Laboratory and the Center for High-Performance Computing, Shanghai Jiao Tong University.
