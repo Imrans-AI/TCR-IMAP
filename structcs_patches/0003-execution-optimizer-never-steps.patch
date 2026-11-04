@@ -1,0 +1,59 @@
+# Defect 3 of 4 - EXECUTION FIX.
+#
+# Scripts/site_train.py train_epoch calls opt.zero_grad() and loss.backward() but never opt.step(),
+# and constructs a fresh torch.optim.Adam inside the per-batch loop, discarding optimizer state each
+# batch. The model's parameters are therefore never updated: training is a no-op.
+#
+# Two further blockers in the same function stop it running at all, and are fixed here because the
+# optimizer fix cannot be exercised without them:
+#   * `nn.BCELoss()` is used but torch.nn is never imported -> NameError.
+#   * fit() logs `trainloss`, which train_epoch computes but does not return, and divides by `ids`,
+#     which is never defined in this module -> NameError.
+#
+# Fix: import torch.nn; build the optimizer once in fit() and pass it in; call opt.step(); return
+# trainloss and divide by len(traintuple).
+#
+# Note: fit() also references `os` and `modelname`, which this module neither imports nor defines.
+# Those are left alone - see the README, "What these patches do not fix".
+#
+--- a/Scripts/site_train.py
++++ b/Scripts/site_train.py
+@@ -1,6 +1,7 @@
+ import logging
+ from sklearn.metrics import *
+ import torch
++import torch.nn as nn
+ 
+ def get_logger(filename, verbosity=1, name=None):
+     level_dict = {0: logging.DEBUG, 1: logging.INFO, 2: logging.WARNING}
+@@ -54,7 +55,7 @@
+     aauc = tauc / N
+     return aauc, aaupr
+ 
+-def train_epoch(model, tuple, lr, weight_decay, device):
++def train_epoch(model, tuple, opt, device):
+     trainloss=0
+     for ind, data in enumerate(tuple):
+         pepseqEmb = (data['pep']).to(device)
+@@ -66,17 +67,18 @@
+         loss_func = nn.BCELoss()
+         loss = loss_func(scores.squeeze(), label)
+         trainloss = trainloss + loss.item()
+-        opt = torch.optim.Adam(model.parameters(), lr=lr, weight_decay=weight_decay)
+         opt.zero_grad()
+         loss.backward()
+-
++        opt.step()
++    return trainloss
+ 
+ def fit(model, traintuple, lr, epoch, weight_decay, device, testtuple):
+     model = model.to(device)
++    opt = torch.optim.Adam(model.parameters(), lr=lr, weight_decay=weight_decay)
+     bestauc = 0
+     earlystop = 0
+     for i in range(epoch):
+-        train_epoch(model, traintuple, lr, weight_decay, device)
++        trainloss = train_epoch(model, traintuple, opt, device)
+         auc, aupr = test(model, testtuple)
+         if auc>bestauc:
+             model_save_path = os.path.join(modelname)

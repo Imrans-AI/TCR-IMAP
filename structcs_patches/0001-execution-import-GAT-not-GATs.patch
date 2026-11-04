@@ -1,0 +1,19 @@
+# Defect 1 of 4 - EXECUTION FIX.
+#
+# Models/modules.py line 21 reads `from GATs import *`. No module named GATs exists in the release;
+# the file is Models/GAT.py. Importing Models.modules raises ImportError, so nothing downstream can
+# be constructed.
+#
+# Fix: import from GAT.
+#
+--- a/Models/modules.py
++++ b/Models/modules.py
+@@ -18,7 +18,7 @@
+         outfeat = self.norm2(self.FF(out)+out)
+         return outfeat
+ 
+-from GATs import *
++from GAT import *
+ class GATEncoder(nn.Module):
+     def __init__(self, n_heads, m, input_dim, hidden_size, device):
+         super().__init__()

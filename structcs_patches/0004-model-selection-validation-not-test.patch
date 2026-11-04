@@ -1,0 +1,41 @@
+# Defect 4 of 4 - MODEL-SELECTION CHANGE, not an execution fix.
+#
+# Scripts/site_train.py fit() takes `testtuple`, early-stops on it, and saves the checkpoint with the
+# best score measured on it. Model selection is therefore not separated from test evaluation, and the
+# reported test metric is a maximum over epochs on the same data.
+#
+# This is a deliberate change of method, not a repair: the released code runs as written once defects
+# 1-3 are fixed. It is listed separately for that reason.
+#
+# Fix: fit() takes `valtuple` and early-stops on it; `testtuple` becomes optional and is not consulted
+# during training. The caller must supply a validation split disjoint from test. In this study that
+# split is drawn as whole TCR clusters - Methods 2.7, results/review/VALIDATION_FIX_REPORT.md.
+#
+--- a/Scripts/site_train.py
++++ b/Scripts/site_train.py
+@@ -72,14 +72,14 @@
+         opt.step()
+     return trainloss
+ 
+-def fit(model, traintuple, lr, epoch, weight_decay, device, testtuple):
++def fit(model, traintuple, lr, epoch, weight_decay, device, valtuple, testtuple=None):
+     model = model.to(device)
+     opt = torch.optim.Adam(model.parameters(), lr=lr, weight_decay=weight_decay)
+     bestauc = 0
+     earlystop = 0
+     for i in range(epoch):
+         trainloss = train_epoch(model, traintuple, opt, device)
+-        auc, aupr = test(model, testtuple)
++        auc, aupr = test(model, valtuple)
+         if auc>bestauc:
+             model_save_path = os.path.join(modelname)
+             torch.save(model.state_dict(), model_save_path)
+@@ -88,7 +88,7 @@
+         else:
+             earlystop += 1
+ 
+-        logger.info('Epoch:[{}/{}]\t trainloss={:.9f}\t testauc={:.9f}\t testaupr={:.9f}'.format(i + 1, epoch, trainloss / len(ids), auc, aupr))
++        logger.info('Epoch:[{}/{}]\t trainloss={:.9f}\t valauc={:.9f}\t valaupr={:.9f}'.format(i + 1, epoch, trainloss / len(traintuple), auc, aupr))
+         if earlystop == 10:
+             logger.info(
+                 'finish')

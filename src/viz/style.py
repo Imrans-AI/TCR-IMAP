@@ -2,7 +2,7 @@
 bootstrap-floor-aware p-value formatter, and the save convention, so every p82v1 figure
 script applies them identically instead of re-declaring them per script.
 
-Style per CLAUDE.md: 7.2 in wide, 600 dpi PNG + vector PDF, Arial 8 pt body / bold 10 pt
+Style per the project notes: 7.2 in wide, 600 dpi PNG + vector PDF, Arial 8 pt body / bold 10 pt
 panel letters. No significance stars anywhere -- point/bar fill (or explicit p-text) is
 the only significance encoding used in this project's figures.
 """

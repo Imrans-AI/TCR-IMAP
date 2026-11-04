@@ -1,0 +1,21 @@
+# Defect 2 of 4 - EXECUTION FIX.
+#
+# Models/modules.py line 29: GATEncoder.__init__ calls Multihead_GAT with SIX positional arguments
+# (n_heads, m, input_dim, input_dim, n_heads*input_dim, device). Multihead_GAT.__init__ in
+# Models/GAT.py line 64 takes FIVE (n_heads, m, input_dim, out_dim, device). Constructing a
+# GATEncoder raises TypeError.
+#
+# Fix: drop the surplus n_heads*input_dim argument, leaving input_dim as out_dim, which is what the
+# surrounding residual connection and LayerNorm(input_dim) require.
+#
+--- a/Models/modules.py
++++ b/Models/modules.py
+@@ -26,7 +26,7 @@
+         self.input_dim = input_dim
+         self.n_heads = n_heads
+         self.device = device
+-        self.gan = Multihead_GAT(self.n_heads, self.m, self.input_dim, self.input_dim, self.n_heads*self.input_dim, self.device)
++        self.gan = Multihead_GAT(self.n_heads, self.m, self.input_dim, self.input_dim, self.device)
+         self.norm1 = nn.LayerNorm(self.input_dim)
+         self.ff = nn.Sequential(nn.Linear(in_features=self.input_dim, out_features=self.input_dim*2),
+                                 nn.ReLU(),

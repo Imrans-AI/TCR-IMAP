@@ -51,4 +51,4 @@ synthetic B 8eo8 29         0.0           0      0.001     False
 production checkpoints: 5yxn rep1 50,000,000, 5yxn rep2 50,000,000, 5yxn rep3 50,000,000, 7n1f rep1 50,000,000, 7n1f rep2 50,000,000, 7n1f rep3 50,000,000, 3vxs rep1 50,000,000, 3vxs rep2 50,000,000, 3vxs rep3 27,834,300, 8eo8 rep1 50,000,000, 8eo8 rep2 50,000,000, 8eo8 rep3 -1
 complete: 10/12 -> the run script would REFUSE the completion guard
 
-smoke test PASS; outputs in /tmp/claude-1000/-home-muhammad-imran/d664ef50-c781-4acf-bdec-eac545674198/scratchpad/smoke
+smoke test PASS; outputs in <scratch>

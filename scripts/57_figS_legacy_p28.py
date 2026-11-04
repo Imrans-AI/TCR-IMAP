@@ -91,7 +91,7 @@ P84["sweep"] = dict(diff=sc84["diff"], lo=sc84.lo, hi=sc84.hi, p=sc84.p, a=sc84.
                     src="similarity_curve_p84v2.csv", cell="threshold=0.7", boot="2k")
 P84["pep"] = dict(diff=pa84["diff"], lo=pa84.lo, hi=pa84.hi, p=pa84.pval, a=pa84.pep, b=pa84.no_pep,
                   src="peptide_aware_p84v2.csv", cell="scope=CDR3", boot="2k")
-# the CLAUDE.md headline values, as a guard against reading the wrong row
+# the recorded headline values, as a guard against reading the wrong row
 assert (round(P84["pair"]["diff"], 4), round(P84["struct"]["diff"], 4), round(P84["posfreq"]["diff"], 4),
         round(P84["sweep"]["diff"], 4), round(P84["pep"]["diff"], 4)) == (0.0507, 0.0312, 0.0085, 0.0274, 0.0082)
 print(f"p84v2: 3 rows recomputed at {N_BOOT:,} resamples, seed {SEED} = stats_20k_seed42.tsv; sweep and peptide rows "

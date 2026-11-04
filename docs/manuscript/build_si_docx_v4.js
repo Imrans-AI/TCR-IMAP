@@ -1,3 +1,7 @@
+// v4 Supporting Information. Forked from build_si_docx_v31.js so v3.1 stays reproducible; the
+// only changes are the title and the allele-protocol naming.
+// v3.1 Supporting Information. Forked from build_si_docx_v3.js so v3 stays reproducible; the only
+// change is the title. Every table, figure and number is identical to v3.
 // Build the Supporting Information document (figures S1-S9 + tables S1-S10) as a separate .docx.
 // Figure captions come from docs/manuscript/FIGURE_CAPTIONS.md (verified by scripts/58_verify_captions.py);
 // tables are converted from docs/manuscript/si_tables/*.md, which build_si_tables.py generates from the
@@ -11,7 +15,7 @@ const {
 } = require("docx");
 
 const REPO = "/home/muhammad-imran/PhD_data/TCRMHC_Module_3_TCR-IMAP";
-const OUT = path.join(REPO, "docs/manuscript/TCR-IMAP_supporting_information_v3.docx");
+const OUT = path.join(REPO, "docs/manuscript/TCR-IMAP_supporting_information_v_4.docx");
 const FONT = "Times New Roman";
 const SZ = 22, SZ_SMALL = 20, SZ_TBL = 14; // 11 pt, 10 pt, 7 pt
 
@@ -35,11 +39,11 @@ const P = (t, o = {}) => new Paragraph({
   spacing: { after: 140, line: 300, lineRule: LineRuleType.AUTO }, ...o,
 });
 const H1 = (t) => new Paragraph({
-  children: [new TextRun({ text: t, font: FONT, size: 26, bold: true })],
+  children: [new TextRun({ text: t, font: FONT, size: 26, bold: true, color: "000000" })],
   spacing: { before: 320, after: 160 }, heading: HeadingLevel.HEADING_1,
 });
 const H2 = (t) => new Paragraph({
-  children: [new TextRun({ text: t, font: FONT, size: 23, bold: true })],
+  children: [new TextRun({ text: t, font: FONT, size: 23, bold: true, color: "000000" })],
   spacing: { before: 280, after: 120 }, heading: HeadingLevel.HEADING_2,
 });
 
@@ -159,19 +163,28 @@ front.push(new Paragraph({
 }));
 front.push(new Paragraph({
   children: [new TextRun({
-    text: "TCR-IMAP: Homology-Controlled Evaluation of TCR–MHC Contact Prediction",
+    text: "TCR-IMAP: A Dual-Encoder Cross-Attention Model for TCR–MHC Contact Map Prediction",
     font: FONT, size: 26, bold: true, italics: true,
   })],
   alignment: AlignmentType.CENTER, spacing: { after: 160, line: 300, lineRule: LineRuleType.AUTO },
 }));
 front.push(new Paragraph({
-  children: [new TextRun({ text: "Muhammad Imran and Dong-Qing Wei", font: FONT, size: SZ })],
+  children: [new TextRun({ text: "Muhammad Imran, Waqar Ali, Syed Mansoor Jan, Muhammad Rizwan, Adil Farooq, "
+    + "Wanwan Huang and Dongqing Wei", font: FONT, size: SZ })],
   alignment: AlignmentType.CENTER, spacing: { after: 60 },
 }));
 front.push(new Paragraph({
   children: [new TextRun({
-    text: "State Key Laboratory of Microbial Metabolism, School of Life Sciences and Biotechnology, "
-        + "Shanghai Jiao Tong University, Shanghai 200240, China",
+    text: "State Key Laboratory of Microbial Metabolism, Joint International Research Laboratory of Metabolic "
+        + "and Developmental Sciences, and Department of Bioinformatics and Biological Statistics, School of "
+        + "Life Sciences and Biotechnology, Shanghai Jiao Tong University, Shanghai 200030, P.R. China",
+    font: FONT, size: SZ_SMALL, italics: true })],
+  alignment: AlignmentType.CENTER, spacing: { after: 40 },
+}));
+front.push(new Paragraph({
+  children: [new TextRun({
+    text: "School of Information and Intelligent Science and Technology, Hunan Agricultural University, "
+        + "Changsha, Hunan 410128, P.R. China",
     font: FONT, size: SZ_SMALL, italics: true })],
   alignment: AlignmentType.CENTER, spacing: { after: 300 },
 }));
@@ -238,7 +251,7 @@ tablesBody.push(P("These tables are generated from the committed result tables b
 
 const doc = new Document({
   creator: "Muhammad Imran",
-  title: "Supporting Information - TCR-IMAP: Homology-Controlled Evaluation of TCR-MHC Contact Prediction",
+  title: "Supporting Information - TCR-IMAP: A Dual-Encoder Cross-Attention Model for TCR-MHC Contact Map Prediction",
   styles: { default: { document: { run: { font: FONT, size: SZ } } } },
   sections: [
     {

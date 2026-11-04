@@ -73,5 +73,5 @@ Training sizes are exact per fold; any mean is labelled as a mean.
 | 0.7 | 1005 | 174 | 0.5646 | 0.3444 | 0.2202 | 0.1528 | 0.2693 | 0.0001 |
 | 0.7 | mean_over_draws | 174 | 0.5995 | 0.3565 | 0.2430 | 0.1794 | 0.2910 | 0.0001 |
 
-Full subset memberships — the training PDB identifiers drawn for every (threshold, fold, draw) — are in
+Full subset memberships, the training PDB identifiers drawn for every (threshold, fold, draw), are in
 `results/review/size_matched_control/memberships.tsv` (75 subsets) and in the deposit.

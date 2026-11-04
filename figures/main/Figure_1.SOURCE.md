@@ -102,7 +102,7 @@ The PyMOL session file (`1ao7_interface.pse`) was not included in the approved f
 2. `scripts/70_fig1_workflow.py`, which produced the superseded script-drawn figure, is kept for the
    audit trail but refuses to run without `--allow-superseded` and writes only to
    `figures/previous_versions/`. It can no longer reach `figures/main/`.
-3. `figures/FIGURE_MANIFEST.md`, `docs/manuscript/BUILD_NOTES_v3.md`, `CLAUDE.md` and `HANDOFF_1.md`
+3. `figures/FIGURE_MANIFEST.md`, `docs/manuscript/BUILD_NOTES_v4.md`, the project notes and `HANDOFF_1.md`
    all record which file the builder uses and that it is not regenerated.
 
 `FIG1_SHA256` in the builder is updated only when the author approves a new figure. It was updated

@@ -92,7 +92,7 @@ Training sizes are exact per fold; any mean is labelled as a mean.
 
 {md_table(pd_tab)}
 
-Full subset memberships — the training PDB identifiers drawn for every (threshold, fold, draw) — are in
+Full subset memberships, the training PDB identifiers drawn for every (threshold, fold, draw), are in
 `results/review/size_matched_control/memberships.tsv` ({len(mem)} subsets) and in the deposit.
 """
 
@@ -139,7 +139,7 @@ Seed-to-seed variation within a fixed split (Figure S6) does not measure variati
 ## S10b. Canonical-CDR-only scoring, FR4 excluded
 
 The 75-row TCR representation keeps 14 J-region framework rows (IMGT 118–124 of both chains).
-Those rows carry **0 of the 5,281 contacts** at 4.5 Å but **204,624 of the 893,928 resolved pairs** — 22.9 % of the evaluated negatives and none of the positives.
+Those rows carry **0 of the 5,281 contacts** at 4.5 Å but **204,624 of the 893,928 resolved pairs**, 22.9 % of the evaluated negatives and none of the positives.
 Rescoring the stored predictions over canonical CDR rows only (IMGT ≤ 117) tests how much each comparison depends on them.
 Paired cluster bootstrap over clu70, 20,000 resamples, seed 42. The *TCR-IMAP* and *comparator* columns are macro-AUPRC.
 
@@ -154,8 +154,8 @@ difference is **{worst_change}** ({worst['group']}, {worst['comparison']}); ever
 {teim.macro_auprc.iloc[0]:.4f} to {teim.macro_auprc.iloc[1]:.4f}. Within this listed set the FR4 rows change no verdict,
 which is a statement about these {n_comparisons} comparisons and not about every result in the paper.
 
-**What this does not cover.** The **predeclared primary comparison** — per-residue macro-AUPRC under tcr70, TCR-IMAP
-versus Struct-TCS, over the full 174-complex benchmark — **cannot be rescored at all**. That runner stores per-complex
+**What this does not cover.** The **predeclared primary comparison**, per-residue macro-AUPRC under tcr70, TCR-IMAP
+versus Struct-TCS, over the full 174-complex benchmark, **cannot be rescored at all**. That runner stores per-complex
 metrics and no prediction array, and writes no checkpoint, so there is nothing to restrict to canonical CDR rows; the
 files under `results/checkpoints/` are from the superseded 28-position candidate set under partitions that are not the
 frozen protocols, and are not the reported runs (`results/review/FR4_CHECKPOINT_AUDIT.md`). Completing this one

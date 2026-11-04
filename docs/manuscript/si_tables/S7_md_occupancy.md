@@ -90,12 +90,12 @@ between the two scores.
 | count | 7n1f | 3 | 4,598 | 83 | 0.219 | 0.488 | yes |
 | count | 3vxs | 3 | 5,010 | 73 | 0.195 | 0.439 | yes |
 | count | 8eo8 | 3 | 5,429 | 106 | 0.213 | 0.393 | yes |
-| count | 4 contributing systems | — | 19,957 | 317 | 0.200 | 0.424 | yes |
-| identity | 5yxn | 0 | 4,920 | — | — | — | no (no contributing replicate) |
+| count | 4 contributing systems | n/a | 19,957 | 317 | 0.200 | 0.424 | yes |
+| identity | 5yxn | 0 | 4,920 | n/a | n/a | n/a | no (no contributing replicate) |
 | identity | 7n1f | 2 | 4,598 | 50 | 0.172 | 0.402 | yes |
 | identity | 3vxs | 3 | 5,010 | 59 | 0.176 | 0.407 | yes |
-| identity | 8eo8 | 0 | 5,429 | — | — | — | no (no contributing replicate) |
-| identity | 2 contributing systems | — | 9,608 | 109 | 0.174 | 0.405 | yes |
+| identity | 8eo8 | 0 | 5,429 | n/a | n/a | n/a | no (no contributing replicate) |
+| identity | 2 contributing systems | n/a | 9,608 | 109 | 0.174 | 0.405 | yes |
 
 ## F. Score–score Spearman correlation among crystal-negative pairs
 

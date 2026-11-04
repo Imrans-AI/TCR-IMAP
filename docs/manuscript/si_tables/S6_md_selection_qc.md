@@ -57,7 +57,7 @@ under the corrected (p84v2) analysis. (B) Quality control of each of the twelve 
   3vxs rep2; the log also records 3 sessions for 5yxn rep2 and 2 for 7n1f rep1. No other quantity is affected.
 
 **Sources.** A: `md/MD_SYSTEM_SELECTION_CRITERIA.md` §8 (selection record: p82v1 Δ, TCR-IMAP, prior, resolution, clu70,
-allele, peptide) and "Revision — the analysis moves to the p84v2 pair universe" (p84v2 ranks); p84v2 rank and values
+allele, peptide) and the revision in which the analysis moves to the p84v2 pair universe (p84v2 ranks); p84v2 rank and values
 recomputed from `results/tables/percomplex_tcr70_paired_p84v2.tsv` and asserted equal to that revision; clu70 and
 resolution checked against `data/processed/complex_metadata.tsv`. B: `results/review/characterisation_fix/S2_qc_all12.log`
 (`md/qc_replicate.sh` on all 12 replicates: steps, frames, LINCS, sessions, thermodynamics, interface contacts; retention

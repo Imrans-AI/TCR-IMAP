@@ -1,7 +1,7 @@
 # Module 4 → JCIM: standing guidelines
 
 *From handwritten notes, 19 Aug 2026. These are directives for how the paper must be
-strengthened before submission — read alongside CLAUDE.md.*
+strengthened before submission — read alongside the project's internal notes.*
 
 ---
 

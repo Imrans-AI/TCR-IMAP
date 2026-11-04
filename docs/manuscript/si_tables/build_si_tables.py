@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build the Supporting Information tables S1-S8 (task: docs/claude_code_tasks/si_tables.md).
+"""Build the Supporting Information tables S1-S8 (task specification held with the project notes).
 
 Reads committed tables and reports, and the stored per-complex arrays (verified by SHA-256 where a checksum is
 committed). No training, inference, scoring or GPU. The only statistics computed here are paired cluster-bootstrap
@@ -140,7 +140,7 @@ for p in PROTOS:
             cell = f"{sg(r['diff'])} {ci(r['lo'], r['hi'])}", pstr(r["p"])
         s1a_csv.append(row)
         s1a.append([plab(p) if key == "Ours" else "", n if key == "Ours" else "", k if key == "Ours" else "", label,
-                    fx(m_apr), fx(m_auc), *(cell if cell else ("—", "—"))])
+                    fx(m_apr), fx(m_auc), *(cell if cell else ("n/a", "n/a"))])
 
 pm = pd.read_csv(T / "protocol_main_p84v2.csv").set_index("protocol")
 pw = np.load(T / "pairwise_ours_p84v2.npz", allow_pickle=True)
@@ -188,7 +188,7 @@ for p in PROTOS:
                 dict(task="pairwise", protocol=p, method="Pair-frequency prior", n_complexes=n, n_clusters=int(s["clusters"]),
                      macro_auprc=float(pm.loc[p, "freq_auprc"]), macro_auc=PWAUC[p][1], diff_vs_tcrimap=float(s["diff"]),
                      ci_lo=float(s["lo"]), ci_hi=float(s["hi"]), p=float(s["p"]), wins=s["wins"], resamples="20,000 (seed 42)")]
-    s1b.append([plab(p), n, int(s["clusters"]), "TCR-IMAP", fx(pm.loc[p, "model_auprc"]), auc_m, "—", "—", "—"])
+    s1b.append([plab(p), n, int(s["clusters"]), "TCR-IMAP", fx(pm.loc[p, "model_auprc"]), auc_m, "n/a", "n/a", "n/a"])
     s1b.append(["", "", "", "Pair-frequency prior", fx(pm.loc[p, "freq_auprc"]), auc_f,
                 f"{sg(s['diff'])} {ci(s['lo'], s['hi'])}", pstr(s["p"]), s["wins"]])
     if p == "tcr70":
@@ -377,7 +377,7 @@ PC = {"TCR-IMAP (pairwise)": npar(ns19["PairNet"](mhc_len=84)),
       "TEIM-Res": npar(ns36["TEIMRes"](84)),
       "AngleNet": npar(ns16["AngleNet"](mhc_len=84))}
 for k, v in (("TCR-IMAP (pairwise)", 529310), ("TCR-IMAP (per-residue)", 291073), ("Struct-TCS", 336905), ("Seq-TCS", 303105)):
-    check(PC[k] == v, f"S3 parameter count {k} = {v:,} (CLAUDE.md / HANDOFF_1.md §7 / METHODS_DRAFT.md)")
+    check(PC[k] == v, f"S3 parameter count {k} = {v:,} (project notes / HANDOFF_1.md §7 / METHODS_DRAFT.md)")
 print("  parameter counts:", PC)
 H = ["Item", "TCR-IMAP (pairwise)", "TCR-IMAP (per-residue)", "Struct-TCS", "Seq-TCS", "TEIM-Res", "AngleNet"]
 R = [
@@ -388,7 +388,7 @@ R = [
     ["Width d", "128", "96", "64", "64", "64 (embedding); 32 (2D channels)", "96"],
     ["TCR encoder", "2-layer pre-norm Transformer, FF 256", "2-layer pre-norm Transformer, FF 192", "2-layer LSTM → 2 gated multi-head GAT blocks", "2-layer LSTM → 2 self-attention blocks", "2 × Conv1d (k = 3) + BatchNorm + ReLU", "2-layer pre-norm Transformer, FF 192"],
     ["MHC encoder", "1-layer pre-norm Transformer, FF 256", "1-layer pre-norm Transformer, FF 192", "2-layer LSTM → 2 self-attention blocks", "2-layer LSTM → 2 self-attention blocks", "2 × Conv1d (k = 3) + BatchNorm + ReLU", "embedding + positional only"],
-    ["Attention heads", "8 (encoders and cross-attention)", "6", "4 (GAT, self- and cross-attention)", "4", "—", "6"],
+    ["Attention heads", "8 (encoders and cross-attention)", "6", "4 (GAT, self- and cross-attention)", "4", "n/a", "6"],
     ["Fusion", "TCR→MHC cross-attention, residual + LayerNorm", "same as pairwise", "cross-attention (TCR query) + FFN", "same as Struct-TCS", "element-wise outer product → 1 × 1 conv → 3 dilated 2D residual blocks (dilation 1, 2, 4)", "TCR→MHC cross-attention, residual + LayerNorm"],
     ["Output head", "bilinear s·⟨W_t h_i, W_m g_j⟩/√d + P_ij + b (P 75 × 84, init 0; s init 1; b init −4)", "per row: Linear–GELU–Dropout–Linear", "per row: Linear", "per row: Linear", "1 × 1 conv", "pooled [TCR mean, MHC mean]: Linear–GELU–Dropout–Linear"],
     ["Dropout", "0.2", "0.25", "0.1 (self-attention blocks)", "0.1", "none", "0.3"],
@@ -401,7 +401,7 @@ R = [
     ["Epochs", "400 (fixed)", "≤ 300", "≤ 300", "≤ 300", "400 (fixed)", "400 (fixed)"],
     ["Validation / early stopping", "none", "cluster-disjoint validation (whole clu70 clusters, ≥ 15 % of training complexes); AUPRC every 5 epochs; stop after 10 evaluations without improvement; best weights restored", "same as per-residue TCR-IMAP", "same", "none", "none"],
     ["Seeds", "42, 43, 44; predictions averaged", "42, 43, 44; averaged", "42, 43, 44; averaged", "42, 43, 44; averaged", "42, 43, 44; averaged", "42, 43, 44; each a separate run"],
-    ["Determinism", "reproducible without extra settings", "reproducible (deterministic settings change no value)", "same", "same", "deterministic cuDNN/cuBLAS settings required (see Methods)", "—"],
+    ["Determinism", "reproducible without extra settings", "reproducible (deterministic settings change no value)", "same", "same", "deterministic cuDNN/cuBLAS settings required (see Methods)", "n/a"],
     ["Trainable parameters", *[n_(PC[h]) for h in H[1:]]],
 ]
 s3_md = f"""# Table S3. Architectures, hyperparameters and parameter counts
@@ -418,7 +418,7 @@ regressor (AngleNet), as used for every reported (p84v2) result.
   (`results/review/REBUILD_P84V2_REPORT.md` step 3; `CORRECTION_PLAN_P84V2.md` §2).
 - Parameter counts were taken by `build_si_tables.py` by instantiating each class on the CPU at the p84v2 layout (no
   forward pass) and counting trainable parameters. The counts for TCR-IMAP (both variants), Struct-TCS and Seq-TCS are
-  asserted equal to the values recorded in `CLAUDE.md`, `HANDOFF_1.md` §7 and `METHODS_DRAFT.md`; the TEIM-Res and
+  asserted equal to the values recorded in the project notes, `HANDOFF_1.md` §7 and `METHODS_DRAFT.md`; the TEIM-Res and
   AngleNet counts are recorded here for the first time.
 - The pairwise models (TCR-IMAP, TEIM-Res) use no validation subset and no early stopping, so no test complex
   influences their training. The per-residue validation split is described in Methods and evaluated in Figure S4.
@@ -476,7 +476,7 @@ for p in PROTOS:
         s4_csv.append(row)
         s4.append([plab(p) if fi == 0 else "", fi, "yes" if ev else "**no (n < 3)**", len(tei), len(tri), len(ctest), len(ctrain), len(ctest & ctrain),
                    f"{ms.max():.3f}", f"{ms.mean():.3f}", f"{100 * (ms > 0.9).mean():.1f}", int(la.leak_conservative.iloc[0]), int(la.leak_stored.iloc[0]),
-                   (f"{v['train']} / {v['val']} ({v['val_clusters']}; {v['pct']:.1f} %)" if v else "—")])
+                   (f"{v['train']} / {v['val']} ({v['val_clusters']}; {v['pct']:.1f} %)" if v else "n/a")])
 t70 = [r for r in s4_csv if r["protocol"] == "tcr70"]
 check(max(r["max_train_test_similarity"] for r in t70) < 0.6958 and round(max(r["max_train_test_similarity"] for r in t70), 3) == 0.696,
       "S4 tcr70 maximum train/test similarity = 0.696 (clustering strings)")
@@ -568,8 +568,8 @@ prior with their paired difference.
 - Achieved similarity: for each test complex, its maximum similarity to the training complexes its fold kept; the
   maximum and the mean over the 174 test complexes.
 - **The `mean_max_sim` column recorded with the sweep is not the achieved similarity.** For each test complex it takes
-  the maximum similarity to any *other complex of the 174* whose similarity is below the threshold — including complexes
-  in the same test fold and training complexes the filter removed — and averages over test complexes. It is therefore
+  the maximum similarity to any *other complex of the 174* whose similarity is below the threshold, including complexes
+  in the same test fold and training complexes the filter removed, and averages over test complexes. It is therefore
   an upper bound on the achieved mean (here 0.008–0.029 above it, and different even with no restriction, because it
   also counts same-fold neighbors).
 - Δ = TCR-IMAP − prior. The reported **95 % CI and p use the project standard: paired clu70 cluster bootstrap,
@@ -712,7 +712,7 @@ under the corrected (p84v2) analysis. (B) Quality control of each of the twelve 
   3vxs rep2; the log also records 3 sessions for 5yxn rep2 and 2 for 7n1f rep1. No other quantity is affected.
 
 **Sources.** A: `md/MD_SYSTEM_SELECTION_CRITERIA.md` §8 (selection record: p82v1 Δ, TCR-IMAP, prior, resolution, clu70,
-allele, peptide) and "Revision — the analysis moves to the p84v2 pair universe" (p84v2 ranks); p84v2 rank and values
+allele, peptide) and the revision in which the analysis moves to the p84v2 pair universe (p84v2 ranks); p84v2 rank and values
 recomputed from `results/tables/percomplex_tcr70_paired_p84v2.tsv` and asserted equal to that revision; clu70 and
 resolution checked against `data/processed/complex_metadata.tsv`. B: `results/review/characterisation_fix/S2_qc_all12.log`
 (`md/qc_replicate.sh` on all 12 replicates: steps, frames, LINCS, sessions, thermodynamics, interface contacts; retention
@@ -730,7 +730,7 @@ SC = ["TCR-IMAP", "pair-frequency prior"]
 
 
 def ptxt(p):
-    return "—" if pd.isna(p) else ("< 0.001" if p <= 0.0005 else f"{p:.3f}")
+    return "n/a" if pd.isna(p) else ("< 0.001" if p <= 0.0005 else f"{p:.3f}")
 
 
 s7a = []
@@ -756,15 +756,15 @@ for s in SYS:
         s7c.append([s if sc_ == SC[0] else "", sc_, r.k, f"{int(r.n_top_k_ge)} / {r.k} ({r.frac_top_k:.3f})", f"{r.base_rate:.4f}",
                     f"{r.frac_top_k / r.base_rate:.0f}×", "yes" if r.tie_at_k else "no"])
 enr = topk.frac_top_k / topk.base_rate
-check(round(enr.min()) == 28 and round(enr.max()) == 88 and topk.n_top_k_ge.min() == 1 and topk.n_top_k_ge.max() == 7, "S7 top-k enrichment 28–88× on 1–7 pairs (CLAUDE.md)")
+check(round(enr.min()) == 28 and round(enr.max()) == 88 and topk.n_top_k_ge.min() == 1 and topk.n_top_k_ge.max() == 7, "S7 top-k enrichment 28–88× on 1–7 pairs (project notes)")
 s7d = [[r.pdb, r.rep, r.n, f"{r['mean']:.3f}", f"{r['median']:.3f}", f"{r['min']:.3f}", f"{r.n_ge_meaningful} / {r.n}"] for _, r in ck1.iterrows()]
 s7e = []
 for reading in ("count", "identity"):
     for _, a in dr[(dr.score == SC[0]) & (dr.reading == reading)].iterrows():
         b = dr[(dr.score == SC[1]) & (dr.reading == reading) & (dr.level == a.level) & (dr.pdb == a.pdb)].iloc[0]
-        nc = "—" if pd.isna(a.n_replicates_contributing) else int(a.n_replicates_contributing)
-        s7e.append([reading, a.pdb, nc, n_(a.n_crystal_negative), "—" if pd.isna(a.n_nonzero_occupancy) else n_(a.n_nonzero_occupancy),
-                    "—" if pd.isna(a.rho) else f"{a.rho:.3f}", "—" if pd.isna(b.rho) else f"{b.rho:.3f}", "yes" if a.interpretable else "no (no contributing replicate)"])
+        nc = "n/a" if pd.isna(a.n_replicates_contributing) else int(a.n_replicates_contributing)
+        s7e.append([reading, a.pdb, nc, n_(a.n_crystal_negative), "n/a" if pd.isna(a.n_nonzero_occupancy) else n_(a.n_nonzero_occupancy),
+                    "n/a" if pd.isna(a.rho) else f"{a.rho:.3f}", "n/a" if pd.isna(b.rho) else f"{b.rho:.3f}", "yes" if a.interpretable else "no (no contributing replicate)"])
 s7f = [[r.pdb, n_(r.n_crystal_negative), f"{r.spearman_rho:.3f}"] for _, r in ss.iterrows()]
 s7_md = f"""# Table S7. Molecular dynamics: occupancy statistics
 

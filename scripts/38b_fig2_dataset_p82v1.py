@@ -195,43 +195,43 @@ vc_ = m.dup_family.value_counts(); ind_ = (m.dup_family.map(vc_) > 1).values
 print(f"\nallele fold dropped: fold {small[0]} (n = 2: {', '.join(dropped)}); "
       f"allele n = {N_EVAL['allele']} in D and E, equal to percomplex_allele_p82v1.npz")
 rows = [
-    dict(panel="B", quantity="complexes", source="complex_metadata.tsv", shown=f"{len(m)}", claude="174"),
+    dict(panel="B", quantity="complexes", source="complex_metadata.tsv", shown=f"{len(m)}", recorded="174"),
     dict(panel="C", quantity="clusters 70/80/90 %", source="complex_metadata.tsv",
-         shown=f"{n_clu['clu70']}/{n_clu['clu80']}/{n_clu['clu90']}", claude="69 (70 %); HANDOFF 82/89"),
+         shown=f"{n_clu['clu70']}/{n_clu['clu80']}/{n_clu['clu90']}", recorded="69 (70 %); HANDOFF 82/89"),
     dict(panel="B", quantity="exact TCR twin (NN >= 0.999)", source="tcr_identity_matrix.npy",
-         shown=f"{n_exact}/174 = {100*frac_exact:.1f}%", claude="57.5 % (100/174)"),
+         shown=f"{n_exact}/174 = {100*frac_exact:.1f}%", recorded="57.5 % (100/174)"),
     dict(panel="B", quantity="pairs >= 0.90", source="tcr_identity_matrix.npy",
-         shown=f"{100*(off>=0.9).mean():.1f}%", claude="-"),
+         shown=f"{100*(off>=0.9).mean():.1f}%", recorded="-"),
     dict(panel="B", quantity="complexes NN >= 0.90", source="tcr_identity_matrix.npy",
-         shown=f"{100*(nn>=0.9).mean():.1f}%", claude="-"),
+         shown=f"{100*(nn>=0.9).mean():.1f}%", recorded="-"),
     dict(panel="D", quantity="random median max-sim", source="percomplex_maxsim.tsv",
-         shown=f"{np.median(r_ms):.3f}", claude="0.983"),
+         shown=f"{np.median(r_ms):.3f}", recorded="0.983"),
     dict(panel="D", quantity="random >= 0.90", source="percomplex_maxsim.tsv",
-         shown=f"{100*(r_ms>=0.9).mean():.1f}%", claude="HANDOFF 60.3 % (fold mean)"),
+         shown=f"{100*(r_ms>=0.9).mean():.1f}%", recorded="HANDOFF 60.3 % (fold mean)"),
     dict(panel="D", quantity="tcr70 max max-sim", source="percomplex_maxsim.tsv",
-         shown=f"{t_ms.max():.3f}", claude="0.696"),
+         shown=f"{t_ms.max():.3f}", recorded="0.696"),
 ]
 for p in ORDER:
     rows.append(dict(panel="D/E", quantity=f"{p} n evaluated", source="percomplex_maxsim.tsv + leakage_audit_dual.tsv",
-                     shown=f"{N_EVAL[p]}", claude={"random": "174", "double": "30", "allele": "64",
+                     shown=f"{N_EVAL[p]}", recorded={"random": "174", "double": "30", "allele": "64",
                                                     "temporal": "60", "tcr70": "174"}[p]))
 for p in ORDER:
     rows.append(dict(panel="E", quantity=f"{p} split dup families/fold ({int(g.folds[p])} folds)",
                      source="leakage_audit_dual.tsv (leak_conservative)", shown=f"{g.lc[p]:.2f}",
-                     claude={"random": "7.4", "double": "0.67", "allele": "1.2 (HANDOFF, 5 folds incl. n=2)",
+                     recorded={"random": "7.4", "double": "0.67", "allele": "1.2 (HANDOFF, 5 folds incl. n=2)",
                              "temporal": "0", "tcr70": "0 (no leakage)"}[p]))
 print_validation_table(rows, [("panel", "panel", None), ("quantity", "quantity", None),
                               ("source", "source", None), ("shown", "displayed", None),
-                              ("claude", "CLAUDE.md / HANDOFF", None)])
+                              ("recorded", "recorded values", None)])
 
-# CLAUDE.md "Primary p82v1 results" -> Redundancy line: hard cross-checks
+# Project notes, "Primary p82v1 results" -> Redundancy line: hard cross-checks
 checks = {"complexes == 174": len(m) == 174,
           "clu70 clusters == 69": n_clu["clu70"] == 69,
           "exact twin 57.5 %": round(100 * frac_exact, 1) == 57.5,
           "random median max-sim 0.983": round(float(np.median(r_ms)), 3) == 0.983,
           "tcr70 max max-sim 0.696": round(float(t_ms.max()), 3) == 0.696,
           "no dup-family leakage under tcr70": g.lc["tcr70"] == 0}
-print("\nCLAUDE.md cross-check:", {k: ("OK" if v else "MISMATCH") for k, v in checks.items()})
+print("\nrecorded-values cross-check:", {k: ("OK" if v else "MISMATCH") for k, v in checks.items()})
 print("\nper-protocol max-sim (pooled per complex):")
 print(pc.groupby("protocol").max_sim.agg(["count", "mean", "median", "max",
       lambda s: round((s >= 0.9).mean(), 3)]).rename(columns={"<lambda_0>": "frac>=0.90"})

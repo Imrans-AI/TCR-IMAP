@@ -11,7 +11,7 @@ Author: Muhammad Imran. Date: 2 October 2026.
 
 The primary analysis of this paper was rebuilt once already because a 28-position MHC candidate
 set had been chosen using contact frequency pooled over all 174 complexes *before* splitting —
-outcome-informed selection that invalidated every headline number (see `CLAUDE.md`, "The
+outcome-informed selection that invalidated every headline number (see the project notes, "The
 correction"). The same failure mode is available here: choosing MD systems by looking at which
 complexes give a convenient answer. These criteria are fixed in advance so that the selection
 cannot be, and cannot be alleged to be, informed by the outcome.
@@ -48,7 +48,7 @@ under tcr70. This is the comparison the MD analysis is designed to inform.
 - **2 high-Delta** — complexes where the model most exceeds the prior
 - **2 low-Delta** — complexes where it does not
 
-The mid-Delta stratum in the earlier 6-system sketch (`CLAUDE.md`, MD design table) is dropped.
+The mid-Delta stratum in the earlier 6-system sketch (the project notes, MD design table) is dropped.
 Four systems preserve two complexes per stratum, so no stratum rests on a single structure.
 
 **Eligibility filters, applied before ranking:**
@@ -62,7 +62,7 @@ Four systems preserve two complexes per stratum, so no stratum rests on a single
 **Ranking rule:** among eligible complexes, take the 2 highest Delta and the 2 lowest Delta.
 
 **Pre-identified extremes.** `5yxn` (Delta = +0.250) and `7n1f` (Delta = -0.231) are already
-recorded in `CLAUDE.md` and `HANDOFF_1.md` as the Figure 6 success/failure extremes, so the ends
+recorded in the project notes and `HANDOFF_1.md` as the Figure 6 success/failure extremes, so the ends
 of this table are already known to the author. They are therefore **auto-included as the two
 anchors if and only if they pass the eligibility filters above**; the second complex in each
 stratum is the next-ranked eligible complex. If either fails a filter, it is replaced by the

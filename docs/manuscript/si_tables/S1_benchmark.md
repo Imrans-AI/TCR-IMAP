@@ -9,27 +9,27 @@ task. (B) Pairwise task. (C) The 88 structures shared with the comparator's data
 
 | Protocol | n complexes | n clusters | Method | Macro-AUPRC | Macro-AUC | TCR-IMAP − method [95 % CI] | p |
 |---|---|---|---|---|---|---|---|
-| random | 174 | 69 | TCR-IMAP | 0.8061 | 0.9309 | — | — |
+| random | 174 | 69 | TCR-IMAP | 0.8061 | 0.9309 | n/a | n/a |
 |  |  |  | Struct-TCS | 0.8092 | 0.9280 | −0.0030 [−0.0227, +0.0207] | 0.798 |
 |  |  |  | Seq-TCS | 0.7736 | 0.9074 | +0.0325 [+0.0132, +0.0559] | 0.001 |
 |  |  |  | Position-frequency prior | 0.7457 | 0.9086 | +0.0604 [+0.0364, +0.0837] | < 0.001 |
 |  |  |  | Nearest-neighbor transfer | 0.7281 | 0.8692 | +0.0780 [+0.0398, +0.1252] | < 0.001 |
-| intersection (legacy) | 30 | 22 | TCR-IMAP | 0.7996 | 0.9293 | — | — |
+| intersection (legacy) | 30 | 22 | TCR-IMAP | 0.7996 | 0.9293 | n/a | n/a |
 |  |  |  | Struct-TCS | 0.7300 | 0.8944 | +0.0696 [+0.0148, +0.1161] | 0.015 |
 |  |  |  | Seq-TCS | 0.7079 | 0.8797 | +0.0917 [+0.0394, +0.1436] | < 0.001 |
 |  |  |  | Position-frequency prior | 0.7213 | 0.8988 | +0.0783 [+0.0431, +0.1127] | < 0.001 |
 |  |  |  | Nearest-neighbor transfer | 0.5704 | 0.7796 | +0.2292 [+0.1527, +0.2943] | < 0.001 |
-| allele | 64 | 38 | TCR-IMAP | 0.7764 | 0.9237 | — | — |
+| allele | 64 | 38 | TCR-IMAP | 0.7764 | 0.9237 | n/a | n/a |
 |  |  |  | Struct-TCS | 0.7258 | 0.8875 | +0.0507 [+0.0187, +0.0822] | 0.001 |
 |  |  |  | Seq-TCS | 0.6734 | 0.8615 | +0.1030 [+0.0716, +0.1382] | < 0.001 |
 |  |  |  | Position-frequency prior | 0.7467 | 0.9096 | +0.0298 [−0.0163, +0.0775] | 0.205 |
 |  |  |  | Nearest-neighbor transfer | 0.5848 | 0.7840 | +0.1916 [+0.1001, +0.2820] | < 0.001 |
-| temporal | 60 | 32 | TCR-IMAP | 0.6936 | 0.8861 | — | — |
+| temporal | 60 | 32 | TCR-IMAP | 0.6936 | 0.8861 | n/a | n/a |
 |  |  |  | Struct-TCS | 0.6907 | 0.8789 | +0.0030 [−0.0410, +0.0602] | 0.874 |
 |  |  |  | Seq-TCS | 0.6474 | 0.8485 | +0.0462 [+0.0043, +0.1064] | 0.028 |
 |  |  |  | Position-frequency prior | 0.6830 | 0.8841 | +0.0107 [−0.0257, +0.0515] | 0.584 |
 |  |  |  | Nearest-neighbor transfer | 0.4514 | 0.7112 | +0.2423 [+0.1925, +0.2913] | < 0.001 |
-| tcr70 | 174 | 69 | TCR-IMAP | 0.7281 | 0.8968 | — | — |
+| tcr70 | 174 | 69 | TCR-IMAP | 0.7281 | 0.8968 | n/a | n/a |
 |  |  |  | Struct-TCS | 0.6969 | 0.8740 | +0.0312 [−0.0049, +0.0650] | 0.088 |
 |  |  |  | Seq-TCS | 0.6481 | 0.8453 | +0.0799 [+0.0455, +0.1161] | < 0.001 |
 |  |  |  | Position-frequency prior | 0.7196 | 0.8982 | +0.0085 [−0.0162, +0.0371] | 0.546 |
@@ -39,15 +39,15 @@ task. (B) Pairwise task. (C) The 88 structures shared with the comparator's data
 
 | Protocol | n complexes | n clusters | Method | Macro-AUPRC | Macro-AUC | TCR-IMAP − method [95 % CI] | p | TCR-IMAP higher |
 |---|---|---|---|---|---|---|---|---|
-| random | 174 | 69 | TCR-IMAP | 0.6230 | 0.9912 | — | — | — |
+| random | 174 | 69 | TCR-IMAP | 0.6230 | 0.9912 | n/a | n/a | n/a |
 |  |  |  | Pair-frequency prior | 0.3559 | 0.9741 | +0.2671 [+0.2069, +0.3126] | < 0.001 | 151/174 |
-| intersection (legacy) | 30 | 22 | TCR-IMAP | 0.4406 | 0.9876 | — | — | — |
+| intersection (legacy) | 30 | 22 | TCR-IMAP | 0.4406 | 0.9876 | n/a | n/a | n/a |
 |  |  |  | Pair-frequency prior | 0.3182 | 0.9730 | +0.1223 [+0.0508, +0.2021] | < 0.001 | 22/30 |
-| allele | 64 | 38 | TCR-IMAP | 0.4721 | 0.9832 | — | — | — |
+| allele | 64 | 38 | TCR-IMAP | 0.4721 | 0.9832 | n/a | n/a | n/a |
 |  |  |  | Pair-frequency prior | 0.3306 | 0.9689 | +0.1415 [+0.0577, +0.2241] | < 0.001 | 48/64 |
-| temporal | 60 | 32 | TCR-IMAP | 0.3200 | 0.9768 | — | — | — |
+| temporal | 60 | 32 | TCR-IMAP | 0.3200 | 0.9768 | n/a | n/a | n/a |
 |  |  |  | Pair-frequency prior | 0.2892 | 0.9354 | +0.0308 [+0.0012, +0.0663] | 0.041 | 40/60 |
-| tcr70 | 174 | 69 | TCR-IMAP | 0.3598 | 0.9809 | — | — | — |
+| tcr70 | 174 | 69 | TCR-IMAP | 0.3598 | 0.9809 | n/a | n/a | n/a |
 |  |  |  | Pair-frequency prior | 0.3090 | 0.9601 | +0.0507 [+0.0215, +0.0841] | < 0.001 | 112/174 |
 |  |  |  | TEIM-Res | 0.2725 | 0.8205 | +0.0873 [+0.0592, +0.1149] | < 0.001 | 143/174 |
 

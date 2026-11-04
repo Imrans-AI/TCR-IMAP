@@ -13,7 +13,7 @@ regressor (AngleNet), as used for every reported (p84v2) result.
 | Width d | 128 | 96 | 64 | 64 | 64 (embedding); 32 (2D channels) | 96 |
 | TCR encoder | 2-layer pre-norm Transformer, FF 256 | 2-layer pre-norm Transformer, FF 192 | 2-layer LSTM → 2 gated multi-head GAT blocks | 2-layer LSTM → 2 self-attention blocks | 2 × Conv1d (k = 3) + BatchNorm + ReLU | 2-layer pre-norm Transformer, FF 192 |
 | MHC encoder | 1-layer pre-norm Transformer, FF 256 | 1-layer pre-norm Transformer, FF 192 | 2-layer LSTM → 2 self-attention blocks | 2-layer LSTM → 2 self-attention blocks | 2 × Conv1d (k = 3) + BatchNorm + ReLU | embedding + positional only |
-| Attention heads | 8 (encoders and cross-attention) | 6 | 4 (GAT, self- and cross-attention) | 4 | — | 6 |
+| Attention heads | 8 (encoders and cross-attention) | 6 | 4 (GAT, self- and cross-attention) | 4 | n/a | 6 |
 | Fusion | TCR→MHC cross-attention, residual + LayerNorm | same as pairwise | cross-attention (TCR query) + FFN | same as Struct-TCS | element-wise outer product → 1 × 1 conv → 3 dilated 2D residual blocks (dilation 1, 2, 4) | TCR→MHC cross-attention, residual + LayerNorm |
 | Output head | bilinear s·⟨W_t h_i, W_m g_j⟩/√d + P_ij + b (P 75 × 84, init 0; s init 1; b init −4) | per row: Linear–GELU–Dropout–Linear | per row: Linear | per row: Linear | 1 × 1 conv | pooled [TCR mean, MHC mean]: Linear–GELU–Dropout–Linear |
 | Dropout | 0.2 | 0.25 | 0.1 (self-attention blocks) | 0.1 | none | 0.3 |
@@ -26,7 +26,7 @@ regressor (AngleNet), as used for every reported (p84v2) result.
 | Epochs | 400 (fixed) | ≤ 300 | ≤ 300 | ≤ 300 | 400 (fixed) | 400 (fixed) |
 | Validation / early stopping | none | cluster-disjoint validation (whole clu70 clusters, ≥ 15 % of training complexes); AUPRC every 5 epochs; stop after 10 evaluations without improvement; best weights restored | same as per-residue TCR-IMAP | same | none | none |
 | Seeds | 42, 43, 44; predictions averaged | 42, 43, 44; averaged | 42, 43, 44; averaged | 42, 43, 44; averaged | 42, 43, 44; averaged | 42, 43, 44; each a separate run |
-| Determinism | reproducible without extra settings | reproducible (deterministic settings change no value) | same | same | deterministic cuDNN/cuBLAS settings required (see Methods) | — |
+| Determinism | reproducible without extra settings | reproducible (deterministic settings change no value) | same | same | deterministic cuDNN/cuBLAS settings required (see Methods) | n/a |
 | Trainable parameters | 529,310 | 291,073 | 336,905 | 303,105 | 110,593 | 225,505 |
 
 **Notes.**
@@ -35,7 +35,7 @@ regressor (AngleNet), as used for every reported (p84v2) result.
   (`results/review/REBUILD_P84V2_REPORT.md` step 3; `CORRECTION_PLAN_P84V2.md` §2).
 - Parameter counts were taken by `build_si_tables.py` by instantiating each class on the CPU at the p84v2 layout (no
   forward pass) and counting trainable parameters. The counts for TCR-IMAP (both variants), Struct-TCS and Seq-TCS are
-  asserted equal to the values recorded in `CLAUDE.md`, `HANDOFF_1.md` §7 and `METHODS_DRAFT.md`; the TEIM-Res and
+  asserted equal to the values recorded in the project notes, `HANDOFF_1.md` §7 and `METHODS_DRAFT.md`; the TEIM-Res and
   AngleNet counts are recorded here for the first time.
 - The pairwise models (TCR-IMAP, TEIM-Res) use no validation subset and no early stopping, so no test complex
   influences their training. The per-residue validation split is described in Methods and evaluated in Figure S4.

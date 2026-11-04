@@ -5,10 +5,10 @@
 # The private repository exists; no public release date or archive DOI has been assigned.
 cff-version: 1.2.0
 message: >-
-  This software and data package accompanies a manuscript that is in preparation. It has not been
-  published, deposited or assigned a DOI. Please cite the manuscript once it is available; until
+  This software and data package accompanies a manuscript that is being submitted for
+  publication. It has not been published, deposited or assigned a DOI. Please cite the manuscript once it is available; until
   then, cite this package by its version and source revision as recorded in PACKAGE_INFO.json.
-title: "TCR-IMAP: homology-controlled evaluation of TCR-MHC contact prediction"
+title: "TCR-IMAP: A Dual-Encoder Cross-Attention Model for TCR-MHC Platform Contact Map Prediction"
 abstract: >-
   Frozen benchmark, partitioning protocols, baselines, stored predictions and analysis code for
   measuring how much of a sequence-based TCR-MHC class I contact predictor's apparent accuracy
@@ -27,14 +27,53 @@ authors:
   - family-names: Imran
     given-names: Muhammad
     affiliation: >-
-      State Key Laboratory of Microbial Metabolism, School of Life Sciences and Biotechnology,
-      Shanghai Jiao Tong University, Shanghai 200240, China
+      State Key Laboratory of Microbial Metabolism, Joint International Research Laboratory of
+      Metabolic and Developmental Sciences, and Department of Bioinformatics and Biological
+      Statistics, School of Life Sciences and Biotechnology, Shanghai Jiao Tong University,
+      Shanghai 200030, P.R. China
     # orcid: AUTHOR DECISION - no ORCID is recorded anywhere in this project; supply or omit
-  - family-names: Wei
-    given-names: Dong-Qing
+  - family-names: Ali
+    given-names: Waqar
     affiliation: >-
-      State Key Laboratory of Microbial Metabolism, School of Life Sciences and Biotechnology,
-      Shanghai Jiao Tong University, Shanghai 200240, China
+      State Key Laboratory of Microbial Metabolism, Joint International Research Laboratory of
+      Metabolic and Developmental Sciences, and Department of Bioinformatics and Biological
+      Statistics, School of Life Sciences and Biotechnology, Shanghai Jiao Tong University,
+      Shanghai 200030, P.R. China
+  - family-names: Jan
+    given-names: Syed Mansoor
+    affiliation: >-
+      State Key Laboratory of Microbial Metabolism, Joint International Research Laboratory of
+      Metabolic and Developmental Sciences, and Department of Bioinformatics and Biological
+      Statistics, School of Life Sciences and Biotechnology, Shanghai Jiao Tong University,
+      Shanghai 200030, P.R. China
+  - family-names: Rizwan
+    given-names: Muhammad
+    affiliation: >-
+      State Key Laboratory of Microbial Metabolism, Joint International Research Laboratory of
+      Metabolic and Developmental Sciences, and Department of Bioinformatics and Biological
+      Statistics, School of Life Sciences and Biotechnology, Shanghai Jiao Tong University,
+      Shanghai 200030, P.R. China
+  - family-names: Farooq
+    given-names: Adil
+    affiliation: >-
+      State Key Laboratory of Microbial Metabolism, Joint International Research Laboratory of
+      Metabolic and Developmental Sciences, and Department of Bioinformatics and Biological
+      Statistics, School of Life Sciences and Biotechnology, Shanghai Jiao Tong University,
+      Shanghai 200030, P.R. China
+  - family-names: Huang
+    given-names: Wanwan
+    email: hww@hunau.edu.cn
+    affiliation: >-
+      School of Information and Intelligent Science and Technology, Hunan Agricultural University,
+      Changsha, Hunan 410128, P.R. China
+    # orcid: AUTHOR DECISION - no ORCID is recorded for this author either
+  - family-names: Wei
+    given-names: Dongqing
+    affiliation: >-
+      State Key Laboratory of Microbial Metabolism, Joint International Research Laboratory of
+      Metabolic and Developmental Sciences, and Department of Bioinformatics and Biological
+      Statistics, School of Life Sciences and Biotechnology, Shanghai Jiao Tong University,
+      Shanghai 200030, P.R. China
     # orcid: AUTHOR DECISION - as above
 keywords:
   - T-cell receptor
@@ -69,7 +108,8 @@ references:
 # ---------------------------------------------------------------------------------------------
 # AUTHOR DECISIONS REQUIRED before this file is valid for a release
 # ---------------------------------------------------------------------------------------------
-#   licence scope: see LICENSING_DECISION_REQUIRED.md; figures and third-party material excluded
+#   licence scope: see LICENSING_DECISION_REQUIRED.md. Original code MIT; original derived
+#   data, documentation AND figures CC BY 4.0; third-party material keeps its own terms
 #   doi / identifiers: no archive record exists - do not invent or pre-reserve a DOI here
 #   date-released:  set to the actual deposit date on the day of deposit, not before
 #   preferred-citation: add the manuscript once it has a journal, year and status

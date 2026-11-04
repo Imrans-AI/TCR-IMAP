@@ -1,0 +1,92 @@
+{
+  "generated_by": "scripts/71_results_tables_v4.py",
+  "sources": {
+    "data/splits_v2/protocols.json": "3e48a094e94d9758c54187ea924e23caf6c1980bd2d5eb812e85546deb084dca",
+    "data/processed/complex_metadata.tsv": "c14641f75b25dc264b2655791e66d2e59492b0468acc606c091fce65c3b4c01f",
+    "results/review/figures_p84v2/stats_20k_seed42.tsv": "f640660db4d65ce82272ed69d46539c0ca5ad5a8ffed1269580d793a9aa067a1"
+  },
+  "table1": [
+    {
+      "protocol": "random",
+      "folds": "5",
+      "evaluated": "174 of 174",
+      "tcr_control": "none; folds are drawn over complexes",
+      "mhc_control": "none",
+      "role": "reference point; the inflation other protocols remove is measured against it"
+    },
+    {
+      "protocol": "intersection (legacy)",
+      "folds": "3",
+      "evaluated": "30 of 174",
+      "tcr_control": "partial; test complexes are selected at the intersection of a held-out cluster and a held-out allele group, but all non-test complexes remain in training, so the held-out groups are still seen",
+      "mhc_control": "partial, in the same sense",
+      "role": "legacy, retained for continuity with earlier work; not a double holdout and not a point on any strictness ranking"
+    },
+    {
+      "protocol": "allele-annotation holdout",
+      "folds": "5 (1 dropped, n < 3)",
+      "evaluated": "64 of 174",
+      "tcr_control": "none",
+      "mhc_control": "holdout is by parsed allele annotation, not by MHC sequence: 108 complexes carry no annotation and never leave training, and for 32 of the 64 evaluated complexes an identical 84-residue MHC window is present in training",
+      "role": "MHC-side redundancy, as far as the available annotation allows"
+    },
+    {
+      "protocol": "temporal",
+      "folds": "1",
+      "evaluated": "60 of 174",
+      "tcr_control": "none",
+      "mhc_control": "none",
+      "role": "prospective-style split by deposition date"
+    },
+    {
+      "protocol": "tcr70",
+      "folds": "5",
+      "evaluated": "174 of 174",
+      "tcr_control": "whole TCR clusters at a similarity ratio of 0.70 are held out; zero train/test cluster overlap in every fold",
+      "mhc_control": "none; it partitions on TCR sequence only",
+      "role": "primary protocol; the predeclared comparison is made under it"
+    }
+  ],
+  "table2": [
+    {
+      "comparison": "TCR-IMAP vs Struct-TCS",
+      "task": "per-residue",
+      "protocol": "tcr70",
+      "delta": "+0.0312",
+      "ci": "[−0.0049, +0.0650]",
+      "p": "0.088",
+      "n": 174,
+      "interpretation": "**predeclared primary comparison.** Unresolved: the interval spans a disadvantage and an advantage more than twice the estimated difference"
+    },
+    {
+      "comparison": "TCR-IMAP vs pair-frequency prior",
+      "task": "pairwise",
+      "protocol": "tcr70",
+      "delta": "+0.0507",
+      "ci": "[+0.0215, +0.0841]",
+      "p": "< 0.001",
+      "n": 174,
+      "interpretation": "secondary, unadjusted; TCR-IMAP higher on 112 of 174 complexes"
+    },
+    {
+      "comparison": "TCR-IMAP vs TEIM-Res",
+      "task": "pairwise",
+      "protocol": "tcr70",
+      "delta": "+0.0873",
+      "ci": "[+0.0592, +0.1149]",
+      "p": "< 0.001",
+      "n": 174,
+      "interpretation": "secondary, unadjusted; TCR-IMAP higher on 143 of 174 complexes"
+    },
+    {
+      "comparison": "TCR-IMAP vs Struct-TCS",
+      "task": "per-residue",
+      "protocol": "random",
+      "delta": "−0.0030",
+      "ci": "[−0.0227, +0.0207]",
+      "p": "0.798",
+      "n": 174,
+      "interpretation": "secondary, unadjusted; no difference is detected where train/test similarity is unrestricted"
+    }
+  ]
+}

@@ -142,10 +142,10 @@ wrote S1_benchmark.md + S1_benchmark_per_residue_pairwise.csv, S1_benchmark_comp
   ok  S2 dot_head: simultaneous interval excludes zero iff Holm p < 0.05
 wrote S2_ablations.md + S2_ablations.csv
 == S3
-  ok  S3 parameter count TCR-IMAP (pairwise) = 529,310 (CLAUDE.md / HANDOFF_1.md §7 / METHODS_DRAFT.md)
-  ok  S3 parameter count TCR-IMAP (per-residue) = 291,073 (CLAUDE.md / HANDOFF_1.md §7 / METHODS_DRAFT.md)
-  ok  S3 parameter count Struct-TCS = 336,905 (CLAUDE.md / HANDOFF_1.md §7 / METHODS_DRAFT.md)
-  ok  S3 parameter count Seq-TCS = 303,105 (CLAUDE.md / HANDOFF_1.md §7 / METHODS_DRAFT.md)
+  ok  S3 parameter count TCR-IMAP (pairwise) = 529,310 (project notes / HANDOFF_1.md §7 / METHODS_DRAFT.md)
+  ok  S3 parameter count TCR-IMAP (per-residue) = 291,073 (project notes / HANDOFF_1.md §7 / METHODS_DRAFT.md)
+  ok  S3 parameter count Struct-TCS = 336,905 (project notes / HANDOFF_1.md §7 / METHODS_DRAFT.md)
+  ok  S3 parameter count Seq-TCS = 303,105 (project notes / HANDOFF_1.md §7 / METHODS_DRAFT.md)
   parameter counts: {'TCR-IMAP (pairwise)': 529310, 'TCR-IMAP (per-residue)': 291073, 'Struct-TCS': 336905, 'Seq-TCS': 303105, 'TEIM-Res': 110593, 'AngleNet': 225505}
 wrote S3_hyperparameters.md + S3_hyperparameters.csv
 == S4
@@ -277,7 +277,7 @@ wrote S6_md_selection_qc.md + S6_md_systems.csv, S6_md_replicates.csv
   ok  S7 3vxs: both scores on the same pairs
   ok  S7 8eo8: both scores on the same pairs
   ok  S7 every primary and stratum row is interpretable
-  ok  S7 top-k enrichment 28–88× on 1–7 pairs (CLAUDE.md)
+  ok  S7 top-k enrichment 28–88× on 1–7 pairs (project notes)
 wrote S7_md_occupancy.md + S7_md_rho.csv, S7_md_strata.csv, S7_md_topk.csv, S7_md_check1.csv, S7_md_docked_rho.csv, S7_md_score_score.csv
 == S8
   ok  S8 exact twins 100/174 = handoff6_statements.tsv

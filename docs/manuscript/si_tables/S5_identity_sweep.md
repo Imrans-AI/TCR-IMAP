@@ -23,8 +23,8 @@ prior with their paired difference.
 - Achieved similarity: for each test complex, its maximum similarity to the training complexes its fold kept; the
   maximum and the mean over the 174 test complexes.
 - **The `mean_max_sim` column recorded with the sweep is not the achieved similarity.** For each test complex it takes
-  the maximum similarity to any *other complex of the 174* whose similarity is below the threshold — including complexes
-  in the same test fold and training complexes the filter removed — and averages over test complexes. It is therefore
+  the maximum similarity to any *other complex of the 174* whose similarity is below the threshold, including complexes
+  in the same test fold and training complexes the filter removed, and averages over test complexes. It is therefore
   an upper bound on the achieved mean (here 0.008–0.029 above it, and different even with no restriction, because it
   also counts same-fold neighbors).
 - Δ = TCR-IMAP − prior. The reported **95 % CI and p use the project standard: paired clu70 cluster bootstrap,

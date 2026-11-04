@@ -60,7 +60,7 @@ minimum fold size. The partition labeled intersection is a legacy intersection-s
 holdout: its held-out groups remain in training (Methods). The
 similarity ratio is computed on the concatenated CDR1, CDR2 and CDR3 slot sequences of both chains, one residue per
 IMGT position (IMGT 27–38, 56–65 and 105–124, the last including J-region framework positions 118–124), the sequences
-used to cluster the complexes and build the folds. 6uz1 is excluded from the benchmark on structural-scope grounds.
+used to cluster the complexes and build the folds. 6UZ1 is excluded from the benchmark on structural-scope grounds.
 Descriptive; no test is performed. n = 174 complexes.
 
 ---
@@ -79,10 +79,10 @@ from the same point estimate, a Monte Carlo difference in the bootstrap, and are
 Information. (C) Mean absolute error (MAE) of the
 docking angles predicted by AngleNet, a separate sequence-based regression network trained from scratch in each fold
 (not TCR-IMAP), under random, allele-holdout and TRBV-holdout partitions: three training seeds each (points) and their
-mean (line). MAE 5.40–6.08° (random), 11.18–12.01° (allele holdout) and 12.50–13.43° (TRBV holdout); dashed line, the
+mean (line). MAE 5.40–6.08° (random), 11.18–12.01° (allele-annotation holdout) and 12.50–13.43° (TRBV holdout); dashed line, the
 median-predictor baseline (11.0°). Pearson r across seeds is printed for each partition: 0.71 to 0.78, 0.13 to 0.20 and
 0.11 to 0.20. (D) Docking-angle R² for the same runs: +0.42 to +0.56 under random partitioning, −0.38 to −0.22 under
-allele holdout and −0.47 to −0.39 under TRBV holdout; dashed line, R² = 0 (the mean predictor). Statistics: (B) paired
+allele-annotation holdout and −0.47 to −0.39 under TRBV holdout; dashed line, R² = 0 (the mean predictor). Statistics: (B) paired
 cluster bootstrap over 69 TCR clusters, 20,000 resamples, seed 42, recomputed from per-complex arrays recovered under
 a validation gate that reproduced the frozen aggregates exactly; the superseded 2,000-resample values are retained in
 the Supporting Information. (E) Training-size-matched control at the
@@ -141,10 +141,10 @@ marks DSSP helix (dark) and non-helical boundary (light) columns. Boxes mark the
 outline, germline loops; dashed, CDR3; color, TCR chain. Three CDR3β insertion rows resolved in fewer than five
 complexes (111B and 112C, one complex each; 112B, three) are hatched and kept off the color scale, because a frequency
 over one to three complexes is not a population estimate. With these rows excluded, the most frequent pair is CDR1β 36
-× α1 76 (0.667). Square-root color scale. (B) The MHC platform of 1ao7 colored by each position's contact frequency
+× α1 76 (0.667). Square-root color scale. (B) The MHC platform of 1AO7 colored by each position's contact frequency
 summed over the TCR rows resolved in at least five complexes, relative to its own maximum (not panel A's scale).
 Sticks mark the 14 positions above 0.30 of the maximum: 62, 65, 66, 68, 69, 72, 73, 76, 1061A, 1062, 1065, 1066, 1069
-and 1073. Residues are selected by IMGT number and insertion code. (C) The 1ao7 TCR–pMHC complex with its CDR loops.
+and 1073. Residues are selected by IMGT number and insertion code. (C) The 1AO7 TCR–pMHC complex with its CDR loops.
 (D) Contact rate (%) by loop and MHC region over the 182-position G-domain. The β-sheet floor carries 0 contacts in
 595,952 resolved pairs; the 84-column window captures 5,281 of the 5,294 G-domain contacts (99.75 %). (E) Per-cluster
 α1 − α2 contact-rate difference with 95 % bootstrap intervals over the 69 TCR clusters. α-chain germline loops prefer
@@ -173,8 +173,8 @@ TCR-IMAP is higher on 112 of 174 complexes (64.4 %); pooled Δ = +0.0507 [+0.021
 of observed contacts, from out-of-fold tcr70 predictions. View onto the MHC α1/α2 platform from the TCR, α1 helix at
 the top, peptide N-terminus at the left. MHC surface residues are colored by the TCR chain contacting them (sky blue,
 TCRα; vermillion, TCRβ); CDR loops are drawn as tubes, with contact residues as spheres at Cα. MHC residues contacted
-by both chains are drawn in both colors. (C) 3qfj, the largest gain over the prior (pairwise AUPRC 0.566 vs 0.287,
-Δ = +0.2793; k = 30; 16 of 30 predicted pairs observed; MHC sites shared, 13 of 17). (D) 3qeq, the largest loss to it
+by both chains are drawn in both colors. (C) 3QFJ, the largest gain over the prior (pairwise AUPRC 0.566 vs 0.287,
+Δ = +0.2793; k = 30; 16 of 30 predicted pairs observed; MHC sites shared, 13 of 17). (D) 3QEQ, the largest loss to it
 (0.293 vs 0.452, Δ = −0.1583; k = 33; 10 of 33 observed; 9 of 14). Overlap counts equal precision at k for these two
 complexes and are illustrative, not a performance estimate. Contacts are residue pairs within 4.5 Å (minimum
 heavy-atom distance) on the 84-column α1/α2 window. Statistics: paired cluster bootstrap over 69 TCR clusters, 20,000
@@ -185,7 +185,7 @@ resamples, seed 42. n = 174 complexes.
 ## Figure 7
 
 **Figure 7. Solution-phase contact of crystal-negative residue pairs, against TCR-IMAP scores and the pair-frequency
-prior.** Four TCR–pMHC complexes, selected before any simulation for a high (5yxn, 3vxs) or low (7n1f, 8eo8)
+prior.** Four TCR–pMHC complexes, selected before any simulation for a high (5YXN, 3VXS) or low (7N1F, 8EO8)
 per-complex gain of TCR-IMAP over the prior, were simulated in three independent 200 ns replicates each. The occupancy
 of a residue pair is the fraction of the 9,001 frames between 20 and 200 ns in which its minimum heavy-atom distance
 is ≤ 4.5 Å, averaged over the three replicates. Scores are TCR-IMAP's out-of-fold tcr70 pairwise predictions and the
@@ -209,11 +209,11 @@ high-occupancy pairs 28- to 88-fold over the base rate, on 1–7 pairs per syste
 (D) Occupancy of the crystal-positive pairs (check 1) per replicate and per system (all): line, mean; ×, median. Above
 each replicate, the percentage of frames that keep at least 50 % of the starting TCR–pMHC contacts, read two ways:
 docked % (count), the frame has at least half as many TCR–pMHC heavy-atom contacts as at the start; docked %
-(identity), at least half of the specific starting contact pairs are present. The TCR of 5yxn disengages in two of its
+(identity), at least half of the specific starting contact pairs are present. The TCR of 5YXN disengages in two of its
 three replicates (5 % and 3 % of frames docked by count), and its crystal contacts are the least occupied (system mean
 0.33). (E) Backbone RMSD (protein Cα, from the energy-minimized structure) over 20–200 ns for each replicate; dashed
-line, system mean (5yxn 4.25, 7n1f 3.98, 3vxs 3.12 and 8eo8 3.80 Å); the docked % (count) of each replicate is printed
-above. Backbone RMSD stays between 1.5 and 7.7 Å in every replicate, including the 5yxn replicates in which the TCR
+line, system mean (5YXN 4.25, 7N1F 3.98, 3VXS 3.12 and 8EO8 3.80 Å); the docked % (count) of each replicate is printed
+above. Backbone RMSD stays between 1.5 and 7.7 Å in every replicate, including the 5YXN replicates in which the TCR
 disengages: that is a change of interface, not a loss of fold (Figure S3). Backbone RMSD is shown as evidence of
 simulation stability; it is descriptive and is not used to relate stability to prediction quality.
 
@@ -245,8 +245,8 @@ difficulty; differences between methods are assessed with paired tests (Figure 4
 
 ## Figure S3
 
-**Figure S3. Interface characterization of the four simulated TCR–pMHC complexes.** Columns, systems (5yxn, 7n1f,
-3vxs, 8eo8); colors, the three independent replicates. Every measure covers the analyzed window, 20–200 ns of each
+**Figure S3. Interface characterization of the four simulated TCR–pMHC complexes.** Columns, systems (5YXN, 7N1F,
+3VXS, 8EO8); colors, the three independent replicates. Every measure covers the analyzed window, 20–200 ns of each
 200 ns production run, on trajectories made whole and free of periodic jumps. Backbone RMSD is shown in Figure 7E.
 (A) Interface RMSD: RMSD of the Cα atoms of the canonical CDR loops (IMGT 27–38, 56–65 and 105–117) after a
 least-squares fit on the MHC α1/α2 Cα atoms, relative to the crystal pose; every frame, 20 ps apart (9,001 per
@@ -255,11 +255,11 @@ SASA(complex), Shrake–Rupley with a 1.4 Å probe, sampled every 1 ns (181 poin
 traces are smoother than those in A. (C) Per-loop Cα RMSF after the same fit over all 9,001 frames, averaged within
 each CDR loop (loop labels colored by chain). (D) Interface hydrogen bonds per frame (donor–acceptor ≤ 3.5 Å,
 D–H···A ≥ 150°, every frame), between the TCR and MHC α1/α2 and between the TCR and the peptide: bars, mean over the
-window; whiskers, frame-to-frame SD (lower whisker clipped at zero). 5yxn's disengagement appears jointly in these
+window; whiskers, frame-to-frame SD (lower whisker clipped at zero). 5YXN's disengagement appears jointly in these
 measures: in replicate 1 the interface RMSD exceeds 8 Å in more than a quarter of the frames (maximum 10.7 Å;
 mean 6.85 Å, the highest of all twelve replicates);
 buried SASA falls in all three replicates, most in replicate 2 (from about 2,010 to about 945 Å² between the first
-and the last 10 ns), and 5yxn has the lowest mean of the four systems (1,316 Å²); CDR3β RMSF is elevated in
+and the last 10 ns), and 5YXN has the lowest mean of the four systems (1,316 Å²); CDR3β RMSF is elevated in
 replicates 1 and 2 (3.18 and 2.02 Å), where the β chain lost its contacts, and not in replicate 3 (0.94 Å), where the
 α chain disengaged instead. These measures are descriptive: with four systems they characterize these simulations
 only, and they are not used to relate flexibility, burial or hydrogen bonding to prediction quality.
