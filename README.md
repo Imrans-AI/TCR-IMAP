@@ -1,8 +1,9 @@
 # TCR-IMAP: a dual-encoder cross-attention model for TCR–MHC platform contact map prediction
 
-**Private review repository:** [Imrans-AI/TCR-IMAP](https://github.com/Imrans-AI/TCR-IMAP).
-The code package was pushed privately on 3 November 2026. No public release or Zenodo deposit
-exists, and no archive DOI has been assigned. See
+**Repository:** [Imrans-AI/TCR-IMAP](https://github.com/Imrans-AI/TCR-IMAP).
+**Archived on Zenodo:** concept DOI [10.5281/zenodo.23940090](https://doi.org/10.5281/zenodo.23940090),
+which always resolves to the most recent version; this version is
+[10.5281/zenodo.23940091](https://doi.org/10.5281/zenodo.23940091), published 4 November 2026. See
 `PUBLICATION_CHECKLIST.md` for what remains to be done, and `PACKAGE_INFO.json` for the exact source
 revision this tree was staged from.
 
@@ -169,8 +170,9 @@ released under CC BY 4.0 with the other original derived material.
 
 ## Citing
 
-`CITATION.cff` carries the authors, title, repository URL and applicable licences. No DOI or
-public release date is supplied because neither exists yet.
+`CITATION.cff` carries the authors, title, repository URL, the archive DOI and the applicable
+licences. Cite the concept DOI, **10.5281/zenodo.23940090**, unless you need to pin the exact
+version you used, in which case cite **10.5281/zenodo.23940091**.
 
 ## Funding and acknowledgments
 

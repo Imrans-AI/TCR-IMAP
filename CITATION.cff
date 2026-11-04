@@ -1,14 +1,22 @@
 # Citation File Format 1.2.0: https://citation-file-format.github.io
 #
-# INCOMPLETE BY DESIGN. The fields a release needs but that do not yet exist are listed under
-# "author decisions required" at the end of this file and are NOT filled with placeholders:
-# The private repository exists; no public release date or archive DOI has been assigned.
+# Remaining gaps are listed under "author decisions required" at the end of this file and are
+# NOT filled with placeholders. The Zenodo record is published and its DOIs are recorded below.
 cff-version: 1.2.0
 message: >-
   This software and data package accompanies a manuscript that is being submitted for
-  publication. It has not been published, deposited or assigned a DOI. Please cite the manuscript once it is available; until
-  then, cite this package by its version and source revision as recorded in PACKAGE_INFO.json.
+  publication. Please cite the manuscript once it is available, and cite this package by its
+  concept DOI, 10.5281/zenodo.23940090, which always resolves to the most recent version.
 title: "TCR-IMAP: A Dual-Encoder Cross-Attention Model for TCR-MHC Platform Contact Map Prediction"
+doi: "10.5281/zenodo.23940090"
+date-released: "2026-11-04"
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.23940090"
+    description: Concept DOI, all versions
+  - type: doi
+    value: "10.5281/zenodo.23940091"
+    description: Version DOI, this version
 abstract: >-
   Frozen benchmark, partitioning protocols, baselines, stored predictions and analysis code for
   measuring how much of a sequence-based TCR-MHC class I contact predictor's apparent accuracy

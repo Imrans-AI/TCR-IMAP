@@ -1,8 +1,9 @@
 # Release notes: 1.0.0-rc1
 
-**Status: release candidate, under author review. Pushed to the private repository
-https://github.com/Imrans-AI/TCR-IMAP; not public, not deposited and not tagged.** No DOI exists.
-See `PUBLICATION_CHECKLIST.md`.
+**Status: release candidate, under author review. Archived on Zenodo and citable.** Concept DOI
+10.5281/zenodo.23940090 (all versions); this version 10.5281/zenodo.23940091, published
+4 November 2026. The code repository https://github.com/Imrans-AI/TCR-IMAP is **still private**
+and no git tag has been created. See `PUBLICATION_CHECKLIST.md`.
 
 ## Versioning
 
@@ -10,8 +11,8 @@ This is the first version, so there is no prior scheme to preserve. The proposed
 **semantic versioning**, which is what Zenodo's `version` field expects:
 
 * `1.0.0-rc1`: this candidate. Everything is assembled and tested, and it is under author review.
-* `1.0.0`: the version deposited and tagged when the manuscript is accepted, with the repository
-  made public and the archive record created.
+* `1.0.0`: the version tagged when the manuscript is accepted, with the repository made public and
+  a new Zenodo version deposited under the same concept DOI.
 * `1.0.x`: documentation and packaging fixes that change no result.
 * `1.1.0`: new analyses or data that do not invalidate the frozen protocols or the stored
   predictions.
@@ -59,6 +60,7 @@ that reproduces the headline pairwise numbers on a CPU in under a minute.
 3. **No sequence-to-input builder.** Applying the model outside the cohort needs an IMGT numbering
    step that is documented here but not implemented.
 4. **Trajectories are not included** and no access arrangement is promised.
-5. **No DOI and no archive record exist yet**, so this package cannot be cited by DOI. The licence
-   is settled: MIT for code, CC BY 4.0 for original derived data, documentation and all figures
-   (`LICENSING_DECISION_REQUIRED.md`).
+5. **The code repository is still private**, so the GitHub URL does not resolve for a reader yet.
+   The Zenodo archive is public and carries the same tree, so availability does not depend on it.
+   The licence is settled: MIT for code, CC BY 4.0 for original derived data, documentation and
+   all figures (`LICENSING_DECISION_REQUIRED.md`).
