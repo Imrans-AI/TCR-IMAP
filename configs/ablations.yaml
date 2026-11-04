@@ -5,7 +5,7 @@ ablations:
     prior.mode: learned_scale
   - name: no_prior
     prior.mode: zero
-  - name: permuted_prior      # same statistics, wrong geometry — the key control
+  - name: permuted_prior      # same statistics, wrong geometry: the key control
     prior.mode: permuted
   - name: uniform_prior
     prior.mode: uniform

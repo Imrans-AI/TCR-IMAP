@@ -3,23 +3,23 @@
 This package contains original code and derived data, plus the four cleaned coordinate files
 identified below. Third-party material retains its own terms.
 
-## Structures — source collection and included MD inputs
+## Structures: source collection and included MD inputs
 
 | material | source | how to retrieve |
 |---|---|---|
-| 174 IMGT-numbered TCR–peptide–MHC class I structures | **STCRDab**, Leem *et al.*, *Nucleic Acids Res.* 2018, 46, D406–D412 — retrieved 15 August 2026 | https://opig.stats.ox.ac.uk/webapps/stcrdab/ ; `data/interim/stcrdab_index.tsv` carries the exact summary rows, and `scripts/01_fetch_stcrdab.py` performs the download |
+| 174 IMGT-numbered TCR–peptide–MHC class I structures | **STCRDab**, Leem *et al.*, *Nucleic Acids Res.* 2018, 46, D406–D412, retrieved 15 August 2026 | https://opig.stats.ox.ac.uk/webapps/stcrdab/ ; `data/interim/stcrdab_index.tsv` carries the exact summary rows, and `scripts/01_fetch_stcrdab.py` performs the download |
 | the underlying crystallographic entries | **Protein Data Bank** | https://www.rcsb.org ; the identifiers are the `pdb` column of `data/processed/complex_metadata.tsv` |
 
 `data/SOURCES.md` records the retrieval date and the selection criteria. The **derived** data in
-this package — contact labels, masks, residue graphs, the aligned representation, the cohort table
-and the clusters — is our own work computed from those public structures.
+this package: contact labels, masks, residue graphs, the aligned representation, the cohort table
+and the clusters: is our own work computed from those public structures.
 
 Four cleaned coordinate files are included for the MD inputs and Figure 7:
 
-- `md/systems/3vxs/prep/3vxs_clean.pdb` — PDB 3VXS
-- `md/systems/5yxn/prep/5yxn_clean.pdb` — PDB 5YXN
-- `md/systems/7n1f/prep/7n1f_clean.pdb` — PDB 7N1F
-- `md/systems/8eo8/prep/8eo8_clean.pdb` — PDB 8EO8
+- `md/systems/3vxs/prep/3vxs_clean.pdb`: PDB 3VXS
+- `md/systems/5yxn/prep/5yxn_clean.pdb`: PDB 5YXN
+- `md/systems/7n1f/prep/7n1f_clean.pdb`: PDB 7N1F
+- `md/systems/8eo8/prep/8eo8_clean.pdb`: PDB 8EO8
 
 These are processed copies of source coordinates, not newly determined structures. Preparation
 is recorded in `md/systems/BUILD_MANIFEST.tsv`. The package's MIT and CC BY 4.0 grants do not
@@ -29,7 +29,7 @@ One structure, `1ao7`, is rendered in Figure 1 panel A. The rendering is ours
 (`figures/source/fig1_arial_20261102/render_structure.py`); the coordinates are the public PDB entry
 and are not shipped.
 
-## Comparator methods — reimplemented, not redistributed
+## Comparator methods: reimplemented, not redistributed
 
 The Struct-TCS, Seq-TCS and TEIM-Res comparators in this package are **our own code, written from
 the published descriptions**. No original author's repository, weights or data file is included.
@@ -41,7 +41,7 @@ the published descriptions**. No original author's repository, weights or data f
 
 **One third-party file is referenced rather than bundled.** `scripts/31b_structcs_setting_p82v1.py`
 and its pre-p82v1 predecessor read
-`data/raw/sgtpmi/data/STRUCT-CS/PDBids.txt` — the list of PDB identifiers in the comparator's own
+`data/raw/sgtpmi/data/STRUCT-CS/PDBids.txt`: the list of PDB identifiers in the comparator's own
 test set, taken from the released repository `gaol00034/pan-pMHC` (local checkout at commit
 `c118be5`). It is 475 bytes and is **not** in this package, because permission to redistribute it is
 unclear. Retrieve it from that repository if you want to re-run the comparator's own single-split
@@ -60,8 +60,8 @@ original authors.
 ## Software
 
 The dependencies in `env/environment.yml` are installed from PyPI and conda-forge under their own
-licences and are not redistributed here. The external tools in `env/EXTERNAL_TOOLS.md` — GROMACS,
-CHARMM-GUI, DSSP, PyMOL — are obtained from their own distributors under their own terms.
+licences and are not redistributed here. The external tools in `env/EXTERNAL_TOOLS.md`, GROMACS,
+CHARMM-GUI, DSSP, PyMOL: are obtained from their own distributors under their own terms.
 
 ## Fonts
 

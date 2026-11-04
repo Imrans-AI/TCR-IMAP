@@ -10,21 +10,21 @@ NODE_PATH=$R/.build_tools/node_modules node build_si_docx_v4.js
 `.build_tools/` holds the pinned `docx` package and is not part of this repository; create it with
 `npm install --prefix .build_tools docx@9.15.0`.
 
-The builders are the authority. **Never edit the `.docx` by hand** — any such edit is lost at the
+The builders are the authority. **Never edit the `.docx` by hand**: any such edit is lost at the
 next build, and see the LibreOffice warning below.
 
-## The docx version matters — this is a trap
+## The docx version matters: this is a trap
 
 **Use `docx` 9.15.0.** Version **9.7.1** silently breaks every equation.
 
 Under 9.7.1 the OMML loses `xml:space="preserve"` on every math run and omits the empty `<m:sup/>`
 that `<m:nary>` requires. The file still builds and the *text* of every equation is correct, so no
-error is raised — but the summations then render as `□` placeholders. It is invisible in an XML
+error is raised, but the summations then render as `□` placeholders. It is invisible in an XML
 text extraction; it shows up on the page.
 
 ## Never save the `.docx` from LibreOffice
 
-Open it read-only. A LibreOffice save does not destroy the equations — all 13 survive as OMML — but
+Open it read-only. A LibreOffice save does not destroy the equations (all 13 survive as OMML) but
 it rewrites them: intentional spacing inside the math is stripped, the hyphen in `macro-AUPRC`
 becomes a minus sign (U+2212), and `1/B` is re-parsed into a fraction. It also renames the media
 parts to `image1.png`…, losing the content-hashed names, and drops `docProps/custom.xml`,

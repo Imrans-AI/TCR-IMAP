@@ -1,4 +1,4 @@
-# Struct-TCS / Seq-TCS — patches against the released implementation
+# Struct-TCS / Seq-TCS: patches against the released implementation
 
 Four unified diffs against the released code of Gao *et al.*, *J. Chem. Inf. Model.* **2025**,
 *65*, 4674–4686 (DOI 10.1021/acs.jcim.5c00055), repository `gaol00034/pan-pMHC` at commit
@@ -25,20 +25,20 @@ defect it addresses and whether it is an execution fix or a change of method.
 ## Read this before using them
 
 **These patches are not the code that produced any number in the paper.** Our comparator is a
-reimplementation — `scripts/21_struct_tcs.py`, and `scripts/53_structcs_setting_p84v2.py` for the
-comparator-subset setting — written from the published description. We never ran a patched copy of
+reimplementation (`scripts/21_struct_tcs.py`, and `scripts/53_structcs_setting_p84v2.py` for the
+comparator-subset setting) written from the published description. We never ran a patched copy of
 the released code, because the release cannot be run end to end on our data at all: it ships no
 feature builder, no graph builder, no dataset, no splits and no trained weights
 (`results/review/COMPARATOR_PROVENANCE.md`).
 
 What the patches are for is narrower and worth having anyway:
 
-* they make the defects **concrete and checkable** rather than a claim in prose — anyone can apply
+* they make the defects **concrete and checkable** rather than a claim in prose: anyone can apply
   them to `c118be5` and see what changed;
 * they show **what a minimal repair would look like**, which is the evidence for the statement that
   the released code does not run as published;
-* patch 0004 documents the one change that is **method, not repair** — separating model selection
-  from test evaluation — which is the single difference most likely to move a number.
+* patch 0004 documents the one change that is **method, not repair**: separating model selection
+  from test evaluation, which is the single difference most likely to move a number.
 
 **A faithful reimplementation is not constructible** from the paper plus the release. The paper does
 not give the graph radius numerically; the release gives no feature builder, no subset memberships
@@ -67,7 +67,7 @@ interpreted. Results are in `results/review/comparator_fidelity/`:
 
 * gated, as reported: **+0.0312**, p = 0.088
 * ungated, as published: **+0.0354**, p = 0.036
-* the two variants against each other: **−0.0042**, p = 0.441 — indistinguishable
+* the two variants against each other: **−0.0042**, p = 0.441, indistinguishable
 
 The paper reports the **gated** variant, which is the one named in Methods and in the
 predeclaration, and treats the flip in significance as evidence that the comparison is fragile at

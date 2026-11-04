@@ -1,4 +1,4 @@
-# TCR-IMAP — a dual-encoder cross-attention model for TCR–MHC platform contact map prediction
+# TCR-IMAP: a dual-encoder cross-attention model for TCR–MHC platform contact map prediction
 
 **Private review repository:** [Imrans-AI/TCR-IMAP](https://github.com/Imrans-AI/TCR-IMAP).
 The code package was pushed privately on 3 November 2026. No public release or Zenodo deposit
@@ -32,7 +32,7 @@ Concretely, you get:
   protocol and comparison. The legacy partition is **not** comparable to the others by strictness,
   because its held-out groups remain in training; it is reported for continuity, not as a rung on a
   scale. tcr70 is the primary protocol.
-* **Baselines that are hard to beat for the right reason** — within-fold pair-frequency priors and
+* **Baselines that are hard to beat for the right reason**: within-fold pair-frequency priors and
   nearest-neighbour label transfer, fitted on training folds only.
 * **TCR-IMAP itself**, a dual-encoder cross-attention model that maps amino-acid identities to the
   complete 75 × 84 TCR-residue × MHC-residue contact map, plus a per-residue variant matching the
@@ -51,13 +51,13 @@ Concretely, you get:
 | docking-angle regression | AngleNet under grouped evaluation | yes, from stored run records |
 | MD occupancy | do high-scoring crystal-negative pairs form transient contacts in solution | yes, from the released occupancy tables |
 
-### Limitations — read these before reusing anything
+### Limitations: read these before reusing anything
 
 1. **There is no sequence-to-input builder.** `src/data/p84v2.py` exposes `T_for(pdbs)` and
    `M_for(pdbs)`, which look complexes up **by PDB identifier** in the frozen representation.
    Applying the model to a receptor outside this cohort needs an IMGT numbering step that this
    package documents but does not implement: ANARCI or equivalent for the TCR V domains, and
-   per-domain alignment for the MHC G domain — never a fixed offset, which mismatches 66 of 126 α2
+   per-domain alignment for the MHC G domain: never a fixed offset, which mismatches 66 of 126 α2
    positions. **Insertion codes must be preserved**: keying residues by IMGT number alone silently
    overwrites 12 residues at position 111, drops 63 at 112, and puts 1061A and 1072A in the base
    columns. That defect existed in an earlier build of this project and is the most likely way to
@@ -79,7 +79,7 @@ Concretely, you get:
 5. **The `double` protocol is legacy.** It selects the intersection of held-out cluster and allele
    groups but trains on all non-test complexes, so its held-out groups remain in training. It is
    kept, clearly labelled "intersection (legacy)", and is not part of any strictness ordering.
-6. **Molecular-dynamics trajectories are not included** — see "Molecular dynamics" below.
+6. **Molecular-dynamics trajectories are not included**: see "Molecular dynamics" below.
 
 ---
 
@@ -113,8 +113,8 @@ separate instructions and resource estimates for the optional retraining.
 | `tests/` | integrity checks over the frozen artifacts; run them first |
 | `configs/` | model and ablation configuration |
 | `env/` | environment specification and the external tools that are not pip-installable |
-| `data/splits_v2/protocols.json` | the five frozen partitioning protocols — never regenerated |
-| `data/processed/complex_metadata.tsv` | the 174-complex table with clu70/80/90 — never regenerated |
+| `data/splits_v2/protocols.json` | the five frozen partitioning protocols, never regenerated |
+| `data/processed/complex_metadata.tsv` | the 174-complex table with clu70/80/90, never regenerated |
 | `data/processed/pair_maps_p84v2.npz` | contact labels and masks, 174 × 75 × 84, with the row and column manifests |
 | `data/interim/stcrdab_index.tsv` | the STCRDab index rows for the cohort |
 | `results/tables/` | stored predictions, per-complex metrics, aggregates and the MD output tables |

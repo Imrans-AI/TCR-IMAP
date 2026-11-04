@@ -1,4 +1,4 @@
-# Citation File Format 1.2.0 — https://citation-file-format.github.io
+# Citation File Format 1.2.0: https://citation-file-format.github.io
 #
 # INCOMPLETE BY DESIGN. The fields a release needs but that do not yet exist are listed under
 # "author decisions required" at the end of this file and are NOT filled with placeholders:

@@ -1,4 +1,4 @@
-# MD system selection — predeclared criteria
+# MD system selection: predeclared criteria
 
 **Written and committed BEFORE `percomplex_tcr70_paired_p82v1.tsv` was opened for selection.**
 Git history is the evidence: this file's commit precedes any commit containing a selected PDB list.
@@ -10,7 +10,7 @@ Author: Muhammad Imran. Date: 2 October 2026.
 ## 1. Why this document exists
 
 The primary analysis of this paper was rebuilt once already because a 28-position MHC candidate
-set had been chosen using contact frequency pooled over all 174 complexes *before* splitting —
+set had been chosen using contact frequency pooled over all 174 complexes *before* splitting n/a 
 outcome-informed selection that invalidated every headline number (see the project notes, "The
 correction"). The same failure mode is available here: choosing MD systems by looking at which
 complexes give a convenient answer. These criteria are fixed in advance so that the selection
@@ -23,8 +23,8 @@ structure**, what fraction show meaningful contact occupancy in solution?
 
 If a real fraction of the model's apparent false positives are transient solution-phase contacts,
 then the crystal-derived label set systematically penalises the model and measured performance is
-a floor rather than an estimate. This addresses the paper's weakest point — the modest advantage
-over the within-fold frequency prior — from an independent direction.
+a floor rather than an estimate. This addresses the paper's weakest point, the modest advantage
+over the within-fold frequency prior: from an independent direction.
 
 **Key statistic:** Spearman rho between TCR-IMAP score and MD contact occupancy, computed among
 crystal-negative pairs only.
@@ -36,7 +36,7 @@ would mean the model's false positives are genuinely wrong, and the paper says s
 before any system is built so the analysis cannot be judged on its result. No re-running with
 different systems, seeds, force fields or cutoffs in search of a different answer.
 
-## 4. Selection criteria — fixed
+## 4. Selection criteria: fixed
 
 Source table: `results/tables/percomplex_tcr70_paired_p82v1.tsv` (tcr70 protocol, per-complex
 paired differences, p82v1).
@@ -45,15 +45,15 @@ Selection quantity: **Delta = per-complex pairwise AUPRC(TCR-IMAP) - AUPRC(pair-
 under tcr70. This is the comparison the MD analysis is designed to inform.
 
 **Four systems, two strata:**
-- **2 high-Delta** — complexes where the model most exceeds the prior
-- **2 low-Delta** — complexes where it does not
+- **2 high-Delta**: complexes where the model most exceeds the prior
+- **2 low-Delta**: complexes where it does not
 
 The mid-Delta stratum in the earlier 6-system sketch (the project notes, MD design table) is dropped.
 Four systems preserve two complexes per stratum, so no stratum rests on a single structure.
 
 **Eligibility filters, applied before ranking:**
 1. Crystallographic resolution <= 2.5 A
-2. Distinct clu70 cluster — no two selected complexes from the same cluster
+2. Distinct clu70 cluster: no two selected complexes from the same cluster
 3. Complete alpha1/alpha2 platform: no unresolved residues inside the 82-position window
 4. Single peptide, standard residues only; no covalent TCR-peptide linkage, no engineered
    interchain disulfide, no single-chain construct
@@ -71,7 +71,7 @@ prior knowledge of the extremes cannot be exercised as a choice later.
 
 **Ties** are broken by higher resolution (lower numeric value), then by lexicographic PDB ID.
 
-## 5. Simulation protocol — fixed
+## 5. Simulation protocol: fixed
 
 | Element | Setting |
 |---|---|
@@ -89,7 +89,7 @@ prior knowledge of the extremes cannot be exercised as a choice later.
 
 Total: 4 systems x 3 replicates x 200 ns = **2,400 ns**.
 
-### Protocol revision, 2 October 2026 — before any production run, before any analysis
+### Protocol revision, 2 October 2026: before any production run, before any analysis
 
 Two changes, both decided from measured throughput and applied identically to all twelve
 replicates. Nothing had been simulated for analysis and no occupancy number had been computed
@@ -133,11 +133,11 @@ its date and reason, before the occupancy analysis is run.
 **All three replicates are pooled** for the occupancy statistic; per-replicate values are reported
 in SI so the spread is visible. No "representative trajectory" is selected post hoc. (This departs
 deliberately from the lab's TvTPPIMI protocol, which selected one stable replicate for extended
-analysis — defensible for a ligand-stability narrative, but it would bias an occupancy estimate
+analysis: defensible for a ligand-stability narrative, but it would bias an occupancy estimate
 upward by construction.) Replicate design follows Knapp, Ospina & Deane, *JCTC* 2018, 14,
 6127-6138.
 
-### Run protocol — fixed 6 October 2026, before launch
+### Run protocol: fixed 6 October 2026, before launch
 
 Files: `md/protocol/{nvt,npt,prod}.mdp`, `md/run_replicate.sh`, `md/run_queue.sh`. All four
 CHARMM-GUI builds generated byte-identical mdp files, so one shared protocol applies to all.
@@ -182,7 +182,7 @@ with hydrogen-only constraints (as validated by Hopkins et al. 2015) and is belo
 velocity-Verlet stability limit (period / pi ~ 7 fs); the 2 ns benchmark held 300.07 K with
 -0.23 K drift. Constraining all bonds instead would depart from how CHARMM36m was parameterised.
 
-### Production QC — round 1 (13 October 2026), recorded before any outcome analysis
+### Production QC: round 1 (13 October 2026), recorded before any outcome analysis
 
 `md/qc_replicate.sh` checks completion, trajectory continuity, thermodynamics, backbone RMSD and
 gross interface integrity. It deliberately computes no per-pair occupancy and nothing involving
@@ -203,7 +203,7 @@ crystal-positive pairs) measures; its result will be reported per replicate, and
 crystal-negative occupancy will account for it. The remaining 5yxn replicates show whether this is
 characteristic of the system or a single-replicate excursion.
 
-### Secondary analysis — docked frames (added 13 October 2026, before any occupancy was computed)
+### Secondary analysis: docked frames (added 13 October 2026, before any occupancy was computed)
 
 Added after the round-1 integrity QC showed the TCR disengaging in 5yxn rep1. It is therefore
 informed by that observation and is reported as a **secondary sensitivity analysis only**. The
@@ -223,7 +223,7 @@ and remains the headline result.
 At the time this was written, no per-pair occupancy and no quantity involving TCR-IMAP scores had
 been computed from any trajectory.
 
-### Production QC — round 2 (17 October 2026), recorded before any outcome analysis
+### Production QC: round 2 (17 October 2026), recorded before any outcome analysis
 
 All four replicate-2 runs are mechanically clean: 50,000,000 steps, 10,001 frames at 20 ps with no
 irregular timesteps, 0 LINCS warnings, T 300.06-300.07 K, P ~1 bar, density drift <= 0.10 kg/m3,
@@ -254,7 +254,7 @@ check 1 reports per-replicate crystal-positive occupancy, and the docked-frame s
 predeclared on 13 October applies its fixed 50 % threshold and >= 20 ns minimum as written - under
 which 5yxn may contribute few or no docked frames. That is the rule operating as intended.
 
-## 5b. System construction — fixed before any system was built
+## 5b. System construction: fixed before any system was built
 
 **Chains retained:** MHC-I heavy chain (full ectodomain, alpha1/alpha2/alpha3), **beta-2
 microglobulin**, peptide, TCR alpha and TCR beta variable+constant domains as resolved.
@@ -275,14 +275,14 @@ terminal tails are not extended. Any complex requiring modelling of residues ins
 Protonation states at pH 7.4 as assigned by CHARMM-GUI; histidine tautomers left at the default
 assignment and not hand-tuned per system.
 
-## 6. Analysis — fixed
+## 6. Analysis: fixed
 
 Contact occupancy uses the **same minimum heavy-atom 4.5 A definition as the p82v1 labels**, so
 MD occupancy and crystal labels are directly comparable.
 
 1. Occupancy of each **crystal-positive** pair (expected high; sanity check)
 2. Occupancy of each **crystal-negative** pair, split by TCR-IMAP score
-3. **Spearman rho between TCR-IMAP score and occupancy among crystal-negative pairs** — the key
+3. **Spearman rho between TCR-IMAP score and occupancy among crystal-negative pairs**, the key
    statistic, per system and pooled
 4. Per-loop RMSF, germline (CDR1/2) vs CDR3
 5. Interface RMSD; buried SASA
@@ -359,7 +359,7 @@ unchanged.
 At the time this section was committed, no per-pair occupancy, contact frequency, distance statistic
 or correlation had been computed from any production trajectory, and no analysis code existed.
 
-## Revision — the analysis moves to the p84v2 pair universe and predictions, 24 October 2026
+## Revision: the analysis moves to the p84v2 pair universe and predictions, 24 October 2026
 
 Recorded **before any production occupancy was computed**. At the time of writing, no per-pair occupancy,
 contact frequency, distance statistic or correlation had been computed from any production trajectory,
@@ -371,7 +371,7 @@ The analysis defined on 20 October named the **p82v1** pair universe (84 TCR slo
 residues keyed by IMGT number alone) and the tcr70 out-of-fold scores trained on it. Both are replaced by
 their **p84v2** equivalents:
 
-- **Pair universe:** the p84v2 label array, **174 x 75 x 84** — 75 TCR rows (68 occupied IMGT positions plus
+- **Pair universe:** the p84v2 label array, **174 x 75 x 84**: 75 TCR rows (68 occupied IMGT positions plus
   7 CDR3 insertion rows) and 84 MHC columns (82 base positions plus **1061A** and **1072A**), every residue
   keyed by (IMGT number, insertion code). Crystal-positive is Y = 1 and crystal-negative Y = 0 in that array,
   over its resolved pairs S = 1, exactly as before.
@@ -414,7 +414,7 @@ No gate was adjusted. Full numbers: `results/review/FINISH_PENDING_REPORT.md`.
 | **G2** contact function vs the p84v2 crystal labels | **PASS**, 0 mismatches in all four (5yxn 36 contacts, 7n1f 22, 3vxs 30, 8eo8 31). The counts rise against p82v1 for 5yxn (35) and 8eo8 (29) because base 1061/1072 now have their own columns |
 | **G3** occupancy on the restrained NPT trajectories | **PASS**. Crystal-positive median occupancy 1.00, 1.00, 1.00, 0.99; means 0.87-0.93; every NPT frame docked |
 
-### Still open — decisions for the author, not taken here
+### Still open: decisions for the author, not taken here
 
 These four were raised on 20 October and remain open. **No code change has decided any of them**; the
 implemented behaviour is stated so the choice is explicit.
@@ -436,7 +436,7 @@ All 12 replicates are complete (every `prod.cpt` at step 50,000,000). The analys
 the p84v2 axes and **has not been run**. The run script refuses unless `md/analysis/RUN_AUTHORISED` exists;
 only the author creates that file.
 
-## Analysis decisions settled, and the characterisation measures added — 24 October 2026
+## Analysis decisions settled, and the characterisation measures added: 24 October 2026
 
 Recorded **before any production occupancy was computed** and before any code implementing them exists. At the time
 of writing, no per-pair occupancy, contact frequency, distance statistic, correlation, RMSD, RMSF, SASA or hydrogen
@@ -446,7 +446,7 @@ bond had been computed from any production trajectory; `md/analysis/RUN_AUTHORIS
 **Everything in this section is reported in the paper or its SI regardless of outcome.** Nothing here is a screen
 to be passed before a result is shown.
 
-### Primary statistic — unchanged
+### Primary statistic: unchanged
 
 Spearman rho between the TCR-IMAP score and MD occupancy among **crystal-negative resolved pairs**, per system and
 pooled over the four systems, with per-replicate values reported alongside. The pair universe, the occupancy
@@ -525,7 +525,7 @@ Check 1 (crystal-positive occupancy per replicate), the docked-frame fractions u
 and the characterisation measures above will settle it in the single run, and will be reported for 5yxn exactly as
 for the other three systems. No replicate is excluded, re-run or down-weighted on account of it.
 
-### Production QC — round 3 (24 October 2026), recorded before any outcome analysis
+### Production QC: round 3 (24 October 2026), recorded before any outcome analysis
 
 Run with `md/qc_replicate.sh <pdb> 3` for all four systems; full output in
 `results/review/pre_md_run/A_qc_round3.log`. As in rounds 1 and 2 this computes no per-pair occupancy and
@@ -563,7 +563,7 @@ counts, and the protocol explicitly allows resumption from checkpoint: 5yxn rep1
 (1 crash, 2 sessions), 7n1f rep2 (segfault plus a machine reboot, 3 sessions) and 3vxs rep2 (one shutdown,
 2 sessions). None shows any trace of the interruption in its trajectory, thermodynamics or frame spacing.
 
-### 5yxn across all three replicates — what the numbers show
+### 5yxn across all three replicates: what the numbers show
 
 Share of the t = 0 TCR-pMHC heavy-atom contacts (TCRalpha and TCRbeta against peptide and MHC heavy chain,
 summed; b2m excluded) still present at 200 ns:
@@ -596,7 +596,7 @@ occupancy per replicate), the docked-frame fractions under both readings and the
 predeclared on 24 October will quantify it in the single authorised run, and will be reported for 5yxn exactly as
 for the other three systems.
 
-## Undefined correlations are reported as undefined — 24 October 2026, before any production occupancy was seen
+## Undefined correlations are reported as undefined: 24 October 2026, before any production occupancy was seen
 
 Recorded **before any implementing code was written**, and before any production occupancy has been written to disk,
 displayed or summarised.
@@ -651,7 +651,7 @@ completed the 12 Phase A trajectory passes and then crashed in `occupancy_tables
 This rule is therefore fixed before any production occupancy value has been seen, and before any correlation of any
 kind has been computed from production data.
 
-## Occupancy counts reported beside every correlation; no count threshold gates reporting — 24 October 2026
+## Occupancy counts reported beside every correlation; no count threshold gates reporting: 24 October 2026
 
 Recorded before any implementing code was written, and before any production occupancy has been written to disk,
 displayed or summarised. (The first authorised attempt computed occupancy only in the memory of a process that
@@ -664,8 +664,8 @@ and the 6–8 A strata only 2–5 (`results/review/MD_UNDEFINED_P_REPORT.md`). O
 among 4,970 that happens to carry the top score gives rho = 0.025 with p = 0.0005. That p is valid for the
 permutation null, but it is a statement about one pair.
 
-**What is added.** Every correlation output table — `md_occupancy_rho.csv`, `md_occupancy_strata.csv` and
-`md_occupancy_docked_rho.csv` — reports, for every row, alongside `n_distinct_occupancy` and the group's n:
+**What is added.** Every correlation output table, `md_occupancy_rho.csv`, `md_occupancy_strata.csv` and
+`md_occupancy_docked_rho.csv`: reports, for every row, alongside `n_distinct_occupancy` and the group's n:
 
 | Column | Counts the pairs in the row's group with |
 |---|---|
@@ -692,15 +692,15 @@ reader can see it and see why it is not interpreted.
 Nothing else changes: the statistic, pair universe, window, permutation scheme, strata, thresholds, docked-frame
 rules, prior control and the rows of every table are as already fixed.
 
-## "Very few" fixed at 10: the description rule for sparse correlations — 24 October 2026
+## "Very few" fixed at 10: the description rule for sparse correlations: 24 October 2026
 
 Recorded **before any implementing code was written**, and **before any production occupancy was seen**. The first
 authorised attempt computed occupancy only in the memory of a process that crashed in Phase A, before writing,
 displaying or summarising any of it and before loading any score (see "Undefined correlations are reported as
 undefined"). No production occupancy value, count or correlation has been written, displayed or summarised since.
 
-**The rule.** A correlation resting on **fewer than 10 non-zero occupancies** — `n_nonzero_occupancy` < 10, counted
-over exactly the occupancy values the row's rho uses — is described in the text as **uninterpretable**. This fixes
+**The rule.** A correlation resting on **fewer than 10 non-zero occupancies**, `n_nonzero_occupancy` < 10, counted
+over exactly the occupancy values the row's rho uses, is described in the text as **uninterpretable**. This fixes
 the "very few" of the preceding section.
 
 **It is a description rule only.** It is not a reporting rule and not a testing rule:
@@ -717,7 +717,7 @@ the "very few" of the preceding section.
 > `interpretable` = rho is defined (not NaN) **and** `n_nonzero_occupancy` >= 10
 
 It is therefore **False** for:
-- a defined rho on fewer than 10 non-zero occupancies — the uninterpretable case;
+- a defined rho on fewer than 10 non-zero occupancies: the uninterpretable case;
 - an undefined rho;
 - a stratum reported untested;
 - a docked row with no contributing replicate.
@@ -726,7 +726,7 @@ In the last three there is no rho to interpret, and each row's own NaN rho and c
 flag changes no value in any other column. Text describing the MD results quotes only rows with
 `interpretable = True` as results.
 
-## Characterisation recomputed with periodic-boundary handling — 24 October 2026
+## Characterisation recomputed with periodic-boundary handling: 24 October 2026
 
 Recorded before any fix was written or any characterisation measure recomputed.
 
@@ -749,10 +749,10 @@ then `-pbc nojump`) before computing backbone RMSD on frames every 10 ns:
 interface RMSD, per-loop RMSF and buried SASA.
 
 It does **not** affect:
-- **occupancy, or any correlation computed from it** — the contact function uses minimum-image distances, verified
+- **occupancy, or any correlation computed from it**: the contact function uses minimum-image distances, verified
   by gate G2's periodic-boundary test;
-- the docked-frame counts — periodic-aware;
-- the interface hydrogen bonds — MDAnalysis applies the periodic box;
+- the docked-frame counts: periodic-aware;
+- the interface hydrogen bonds: MDAnalysis applies the periodic box;
 - any score, the primary statistic, or any table of Figure 7.
 
 **What is done.** The four coordinate-based measures are recomputed on a trajectory made whole and jump-free by
@@ -772,7 +772,7 @@ checked before and after:
 
 The run manifest's `md_characterisation_summary_sha256_before_scores` continues to describe the superseded file.
 
-## mdrun interruptions recorded in the QC log — 28 October 2026
+## mdrun interruptions recorded in the QC log: 28 October 2026
 
 Recorded after the single authorised run; it concerns only how the run history was recorded and changes no value,
 table or conclusion.

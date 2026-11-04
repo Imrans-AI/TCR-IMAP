@@ -1,4 +1,4 @@
-# Publication checklist — 4 November 2026
+# Publication checklist: 4 November 2026
 
 ## Completed
 

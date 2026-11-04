@@ -1,4 +1,4 @@
-# Licence scope — author decisions recorded 3 and 4 November 2026
+# Licence scope: author decisions recorded 3 and 4 November 2026
 
 The author approved MIT for original code and CC BY 4.0 for original derived data and
 documentation, with copyright held by Muhammad Imran and Dongqing Wei. On 4 November the
@@ -30,7 +30,7 @@ produced by `figures/source/fig1_arial_20261102/design_figure.py`, with its mole
 ray-traced by the accompanying `render_structure.py` from the public 1AO7 coordinates. **No
 figure uses third-party artwork, a drawing service or a template**, so nothing in the figure set
 is encumbered by another party's terms. The underlying 1AO7 coordinates are public and are
-referenced, not redistributed — `THIRD_PARTY_NOTICES.md`.
+referenced, not redistributed: `THIRD_PARTY_NOTICES.md`.
 
 Sources: https://opensource.org/license/mit ; https://creativecommons.org/licenses/by/4.0/ ;
 https://help.zenodo.org/docs/deposit/describe-records/licenses/ .

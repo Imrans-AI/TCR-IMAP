@@ -1,7 +1,7 @@
 # Module 4 → JCIM: standing guidelines
 
 *From handwritten notes, 19 Aug 2026. These are directives for how the paper must be
-strengthened before submission — read alongside the project's internal notes.*
+strengthened before submission: read alongside the project's internal notes.*
 
 ---
 
@@ -9,7 +9,7 @@ strengthened before submission — read alongside the project's internal notes.*
 
 The model must not read as an incidental analysis tool. Concretely:
 
-- Run **on the competitor's data or splits** — i.e. reproduce the SG-TPMI / Struct-TCS
+- Run **on the competitor's data or splits**: i.e. reproduce the SG-TPMI / Struct-TCS
   STRUCT-CS setting (their 94 complexes, their partition) and show GRIP performs at least
   comparably there, *in addition* to our stricter protocols. This pre-empts "you only win
   on your own benchmark."
@@ -22,18 +22,18 @@ The model must not read as an incidental analysis tool. Concretely:
 
 ## 2. Confirm the splitting strategy
 
-Splits are frozen in `data/splits_v2/protocols.json` — but the *justification* must be airtight:
+Splits are frozen in `data/splits_v2/protocols.json`, but the *justification* must be airtight:
 
 - tcr70 is primary (0% of test complexes with a >90%-identical training neighbour, 0 duplicate-family leakage)
 - Report the similarity audit table as a figure, not a footnote
 - Sensitivity across 70 / 80 / 90% clustering thresholds must be shown, not just the best one
-- Double-holdout has *higher* measured leakage (0.422) than tcr70 (0.000) — say so plainly rather
+- Double-holdout has *higher* measured leakage (0.422) than tcr70 (0.000), say so plainly rather
   than implying "double" is strictest
-- Every prior/frequency baseline must be fit **within training folds only** — re-verify before submission
+- Every prior/frequency baseline must be fit **within training folds only**, re-verify before submission
 
 ## 3. Match JCIM-level figure standards
 
-Reference: SG-TPMI (JCIM 2025) and HLABrew (JCIM 2026) — dense, multi-panel, two-column figures.
+Reference: SG-TPMI (JCIM 2025) and HLABrew (JCIM 2026), dense, multi-panel, two-column figures.
 
 **Structures must be emphasised.** Currently missing entirely:
 - PyMOL renderings of representative TCR–pMHC complexes
@@ -47,8 +47,8 @@ make it visible rather than abstract.
 Planned figure set:
 1. Dataset construction and evaluation design (schematic; BioRender)
 2. Dataset redundancy and train–test similarity per protocol
-3. Similarity-threshold curve *(built — needs polish)*
-4. Benchmark vs baselines across protocols with bootstrap CIs *(built — needs polish)*
+3. Similarity-threshold curve *(built: needs polish)*
+4. Benchmark vs baselines across protocols with bootstrap CIs *(built: needs polish)*
 5. Contact stereotypy: heatmap + **structure projection** + entropy with matched resampling *(partial)*
 6. External/temporal test and failure analysis
 

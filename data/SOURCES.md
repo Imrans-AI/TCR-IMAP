@@ -1,4 +1,4 @@
-# Data sources — record download date and version for every entry
+# Data sources: record download date and version for every entry
 
 | Source | URL | Downloaded | Version/Release | Notes |
 |---|---|---|---|---|

@@ -14,7 +14,7 @@ If a command reports a missing array, you have the GitHub tree without the froze
 
 ---
 
-## 1. Start here — integrity, then the worked example
+## 1. Start here: integrity, then the worked example
 
 | command | what it checks or reproduces | expected output | cost |
 |---|---|---|---|
@@ -63,12 +63,12 @@ panel-to-source validation table, and read only stored arrays.
 
 | command | figure |
 |---|---|
-| `python scripts/38b_fig2_dataset_p82v1.py` | Figure 2 — redundancy and leakage |
-| `python scripts/55_fig3_inflation_p84v2.py` | Figure 3 — identity sweep and docking-angle collapse |
-| `python scripts/55_fig4_benchmark_p84v2.py` | Figure 4 — benchmark against the comparators |
-| `python scripts/55_fig5_footprint_p84v2.py` | Figure 5 — observed contact footprint (PyMOL panels are included pre-rendered) |
-| `python scripts/55_fig6_ablation_p84v2.py` | Figure 6 — ablations and the two showcase complexes |
-| `python scripts/56_fig7_md_occupancy.py` | Figure 7 — MD occupancy of crystal-negative pairs |
+| `python scripts/38b_fig2_dataset_p82v1.py` | Figure 2, redundancy and leakage |
+| `python scripts/55_fig3_inflation_p84v2.py` | Figure 3, identity sweep and docking-angle collapse |
+| `python scripts/55_fig4_benchmark_p84v2.py` | Figure 4, benchmark against the comparators |
+| `python scripts/55_fig5_footprint_p84v2.py` | Figure 5, observed contact footprint (PyMOL panels are included pre-rendered) |
+| `python scripts/55_fig6_ablation_p84v2.py` | Figure 6, ablations and the two showcase complexes |
+| `python scripts/56_fig7_md_occupancy.py` | Figure 7, MD occupancy of crystal-negative pairs |
 | `python scripts/55_figS_peptide_p84v2.py` | Figure S1 |
 | `python scripts/55_figS_benchmark_dist_p84v2.py` | Figure S2 |
 | `python scripts/56_figS_md_characterisation.py` | Figure S3 |

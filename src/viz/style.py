@@ -1,4 +1,4 @@
-"""Shared manuscript figure style — one place for the JCIM formatting rules, the
+"""Shared manuscript figure style: one place for the JCIM formatting rules, the
 bootstrap-floor-aware p-value formatter, and the save convention, so every p82v1 figure
 script applies them identically instead of re-declaring them per script.
 

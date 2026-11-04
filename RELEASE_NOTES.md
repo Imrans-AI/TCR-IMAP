@@ -1,20 +1,21 @@
-# Release notes — 1.0.0-rc1
+# Release notes: 1.0.0-rc1
 
-**Status: release candidate, prepared locally for author review. Not published, not pushed, not
-deposited.** No repository URL and no DOI exist. See `PUBLICATION_CHECKLIST.md`.
+**Status: release candidate, under author review. Pushed to the private repository
+https://github.com/Imrans-AI/TCR-IMAP; not public, not deposited and not tagged.** No DOI exists.
+See `PUBLICATION_CHECKLIST.md`.
 
 ## Versioning
 
 This is the first version, so there is no prior scheme to preserve. The proposed scheme is
 **semantic versioning**, which is what Zenodo's `version` field expects:
 
-* `1.0.0-rc1` — this candidate: everything assembled and tested locally, awaiting author review.
-* `1.0.0` — the version deposited and tagged when the manuscript is accepted, with the licence
-  decided and the repository and archive records created.
-* `1.0.x` — documentation and packaging fixes that change no result.
-* `1.1.0` — new analyses or data that do not invalidate the frozen protocols or the stored
+* `1.0.0-rc1`: this candidate. Everything is assembled and tested, and it is under author review.
+* `1.0.0`: the version deposited and tagged when the manuscript is accepted, with the repository
+  made public and the archive record created.
+* `1.0.x`: documentation and packaging fixes that change no result.
+* `1.1.0`: new analyses or data that do not invalidate the frozen protocols or the stored
   predictions.
-* `2.0.0` — any change to the frozen protocols, the candidate set or the contact definition. These
+* `2.0.0`: any change to the frozen protocols, the candidate set or the contact definition. These
   define the benchmark; changing one of them is a new benchmark, not a patch.
 
 **No tag has been created.** `PACKAGE_INFO.json` records the source revision the packages were
@@ -58,4 +59,6 @@ that reproduces the headline pairwise numbers on a CPU in under a minute.
 3. **No sequence-to-input builder.** Applying the model outside the cohort needs an IMGT numbering
    step that is documented here but not implemented.
 4. **Trajectories are not included** and no access arrangement is promised.
-5. **No licence is assigned yet** — `LICENSING_DECISION_REQUIRED.md`.
+5. **No DOI and no archive record exist yet**, so this package cannot be cited by DOI. The licence
+   is settled: MIT for code, CC BY 4.0 for original derived data, documentation and all figures
+   (`LICENSING_DECISION_REQUIRED.md`).
