@@ -20,10 +20,12 @@ measured under.
 
 ## Highlights
 
-* **The contribution is the evaluation framework, not architectural novelty.** The claim is not that
-  TCR-IMAP is a better architecture; it is that how much of a sequence-based TCR–MHC contact
-  predictor's apparent accuracy belongs to the evaluation rather than to the model can be measured,
-  and that this package contains the frozen apparatus for measuring it.
+* **What TCR-IMAP does.** It predicts which residues of a T-cell receptor contact which residues of
+  the MHC class I α1/α2 platform, from amino-acid sequence alone. Two Transformer encoders represent
+  the TCR and MHC residues, cross-attention couples them, and a bilinear head returns a probability
+  for every candidate residue pair. The package ships the model, the frozen partitioning protocols,
+  the characterized benchmark of 174 structures, the within-fold frequency-prior baselines and every
+  stored prediction the reported numbers were computed from.
 * **The predeclared primary comparison is unresolved at this sample size.** Per-residue macro-AUPRC
   under `tcr70`, TCR-IMAP versus Struct-TCS: **+0.0312 (95 % CI [−0.0049, +0.0650], p = 0.088)**. It
   is reported as it stands, and no more favourable secondary comparison was promoted in its place.

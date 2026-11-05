@@ -18,9 +18,11 @@ identifiers:
     value: "10.5281/zenodo.23940091"
     description: Version DOI, this version
 abstract: >-
-  Frozen benchmark, partitioning protocols, baselines, stored predictions and analysis code for
-  measuring how much of a sequence-based TCR-MHC class I contact predictor's apparent accuracy
-  belongs to the evaluation design rather than to the model. 174 curated TCR-peptide-MHC class I
+  TCR-IMAP predicts which residues of a T-cell receptor contact which residues of the MHC class I
+  alpha1/alpha2 platform, from amino-acid sequence alone: two Transformer encoders represent the TCR
+  and MHC residues, cross-attention couples them, and a bilinear head returns a probability for every
+  candidate residue pair. This package ships the model, the frozen benchmark, the partitioning
+  protocols, the baselines, the stored predictions and the analysis code. 174 curated TCR-peptide-MHC class I
   structures with contact labels and candidate masks keyed by IMGT number and insertion code, five
   partitioning protocols fixed before the reported results were produced, within-fold frequency
   priors, paired per-complex metrics with a clustered bootstrap, comparator reimplementations with a
