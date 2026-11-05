@@ -423,7 +423,7 @@ body.push(P(
 + "sample size; the pairwise results above are secondary. TCR-IMAP, together with the frozen protocols, the characterized benchmark and "
 + "the frequency-prior baselines, offers a basis for prioritizing interface residue pairs for structural and mutational "
 + "study, and for comparing sequence-based contact predictors on common ground."));
-body.push(P("**Keywords:** T-cell receptor; MHC class I; contact map prediction; cross-attention; deep learning; molecular dynamics."));
+body.push(P("**Keywords:** T-cell receptor; MHC class I; immunoinformatics; contact map prediction; protein–protein interface; sequence-based prediction; cross-attention; deep learning; homology partitioning; benchmark dataset."));
 
 body.push(H1("1. Introduction"));
 body.push(P(

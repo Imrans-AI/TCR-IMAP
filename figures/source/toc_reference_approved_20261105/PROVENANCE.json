@@ -1,0 +1,67 @@
+{
+  "size_cm": [
+    8.25,
+    4.45
+  ],
+  "raster_dpi": 900,
+  "reference": "user-supplied descriptor / machine-learning / prediction composition; no reference data copied",
+  "fonts": "Arial 6 pt; Courier New 6 pt residue tokens; only bottom stage labels bold",
+  "structure_source": "/home/muhammad-imran/Documents/Codex/2026-10-22/se/outputs/M3_graphical_abstract_revised/1ao7_flat_cartoon.png",
+  "structure_sha256": "c2a309bb042a4434d869dfb6a4e9f94f219af8571e6c9753590466b845d370c6",
+  "structure": "actual complex, intact geometry; molecular context, not a structural model input",
+  "sequence_fragments": [
+    [
+      "DRGSQS",
+      "#56B4E9"
+    ],
+    [
+      "MNHEY",
+      "#D55E00"
+    ],
+    [
+      "PWIEQE",
+      "#BFBFBF"
+    ]
+  ],
+  "sequence_scope": "representative resolved alpha CDR1, beta CDR1 and MHC window fragments from same example; not all model inputs shown",
+  "map_source": "/home/muhammad-imran/PhD_data/TCRMHC_Module_3_TCR-IMAP/results/tables/pairmaps_tcr70_p84v2.npz",
+  "map_sha256": "37525d176cd12ba1d4a2493233f30c652f821cd884d197aef962d8b29d3df214",
+  "map_transform": "unmodified stored predictions, unresolved cells white",
+  "curve_source": "/home/muhammad-imran/PhD_data/TCRMHC_Module_3_TCR-IMAP/results/tables/similarity_curve_p84v2_authoritative.csv",
+  "curve_sha256": "f8495d62c99da4b2117e56b2dbeb55e8c0075e63920d38cf3dd414d3e4730702",
+  "curve_values": [
+    0.275,
+    0.0777,
+    0.052,
+    0.0428,
+    0.034,
+    0.033,
+    0.0274
+  ],
+  "thresholds": [
+    1.01,
+    0.95,
+    0.9,
+    0.85,
+    0.8,
+    0.75,
+    0.7
+  ],
+  "curve_scope": "full-cohort evaluation; threshold settings equally spaced; no synthetic regression data",
+  "legends": false,
+  "older_versions_preserved": true,
+  "verification": {
+    "all_visible_text_within_canvas": true,
+    "bold_stage_labels": 3,
+    "legend_or_colour_key": false,
+    "pixel_size": [
+      2923,
+      1576
+    ],
+    "dpi": 900,
+    "physical_size_cm": [
+      8.25,
+      4.45
+    ]
+  }
+}

@@ -24,4 +24,4 @@ recorded only in review documents, each with the computation that produces it.
 - Every value was recomputed by `build_si_tables.py` from the committed inputs and asserted equal to the recorded value.
 
 **Sources.** Listed per row. Recorded values: `results/review/identity_bound/handoff6_statements.tsv` (definition 1),
-`results/review/REBUILD_P84V2_REPORT.md` step 4, `HANDOFF_1.md` §6 and §8.9.
+`results/review/REBUILD_P84V2_REPORT.md` step 4; the remaining recorded values are those asserted during the build.

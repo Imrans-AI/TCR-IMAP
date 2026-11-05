@@ -35,7 +35,7 @@ regressor (AngleNet), as used for every reported (p84v2) result.
   (`results/review/REBUILD_P84V2_REPORT.md` step 3; `CORRECTION_PLAN_P84V2.md` §2).
 - Parameter counts were taken by `build_si_tables.py` by instantiating each class on the CPU at the p84v2 layout (no
   forward pass) and counting trainable parameters. The counts for TCR-IMAP (both variants), Struct-TCS and Seq-TCS are
-  asserted equal to the values recorded in the project notes, `HANDOFF_1.md` §7 and `METHODS_DRAFT.md`; the TEIM-Res and
+  asserted equal to the values recorded during the build; the TEIM-Res and
   AngleNet counts are recorded here for the first time.
 - The pairwise models (TCR-IMAP, TEIM-Res) use no validation subset and no early stopping, so no test complex
   influences their training. The per-residue validation split is described in Methods and evaluated in Figure S4.

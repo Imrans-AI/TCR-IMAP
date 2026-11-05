@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build the Supporting Information tables S1-S8 (task specification held with the project notes).
+"""Build the Supporting Information tables S1-S8.
 
 Reads committed tables and reports, and the stored per-complex arrays (verified by SHA-256 where a checksum is
 committed). No training, inference, scoring or GPU. The only statistics computed here are paired cluster-bootstrap
@@ -377,7 +377,7 @@ PC = {"TCR-IMAP (pairwise)": npar(ns19["PairNet"](mhc_len=84)),
       "TEIM-Res": npar(ns36["TEIMRes"](84)),
       "AngleNet": npar(ns16["AngleNet"](mhc_len=84))}
 for k, v in (("TCR-IMAP (pairwise)", 529310), ("TCR-IMAP (per-residue)", 291073), ("Struct-TCS", 336905), ("Seq-TCS", 303105)):
-    check(PC[k] == v, f"S3 parameter count {k} = {v:,} (project notes / HANDOFF_1.md §7 / METHODS_DRAFT.md)")
+    check(PC[k] == v, f"S3 parameter count {k} = {v:,} (recorded value)")
 print("  parameter counts:", PC)
 H = ["Item", "TCR-IMAP (pairwise)", "TCR-IMAP (per-residue)", "Struct-TCS", "Seq-TCS", "TEIM-Res", "AngleNet"]
 R = [
@@ -418,7 +418,7 @@ regressor (AngleNet), as used for every reported (p84v2) result.
   (`results/review/REBUILD_P84V2_REPORT.md` step 3; `CORRECTION_PLAN_P84V2.md` §2).
 - Parameter counts were taken by `build_si_tables.py` by instantiating each class on the CPU at the p84v2 layout (no
   forward pass) and counting trainable parameters. The counts for TCR-IMAP (both variants), Struct-TCS and Seq-TCS are
-  asserted equal to the values recorded in the project notes, `HANDOFF_1.md` §7 and `METHODS_DRAFT.md`; the TEIM-Res and
+  asserted equal to the values recorded during the build; the TEIM-Res and
   AngleNet counts are recorded here for the first time.
 - The pairwise models (TCR-IMAP, TEIM-Res) use no validation subset and no early stopping, so no test complex
   influences their training. The per-residue validation split is described in Methods and evaluated in Figure S4.
@@ -756,7 +756,7 @@ for s in SYS:
         s7c.append([s if sc_ == SC[0] else "", sc_, r.k, f"{int(r.n_top_k_ge)} / {r.k} ({r.frac_top_k:.3f})", f"{r.base_rate:.4f}",
                     f"{r.frac_top_k / r.base_rate:.0f}×", "yes" if r.tie_at_k else "no"])
 enr = topk.frac_top_k / topk.base_rate
-check(round(enr.min()) == 28 and round(enr.max()) == 88 and topk.n_top_k_ge.min() == 1 and topk.n_top_k_ge.max() == 7, "S7 top-k enrichment 28–88× on 1–7 pairs (project notes)")
+check(round(enr.min()) == 28 and round(enr.max()) == 88 and topk.n_top_k_ge.min() == 1 and topk.n_top_k_ge.max() == 7, "S7 top-k enrichment 28–88× on 1–7 pairs (recorded value)")
 s7d = [[r.pdb, r.rep, r.n, f"{r['mean']:.3f}", f"{r['median']:.3f}", f"{r['min']:.3f}", f"{r.n_ge_meaningful} / {r.n}"] for _, r in ck1.iterrows()]
 s7e = []
 for reading in ("count", "identity"):
@@ -881,7 +881,7 @@ recorded only in review documents, each with the computation that produces it.
 - Every value was recomputed by `build_si_tables.py` from the committed inputs and asserted equal to the recorded value.
 
 **Sources.** Listed per row. Recorded values: `results/review/identity_bound/handoff6_statements.tsv` (definition 1),
-`results/review/REBUILD_P84V2_REPORT.md` step 4, `HANDOFF_1.md` §6 and §8.9.
+`results/review/REBUILD_P84V2_REPORT.md` step 4; the remaining recorded values are those asserted during the build.
 """
 write("S8_dataset_descriptors", s8_md, {"S8_dataset_descriptors": pd.DataFrame(s8, columns=["quantity", "value", "computation", "source"])})
 
